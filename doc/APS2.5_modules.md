@@ -1398,6 +1398,28 @@ Gradient Boosting 在迭代的时候选择梯度下降的方向来保证最后�
 * d_data (csv): 获取到的数据
 
 
+## <a id="Imbalance">ImbalanceDataSPy3</a>
+对数据进行过采样处理
+
+#### Tag:
+
+* preprocessing
+
+#### Param:
+
+* None
+
+#### Input:
+
+* X (csv): X
+* Y (csv): Y
+
+#### Output:
+
+* x_resampled (csv): 过采样后X
+* y_resampled (csv): 过采样后Y
+
+
 ## <a id="JDBC">JDBCdownloaderUnivSPy3</a>
 通过JDBC方式，访问数据库。
 
