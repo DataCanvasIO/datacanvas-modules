@@ -11,6 +11,9 @@
 * [A] [ML_MultiClassModelEval](#ML_MultiClassModelEval)
 * [A] [ML_RegModelEval](#ML_RegModelEval)
 * [A] [ML_BinaryClassModelEval](#ML_BinaryClass)
+* [M] [DateParsingDataSPy3](#DateParse)
+* [M] [AssembleBaseLeanersSPy3](#ABLeaner)
+* [M] [PKLtoSotrage](#PKLtoS)
 * [A] DefineLabelSPy3_churn
 * [A] DimentionSelectionSPy3_churn
 * [A] FeatureEngineeringSPy3_churn
@@ -19,9 +22,6 @@
 * [A] FilterFastSPy3_churn
 * [A] FeatureEngineeringSPy3_predict_churn
 * [A] DimentionSelectionSPy3_predict_churn
-* [M] [DateParsingDataSPy3](#DateParse)
-* [M] [AssembleBaseLeanersSPy3](#ABLeaner)
-* [M] [PKLtoSotrage](#PKLtoS)
 
 
 ## 180622
