@@ -29,6 +29,7 @@
 * [A] FilterFastSPy3_churn
 * [A] FeatureEngineeringSPy3_predict_churn
 * [A] DimentionSelectionSPy3_predict_churn
+* [A] DimentionSelectionDPy3_churn
 
 
 ## 180622
