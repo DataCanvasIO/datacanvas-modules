@@ -16,6 +16,8 @@
 * [A] [ColsSelectDataDPy3](#spark_cols)
 * [A] [MissingHandlingDPy3](#spark_missing)
 * [A] [FeatureTransformerDPy3](#spark_transform)
+* [A] [FeatureSelectionFeatDPy3](#spark_selection)
+* [A] [LogisticRegressionDPy3](#spark_logistic)
 * [M] [DateParsingDataSPy3](#DateParse)
 * [M] [AssembleBaseLeanersSPy3](#ABLeaner)
 * [M] [PKLtoSotrage](#PKLtoS)
