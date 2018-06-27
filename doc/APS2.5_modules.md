@@ -30,6 +30,8 @@
 * [A] FeatureEngineeringSPy3_predict_churn
 * [A] DimentionSelectionSPy3_predict_churn
 * [A] DimentionSelectionDPy3_churn
+* [A] [Range](#Range)
+* [A] [Condition](#Condition)
 
 
 ## 180622
@@ -410,6 +412,8 @@
 
 ## SQL sql语言
 * [SQLUnivSPy3](#SQL)
+* [Range](#Range)
+* [Condition](#Condition)
 
 ## visualization 可视化
 * [ClasEvalSPy3](#CEval)
@@ -914,6 +918,29 @@ bagging是一种用来提高学习算法准确度的方法，这种方法通过�
 
 * d_feature_selected (csv): 相关性筛选后的数据
 * o_featrue_label_corr (csv): 与标签变量间的相关性分数 (卡方/互信息/F检验分数)
+
+
+## <a id="Condition">Condition</a>
+筛选出两变量相减大于/小于/等于指定值的数据
+
+#### Tag:
+
+* SQL
+
+#### Param:
+
+* col1 (string): 变量1
+* col2 (string): 变量2 (变量1-变量2)
+* condition (string): 大于/等于/小于
+* value (double): 判断值
+
+#### Input:
+
+* d_data (csv): 输入数据
+
+#### Output:
+
+* d_changed_data (csv): 按规则筛选后数据
 
 
 ## <a id="CSV2PKL">CSV2PKLUnivSPy3</a>
@@ -2133,6 +2160,28 @@ logistic回归是一种广义线性回归（generalized linear model），因此
 * best_params (txt): 最优参数
 * best_model (py3pkl): 最优模型(py3pkl格式)
 * best_model_txt (txt): 最优模型(txt格式)
+
+
+## <a id="Range">Range</a>
+筛选出某变量在下限和上限间的数据
+
+#### Tag:
+
+* SQL
+
+#### Param:
+
+* lower (double): 取值下限
+* upper (double): 取值上限
+* col1 (string): 选择指定变量
+
+#### Input:
+
+* d_data (csv): 输入数据
+
+#### Output:
+
+* d_changed_data (csv): 按规则筛选后数据
 
 
 ## <a id="REvalS">RegrEvalSPy3</a>
