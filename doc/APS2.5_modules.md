@@ -1,3 +1,5 @@
+# [跳转至标签](#tag)
+
 # Update
 
 ## 180707
@@ -360,7 +362,8 @@
 * [A] [FunctionTransformer](#ft)
 * [A] [PolyNomialFeatures](#poly)
 
-# Index
+# <a id="tag">标签</a>
+
 # Python 单机版
 
 ## utils 通用工具
