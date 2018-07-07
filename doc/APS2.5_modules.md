@@ -377,7 +377,7 @@
 * [PKLtoSotrage](#PKLtoS)
 * [PKLfromSotrage](#PKLfromS)
 
-## SQL sql语言
+## SQL sql脚本
 * [SQLUnivSPy3](#SQL)
 
 ## dataframe 数据操作
@@ -518,7 +518,7 @@
 * [ModelEvaluateKeras](#ModelEvaluateKeras)
 
 
-## R R语言
+## R R模块
 * [NormalVisuSR_all](#vis_R)
 * [NormalVisuSR_read_data](#load_R)
 * [plotly_ggplot2_pie_2dim](#plt_R)
@@ -526,14 +526,14 @@
 
 # PySpark 分布式
 
-## data_exploration_pyspark 数据探索_分布式
+## data_exploration 数据探索
 * [PivotingDPy3](#Pivot_pyspark)
 * [GroupbySumDPy3](#GroupbySum_pyspark)
 * [CorrelationDPy3](#Correlate_pyspark)
 * [FeatureInfoDPy3](#FeatInfo_pyspark)
 * [ChiSquareTestDPy3](#ChiSquare_pyspark)
 
-## preprocessing_pyspark 预处理_分布式
+## preprocessing  预处理
 
 * [VectorSlicerDPy3](#VecSlice_pyspark)
 * [VectorIndexerDPy3](#VecIdx_pyspark)
@@ -557,7 +557,7 @@
 * [FillNADPy3](#FillNan_pyspark)
 * [SplitDPy3](#Split_pyspark)
 
-## classifier_pyspark 分类模型_分布式
+## classifier 分类模型
 
 * [DecisionTreeClassifierDPy3](#DTClas_pyspark)
 * [MultilayerPerceptronClassifierDPy2](#MLPClas_pyspark)
@@ -567,7 +567,7 @@
 * [LogisticRegressionDPy3](#LR3_pyspark)
 * [LogisticRegressionDPy2](#LR2_pyspark)
 
-## regressor_pyspark 回归模型_分布式
+## regressor 回归模型
 
 * [DecisionTreeRegressorDPy3](#DTReg_pyspark)
 * [RandomForestRegressorDPy3](#RFReg_pyspark)
@@ -575,25 +575,25 @@
 * [GeneralizedLinearRegressionDPy2](#GLR_pyspark)
 * [GBTRegressorDPy2](#GBTReg_pyspark)
 
-## cluster_pyspark 聚类模型_分布式
+## cluster 聚类模型
 * [BisectingKMeansDPy3](#BisectingKMeans_pyspark)
 * [GaussianMixtureDPy3_copy](#GM_pyspark)
 * [LDADPy3_copy](#LDA_pyspark)
 * [KMeansDPy3](#Kmeans_pyspark)
 
-## model_selection & hyperparameters_tuning_pyspark 模型选择以及调参_分布式
+## model_selection & hyperparameters_tuning 模型选择及调参
 * [ParamSearchTVSPy3](#ParamSearchTV_pyspark)
 * [ParamSearchCVDPy3](#ParamSearchCV_pyspark)
 
-## prediction & metrics_pyspark 模型预测以及评估_分布式
+## prediction & metrics 模型预测以及评估
 * [ModelPredictDPy3](#ModelPred_pyspark)
 * [ModelEvaluateDPy3](#ModelEval_pyspark)
 
-## model_release_pyspark 模型发布_分布式
+## model_release 模型发布
 * [PipelineFitDPy3](#PipelineFit_pyspark)
 * [spark2pmmlDPy](#spark2pmml_pyspark)
 
-## natural_language_processing_pyspark 自然语言处理_分布式
+## natural_language_processing 自然语言处理
 * [RegexTokenizerDPy3](#RegexToken_pyspark)
 * [TokenizerDPy3](#Token_pyspark)
 * [NGramDPy3](#NGram_pyspark)
