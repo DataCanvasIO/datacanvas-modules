@@ -2882,7 +2882,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 
 ## <a id="Pivot_pyspark">PivotingDPy3</a>
-选择指定列进行数据透视操作，分布式数据探索
+选择指定列进行数据透视操作。 
 
 #### Tag:
 
@@ -2902,8 +2902,9 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 * out1 (any): 输出
 
+
 ## <a id="GroupbySum_pyspar">GroupbySumDPy3</a>
-根据指定变量进行分组并求和、取均值、取最大值、取最小值、计数，分布式数据探索
+根据指定变量进行分组并求和、取均值、取最大值、取最小值、计数。 
 
 #### Tag:
 
@@ -2923,8 +2924,9 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 * out1 (any): 输出
 
+
 ## <a id="Correlate_pyspark">CorrelationDPy3</a>
-计算变量间相关系数矩阵，分布式数据探索
+计算变量间相关系数矩阵。 
 
 #### Tag:
 
@@ -2943,8 +2945,9 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 * None
 
+
 ## <a id="FeatInfo_pyspark">FeatureInfoDPy3</a>
-数据信息统计：行数统计、变量数统计、缺失值百分比统计、各变量缺失值统计，分布式数据探索
+数据信息统计：行数统计、变量数统计、缺失值百分比统计、各变量缺失值统计。 
 
 #### Tag:
 
@@ -2960,18 +2963,19 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Output:
 
-* out1 (any): 输出
+* out1 (any): 输出dataframe
 
-* out2 (any): 输出
+* out2 (any): 输出string变量
 
-* out3 (any): 输出
+* out3 (any): 输出非string变量
 
-* out4 (any): 输出
+* out4 (any): 输出数据所有变量
 
-* out5 (any): 输出
+* out5 (any): 输出dataframe
+
 
 ## <a id="ChiSquare_pyspark">ChiSquareTestDPy3</a>
-卡方检验自变量与因变量之间关系，分布式数据探索
+卡方检验自变量与因变量之间关系。 
 
 #### Tag:
 
@@ -2989,8 +2993,9 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 * None
 
+
 ## <a id="VecSlice_pyspark">VectorSlicerDPy3</a>
-VectorSlicer是一个变换器，它采用一个特征向量并输出一个带有原始特征子阵列的新特征向量。 它对于从向量列中提取变量非常有用。分布式数据探索
+VectorSlicer是一个变换器，它采用一个特征向量并输出一个带有原始特征子阵列的新特征向量。 它对于从向量列中提取变量非常有用。 
 
 #### Tag:
 
@@ -3008,8 +3013,9 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 * out1 (any): 输出
 
+
 ## <a id="VecIdx_pyspark">VectorIndexerDPy3</a>
-根据最大类别数识别类别变量，然后对向量中的类别变量索引化，主要作用是提高决策树或随机森林算法的分类效果。分布式数据探索
+根据最大类别数识别类别变量，然后对向量中的类别变量索引化，主要作用是提高决策树或随机森林算法的分类效果。 
 
 #### Tag:
 
@@ -3027,9 +3033,9 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 * out1 (any): 输出
 
-## <a id="VecAssemble_pyspark">VectorAssemblerDPy3</a>
 
-将给定的多列表组合成一个单一的相量列。分布式数据探索
+## <a id="VecAssemble_pyspark">VectorAssemblerDPy3</a>
+将给定的多列表组合成一个单一的相量列。 
 
 #### Tag:
 
@@ -3045,17 +3051,17 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe
 
-* in2 (any): 输入
+* in2 (any): 输入数据所有变量
 
 #### Output:
 
 * out1 (any): 输出
 
-## <a id="StrIdx_pyspark">StringIndexerDPy3</a>
 
-将字符串列编码为标签索引列。分布式数据探索
+## <a id="StrIdx_pyspark">StringIndexerDPy3</a>
+将字符串列编码为标签索引列。 
 
 #### Tag:
 
@@ -3069,21 +3075,21 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe
 
-* in2 (any): 输入
+* in2 (any): 输入string变量
 
-* in3 (any): 输入
+* in3 (any): 输入非string变量
 
 #### Output:
 
-* out1 (any): 输出
+* out1 (any): 输出dataframe
 
-* out2 (any): 输出
+* out2 (any): 输出变量
+
 
 ## <a id="StdScale_pyspark">StandardScalerDPy3</a>
-
-StandardScaler转换数据集的向量行，将每个变量标准化为具有单位标准差和/或零均值。分布式数据探索
+StandardScaler转换数据集的向量行，将每个变量标准化为具有单位标准差和/或零均值。 
 
 #### Tag:
 
@@ -3101,10 +3107,10 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 #### Output:
 
 * out1 (any): 输出
+ 
 
 ## <a id="StackRow_pyspark">StackRowsDPy3</a>
-
-对两个数据集进行行堆积，分布式数据探索
+对两个数据集进行行堆积。 
 
 #### Tag:
 
@@ -3116,17 +3122,17 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe
 
-* in2 (any): 输入
+* in2 (any): 输入dataframe2
 
 #### Output:
 
 * out1 (any): 输出
 
-## <a id="QuantileDiscret_pyspark">QuantileDiscretizerDPy3</a>
 
-对连续变量进行分箱，转为离散型变量，分箱个数可以自己设定，分布式数据探索
+## <a id="QuantileDiscret_pyspark">QuantileDiscretizerDPy3</a>
+对连续变量进行分箱，转为离散型变量，分箱个数可以自己设定。 
 
 #### Tag:
 
@@ -3137,19 +3143,20 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 * cols (string): 可以选择要处理的变量，如果#则根据输入的非字符串变量进行处理
 
 * handleInvalid (string): 遇到缺失值的处理方法
+
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe
 
-* in2 (any): 输入
+* in2 (any): 输入非string变量
 
 #### Output:
 
 * out1 (any): 输出
 
-## <a id="PolyExpansion_pyspark">PolynomialExpansionDPy3</a>
 
-特征工程：多项式扩展变量，分布式数据探索
+## <a id="PolyExpansion_pyspark">PolynomialExpansionDPy3</a>
+特征工程：多项式扩展变量。
 
 #### Tag:
 
@@ -3167,9 +3174,9 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 * out1 (any): 输出
 
-## <a id="PCA_pyspark">PCADPy3</a>
 
-PCA降维使用正交变换方法将一组互相相关的变量转换为一组线性非相关的变量，分布式数据探索
+## <a id="PCA_pyspark">PCADPy3</a>
+PCA降维使用正交变换方法将一组互相相关的变量转换为一组线性非相关的变量。
 
 #### Tag:
 
@@ -3187,10 +3194,9 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 * out1 (any): 输出
 
+
 ## <a id="OneHot_pyspark">OneHotEncoderDPy3</a>
-
-
-对类别型变量进行独热编码，分布式数据探索
+对类别型变量进行独热编码。
 
 #### Tag:
 
@@ -3202,18 +3208,17 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe
 
-* in2 (any): 输入
+* in2 (any): 输入string变量
 
 #### Output:
 
 * out1 (any): 输出
 
+
 ## <a id="Normlize_pyspark">NormalizerDPy3</a>
-
-
-将每个向量归一化为单位范数，使用何种范数进行归一化可以自行设定，分布式数据探索
+将每个向量归一化为单位范数，使用何种范数进行归一化可以自行设定。
 
 #### Tag:
 
@@ -3231,10 +3236,9 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 * out1 (any): 输出
 
+
 ## <a id="MinMax_pyspark">MinMaxScalerDPy3</a>
-
-
-MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定范围，分布式数据探索
+MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定范围。
 
 #### Tag:
 
@@ -3252,10 +3256,9 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 
 * out1 (any): 输出
 
+
 ## <a id="MergeCols_pyspark">MergeColsDPy3</a>
-
-
-通过共有列组合数据，分布式数据探索
+通过共有列组合数据。
 
 #### Tag:
 
@@ -3267,18 +3270,17 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入dataframe1
 
-* in2 (any): 输入
+* in2 (any): 输入dataframe2
 
 #### Output:
 
 * out1 (any): 输出
 
+
 ## <a id="MaxAbsScl_pyspark">MaxAbsScalerDPy3</a>
-
-
-MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝对值，将每个变量重新缩放到范围[-1,1]。 它不会中心化数据，因此不会破坏任何稀疏性，分布式数据探索
+MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝对值，将每个变量重新缩放到范围[-1,1]。 它不会中心化数据，因此不会破坏任何稀疏性，
 
 #### Tag:
 
@@ -3296,10 +3298,9 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 
 * out1 (any): 输出
 
+
 ## <a id="Idx2Str_pyspark">IndexToStringDPy3</a>
-
-
-将经过数值编码后的变量转回原标签，分布式数据探索
+将经过数值编码后的变量转回原标签。
 
 #### Tag:
 
@@ -3317,10 +3318,9 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 
 * out1 (any): 输出
 
+
 ## <a id="Impute_pyspark">ImputerDPy3</a>
-
-
-Imputer用均值或中位数填补数据中缺失值，要填补的列必须是DoubleType或FloatType，分布式数据探索
+Imputer用均值或中位数填补数据中缺失值，要填补的列必须是DoubleType或FloatType。
 
 #### Tag:
 
@@ -3338,10 +3338,9 @@ Imputer用均值或中位数填补数据中缺失值，要填补的列必须是D
 
 * out1 (any): 输出
 
+
 ## <a id="FeatHash_pyspark">FeatureHasherDPy3</a>
-
-
-FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵中的列索引。这样的做法使得计算速度提升并且节省了内存，分布式数据探索
+FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵中的列索引。这样的做法使得计算速度提升并且节省了内存。
 
 #### Tag:
 
@@ -3361,10 +3360,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (any): 输出
 
+
 ## <a id="DropNan_pyspark">DropNADPy3</a>
-
-
-根据条件删除缺失值，分布式数据探索
+根据条件删除缺失值。
 
 #### Tag:
 
@@ -3386,10 +3384,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (any): 输出
 
+
 ## <a id="ChiSelect_pyspark">ChiSqSelectorDPy3</a>
-
-
-卡方检验筛选变量，分布式数据探索
+卡方检验筛选变量。
 
 #### Tag:
 
@@ -3409,10 +3406,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (any): 输出
 
+
 ## <a id="FillNan_pyspark">FillNADPy3</a>
-
-
-用固定值填充缺失值，分布式数据探索
+用固定值填充缺失值。
 
 #### Tag:
 
@@ -3432,10 +3428,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (any): 输出
 
+
 ## <a id="Split_pyspark">SplitDPy3</a>
-
-
-分割训练集和测试集，分布式数据探索
+分割训练集和测试集。
 
 #### Tag:
 
@@ -3451,15 +3446,13 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Output:
 
-* out1 (any): 输出
+* out1 (any): 输出训练集
 
-* out2 (any): 输出
+* out2 (any): 输出测试集
 
 
 ## <a id="DTClas_pyspark">DecisionTreeClassifierDPy3</a>
-
-
-分布式决策树分类模型
+分布式决策树分类模型。
 
 #### Tag:
 
@@ -3489,9 +3482,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 
 ## <a id="MLPClas_pyspark">MultilayerPerceptronClassifierDPy2</a>
-
-
-多层感知机分布式分类器
+多层感知机分布式分类器。
 
 #### Tag:
 
@@ -3529,9 +3520,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 
 ## <a id="NB_pyspark">NaiveBayesDPy2</a>
-
-
-朴素贝叶斯分布式分类器
+朴素贝叶斯分布式分类器。
 
 #### Tag:
 
@@ -3559,10 +3548,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (model.pmml): 输出
 
+
 ## <a id="RFClas_pyspark">RandomForestClassifierDPy2</a>
-
-
-随机森林分布式分类器
+随机森林分布式分类器。
 
 #### Tag:
 
@@ -3596,10 +3584,9 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 * out1 (model.pmml): 输出
 
+
 ## <a id="GBTClas_pyspark">GBTClassifierDPy2</a>
-
-
-GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToString
+GBT分类器
 
 #### Tag:
 
@@ -3633,41 +3620,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (model.pmml): 输出
 
-## <a id="LR3_pyspark">LogisticRegressionDPy3</a>
-
-
-逻辑回归pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToString
-
-#### Tag:
-
-* classifier
-
-#### Param:
-
-* label (string): 数据集标签
-
-* maxIter (int): 最大迭代次数
-
-* regParam (double): 正则化参数
-
-* elasticNetParam (double): 弹性网络混合参数，范围[0,1]
-
-* threshold (double): 预测分类时的决策阈值
-
-* testRate (double): 训练集、测试集切分比例
-
-#### Input:
-
-* in1 (any): 输入
-
-#### Output:
-
-* out1 (model.pmml): 输出
 
 ## <a id="LR2_pyspark">LogisticRegressionDPy2</a>
-
-
-逻辑回归pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToString
+逻辑回归模型。
 
 #### Tag:
 
@@ -3695,9 +3650,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 
 ## <a id="DTReg_pyspark">DecisionTreeRegressorDPy3</a>
-
-
-分布式决策树回归模型
+分布式决策树回归模型。
 
 #### Tag:
 
@@ -3734,9 +3687,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 
 ## <a id="RFReg_pyspark">RandomForestRegressorDPy3</a>
-
-
-分布式随机森林回归模型
+分布式随机森林回归模型。
 
 #### Tag:
 
@@ -3768,10 +3719,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
+
 ## <a id="LR_pyspark">LinearRegressionDPy3</a>
-
-
-分布式线性回归模型
+分布式线性回归模型。
 
 #### Tag:
 
@@ -3806,10 +3756,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
+
 ## <a id="GLR_pyspark">GeneralizedLinearRegressionDPy2</a>
-
-
-分布式广义线性回归模型
+分布式广义线性回归模型。
 
 #### Tag:
 
@@ -3843,10 +3792,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
+
 ## <a id="GBTReg_pyspark">GBTRegressorDPy2</a>
-
-
-分布式提升回归树
+分布式提升回归树。
 
 #### Tag:
 
@@ -3886,8 +3834,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 
 ## <a id="BisectingKMeans_pyspark">BisectingKMeansDPy3</a>
-
-分布式BisectingKMeans聚类
+分布式BisectingKMeans聚类。
 
 #### Tag:
 
@@ -3916,9 +3863,8 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * output_path (model.pmml): 输出
 
 
-## <a id="GM_pyspark">GaussianMixtureDPy3_copy</a>
-
-分布式GaussianMixture聚类
+## <a id="GM_pyspark">GaussianMixtureDPy3</a>
+分布式GaussianMixture聚类。
 
 #### Tag:
 
@@ -3948,9 +3894,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * output_path (model.pmml): 输出
 
-## <a id="LDA_pyspark">LDADPy3_copy</a>
 
-分布式LDA聚类
+## <a id="LDA_pyspark">LDADPy3</a>
+分布式LDA聚类。
 
 #### Tag:
 
@@ -3994,9 +3940,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * output_path (model.pmml): 输出
 
-## <a id="Kmeans_pyspark">KMeansDPy3</a>
 
-分布式Kmeans聚类
+## <a id="Kmeans_pyspark">KMeansDPy3</a>
+分布式Kmeans聚类。
 
 #### Tag:
 
@@ -4028,9 +3974,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * output_path (model.pmml): 输出
 
-## <a id="ParamSearchTV_pyspark">ParamSearchTVSPy3</a>
 
-通过留出法搜索参数
+## <a id="ParamSearchTV_pyspark">ParamSearchTVSPy3</a>
+通过留出法搜索参数。
 
 #### Tag:
 
@@ -4053,10 +3999,10 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 #### Output:
 
 * out1 (any): 输出
+
 
 ## <a id="ParamSearchCV_pyspark">ParamSearchCVDPy3</a>
-
-通过交叉验证搜索参数
+通过交叉验证搜索参数。
 
 #### Tag:
 
@@ -4080,9 +4026,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
-## <a id="ModelPred_pyspark">ModelPredictDPy3</a>
 
-模型预测
+## <a id="ModelPred_pyspark">ModelPredictDPy3</a>
+模型预测。
 
 #### Tag:
 
@@ -4102,9 +4048,9 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
-## <a id="ModelEval_pyspark">ModelEvaluateDPy3</a>
 
-模型评估并将评估分数发送到MLServer
+## <a id="ModelEval_pyspark">ModelEvaluateDPy3</a>
+模型评估并将评估分数发送到MLServer。
 
 #### Tag:
 
@@ -4124,8 +4070,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 
 ## <a id="PipelineFit_pyspark">PipelineFitDPy3</a>
-
-读入管道并根据数据训练出管道模型
+读入管道并根据数据训练出管道模型。
 
 #### Tag:
 
@@ -4137,17 +4082,17 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Input:
 
-* in1 (json): 输入
+* in1 (json): 输入管道
 
-* in2 (any): 输入
+* in2 (any): 输入dataframe
 
 #### Output:
 
 * out1 (any): 输出
 
-## <a id="spark2pmml_pyspark">spark2pmmlDPy</a>
 
-模型转换为pmml格式
+## <a id="spark2pmml_pyspark">spark2pmmlDPy3</a>
+模型转换为pmml格式.
 
 #### Tag:
 
@@ -4159,17 +4104,17 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Input:
 
-* in1 (any): 输入
+* in1 (any): 输入数据
 
-* in2 (model.pkl): 输入
+* in2 (model.pkl): 输入模型
 
 #### Output:
 
 * None
 
-## <a id="RegexToken_pyspark">RegexTokenizerDPy3</a>
 
-自定义分隔符分词，支持正则表达式
+## <a id="RegexToken_pyspark">RegexTokenizerDPy3</a>
+自定义分隔符分词，支持正则表达式。
 
 #### Tag:
 
@@ -4199,8 +4144,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 
 ## <a id="Token_pyspark">TokenizerDPy3</a>
-
-空格分词
+空格分词。
 
 #### Tag:
 
@@ -4220,8 +4164,8 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
-## <a id="NGram_pyspark">NGramDPy3</a>
 
+## <a id="NGram_pyspark">NGramDPy3</a>
 NGram
 
 #### Tag:
@@ -4244,9 +4188,9 @@ NGram
 
 * output_path (any): 输出
 
-## <a id="StopWordsRemove_pyspark">StopWordsRemoverDPy3</a>
 
-去停用词
+## <a id="StopWordsRemove_pyspark">StopWordsRemoverDPy3</a>
+去停用词。
 
 #### Tag:
 
@@ -4270,9 +4214,9 @@ NGram
 
 * out1 (any): 输出
 
-## <a id="IDF_pyspark">IDFDPy3_copy</a>
 
-利用IDFModel获取特征向量（通常由HashingTF或CountVectorizer创建）并缩放每列
+## <a id="IDF_pyspark">IDFDPy3</a>
+利用IDFModel获取特征向量（通常由HashingTF或CountVectorizer创建）并缩放每列。
 
 #### Tag:
 
@@ -4294,9 +4238,9 @@ NGram
 
 * output_path (any): 输出
 
-## <a id="HashTF_pyspark">HashingTFDPy3</a>
 
-将原始特征通过应用哈希函数映射到索引中
+## <a id="HashTF_pyspark">HashingTFDPy3</a>
+将原始特征通过应用哈希函数映射到索引中。
 
 #### Tag:
 
@@ -4320,9 +4264,9 @@ NGram
 
 * output_path (any): 输出
 
-## <a id="Word2Vec_pyspark">Word2VecDPy3</a>
 
-将每个单词映射到一个唯一的固定大小向量
+## <a id="Word2Vec_pyspark">Word2VecDPy3</a>
+将每个单词映射到一个唯一的固定大小向量。
 
 #### Tag:
 
@@ -4358,9 +4302,9 @@ NGram
 
 * out1 (any): 输出
 
-## <a id="CountVec_pyspark">CountVectorDPy3</a>
 
-将词汇生成文档的稀疏表示
+## <a id="CountVec_pyspark">CountVectorDPy3</a>
+将词汇生成文档的稀疏表示。
 
 #### Tag:
 
