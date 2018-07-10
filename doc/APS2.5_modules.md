@@ -1,6 +1,6 @@
-# [跳转至标签](#tag)
+# [跳转至标签索引](#tag)
 
-# Update
+# Update 更新说明
 
 ## 180707
 * [D] [Range](#Range)
@@ -362,7 +362,7 @@
 * [A] [FunctionTransformer](#ft)
 * [A] [PolyNomialFeatures](#poly)
 
-# <a id="tag">标签</a>
+# <a id="tag">Index 标签索引</a>
 
 # Python 单机版
 
@@ -603,7 +603,7 @@
 * [Word2VecDPy3](#Word2Vec_pyspark)
 * [CountVectorDPy3](#CountVec_pyspark)
 
-# Module
+# Module 模块列表
 
 ## <a id="AboostC">AdaboostClasSPy3</a>
 一种对同一个训练集训练不同的分类器(弱分类器)，然后把这些弱分类器集合起来构成一个更强的最终分类器(强分类器)的迭代算法。其算法本身是通过改变数据分布来实现的，它根据每次训练集之中每个样本的分类是否正确，以及上次的总体分类的准确率，来确定每个样本的权值。将修改过权值的新数据集送给下层分类器进行训练，最后将每次训练得到的分类器最后融合起来，作为最后的决策分类器。使用adaboost分类器可以排除一些不必要的训练数据特征，并放在关键的训练数据上面。
@@ -2724,7 +2724,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 * cols (string): 类别列名，多列用逗号分割		
 * handling (string): 特征处理策略		
-* targetCol (string): 目标列，仅支持一列		
+* targetCol (string): 目标列，仅支持一列
 
 #### Input:
 
@@ -2744,10 +2744,10 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Param:
 
-* targetCol (string): 目标列			
+* targetCol (string): 目标列
 * cols (string): 数值列，多列使用逗号分割		
 * handling (string): 数值特征处理策略
-* rescaling (string): handling为ASREGULARFEATURE必填	
+* rescaling (string): handling为ASREGULARFEATURE必填
 * binarizeThreshold (string): handling为BINARIZETHRESHOLD必填		
 * constantValue (double): 固定值，binarizeThreshold为CONSTANT必填		
 * quantizeNum (int): handling为QUANTIZE必填			
@@ -2886,7 +2886,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Tag:
 
-* data_exploration_pyspark
+* data_exploration
 
 #### Param:
 
@@ -2907,7 +2907,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Tag:
 
-* data_exploration_pyspark
+* data_exploration
 
 #### Param:
 
@@ -2928,7 +2928,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Tag:
 
-* data_exploration_pyspark
+* data_exploration
 
 #### Param:
 
@@ -2948,7 +2948,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Tag:
 
-* data_exploration_pyspark
+* data_exploration
 
 #### Param:
 
@@ -2975,7 +2975,7 @@ WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自�
 
 #### Tag:
 
-* data_exploration_pyspark
+* data_exploration
 
 #### Param:
 
@@ -2994,7 +2994,7 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3013,7 +3013,7 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3033,7 +3033,7 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3059,7 +3059,7 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3087,7 +3087,7 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3108,7 +3108,7 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3130,7 +3130,7 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3153,7 +3153,7 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3173,7 +3173,7 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3194,7 +3194,7 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3217,7 +3217,7 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3238,7 +3238,7 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3259,7 +3259,7 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3282,7 +3282,7 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3303,7 +3303,7 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3324,7 +3324,7 @@ Imputer用均值或中位数填补数据中缺失值，要填补的列必须是D
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3345,7 +3345,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3368,7 +3368,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3393,7 +3393,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3416,7 +3416,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3439,7 +3439,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* preprocessing_pyspark
+* preprocessing
 
 #### Param:
 
@@ -3463,7 +3463,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3495,7 +3495,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3535,7 +3535,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3566,7 +3566,7 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3603,7 +3603,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3640,7 +3640,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3671,7 +3671,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* classifier_pyspark
+* classifier
 
 #### Param:
 
@@ -3701,7 +3701,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* regressor_pyspark
+* regressor
 
 #### Param:
 
@@ -3740,7 +3740,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* regressor_pyspark
+* regressor
 
 #### Param:
 
@@ -3768,14 +3768,14 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 * out1 (any): 输出
 
-## <a id="LR_pyspark"LinearRegressionDPy3</a>
+## <a id="LR_pyspark">LinearRegressionDPy3</a>
 
 
 分布式线性回归模型
 
 #### Tag:
 
-* regressor_pyspark
+* regressor
 
 #### Param:
 
@@ -3813,7 +3813,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* regressor_pyspark
+* regressor
 
 #### Param:
 
@@ -3850,7 +3850,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* regressor_pyspark
+* regressor
 
 #### Param:
 
@@ -3891,7 +3891,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* cluster_pyspark
+* cluster
 
 #### Param:
 
@@ -3922,7 +3922,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* cluster_pyspark
+* cluster
 
 #### Param:
 
@@ -3954,7 +3954,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* cluster_pyspark
+* cluster
 
 #### Param:
 
@@ -4000,7 +4000,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* cluster_pyspark
+* cluster
 
 #### Param:
 
@@ -4034,7 +4034,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* model_selection & hyperparameters_tuning_pyspark
+* model_selection & hyperparameters_tuning
 
 #### Param:
 
@@ -4060,7 +4060,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* model_selection & hyperparameters_tuning_pyspark
+* model_selection & hyperparameters_tuning
 
 #### Param:
 
@@ -4086,7 +4086,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* prediction & metrics_pyspark
+* prediction & metrics
 
 #### Param:
 
@@ -4108,7 +4108,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* prediction & metrics_pyspark
+* prediction & metrics
 
 #### Param:
 
@@ -4129,7 +4129,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* model_release_pyspark
+* model_release
 
 #### Param:
 
@@ -4151,7 +4151,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* model_release_pyspark
+* model_release
 
 #### Param:
 
@@ -4173,7 +4173,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4204,7 +4204,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4226,7 +4226,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4250,7 +4250,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4276,7 +4276,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4300,7 +4300,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4326,7 +4326,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 
@@ -4364,7 +4364,7 @@ NGram
 
 #### Tag:
 
-* natural_language_processing_pyspark
+* natural_language_processing
 
 #### Param:
 

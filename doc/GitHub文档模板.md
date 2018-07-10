@@ -7,7 +7,7 @@
 
 #### Param:
 
-* None
+* col1 (string): 变量1
 
 #### Input:
 
