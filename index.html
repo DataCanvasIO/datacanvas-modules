@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>DataCanvas Modules Manual</title>
+        <title>Data Modules Manual</title>
         <link href="css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">DataCanvas Modules Manual</a>
+                    <a class="navbar-brand" href=".">Data Modules Manual</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -189,6 +189,10 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#datacanvas-aps-25">DataCanvas APS 2.5</a></li>
         <!-- -->
+        <li class="main "><a href="#screwjack">ScrewJack</a></li>
+        <!--
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -212,7 +216,24 @@
 <li>
 <p>九章云极DataCanvas APS支持自动建模能力，在确定目标问题的前提下，支持自动模型选择、自动超参数优化、自动模型评估等功能极大的降低了机器学习建模的门槛。</p>
 </li>
-</ol></div>
+</ol>
+<h1 id="screwjack">ScrewJack</h1>
+<hr />
+<p>ScrewJack是一个用于操作模块的小型命令行工具。</p>
+<h2 id="installation">Installation</h2>
+<p>可以直接用pip安装:</p>
+<pre><code class="sh">pip install -U screwjack
+</code></pre>
+
+<p>或者，也可以使用最新的版本</p>
+<pre><code class="sh">git clone http://github.com/DataCanvasIO/screwjack.git screwjack.git
+cd screwjack.git
+pip install -r requirements.txt
+./bin/screwjack --help
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+<p>细节请查看<a href="http://screwjack.readthedocs.org">在线文档</a>。</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -295,5 +316,5 @@
 
 <!--
 MkDocs version : 1.0a1
-Build Date UTC : 2018-07-17 07:35:16
+Build Date UTC : 2018-07-17 08:12:58
 -->

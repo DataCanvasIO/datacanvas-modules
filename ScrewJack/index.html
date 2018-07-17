@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>通用模块 - Data Modules Manual</title>
+        <title>ScrewJack - Data Modules Manual</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,12 +49,12 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">单机模块 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">通用模块</a>
+<li >
+    <a href="../utils_py/">通用模块</a>
 </li>
                                     
 <li >
@@ -169,16 +169,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="..">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../SQL_py/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -187,232 +177,33 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#csv2pklunivspy3">CSV2PKLUnivSPy3</a></li>
+        <li class="main active"><a href="#screwjack">ScrewJack</a></li>
         <!--
-            <li><a href="#tag">Tag:</a></li>
-            <li><a href="#param">Param:</a></li>
-            <li><a href="#input">Input:</a></li>
-            <li><a href="#output">Output:</a></li> -->
-        <li class="main "><a href="#datadownloaderunivspy3">DataDownloaderUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_1">Tag:</a></li>
-            <li><a href="#param_1">Param:</a></li>
-            <li><a href="#input_1">Input:</a></li>
-            <li><a href="#output_1">Output:</a></li> -->
-        <li class="main "><a href="#datainfounivspy3">DataInfoUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_2">Tag:</a></li>
-            <li><a href="#param_2">Param:</a></li>
-            <li><a href="#input_2">Input:</a></li>
-            <li><a href="#output_2">Output:</a></li> -->
-        <li class="main "><a href="#hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_3">Tag:</a></li>
-            <li><a href="#param_3">Param:</a></li>
-            <li><a href="#input_3">Input:</a></li>
-            <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#hivedownloaderunivspy3">HiveDownloaderUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_4">Tag:</a></li>
-            <li><a href="#param_4">Param:</a></li>
-            <li><a href="#input_4">Input:</a></li>
-            <li><a href="#output_4">Output:</a></li> -->
-        <li class="main "><a href="#jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_5">Tag:</a></li>
-            <li><a href="#param_5">Param:</a></li>
-            <li><a href="#input_5">Input:</a></li>
-            <li><a href="#output_5">Output:</a></li> -->
-        <li class="main "><a href="#pkl2csvunivspy3">PKL2CSVUnivSPy3</a></li>
-        <!--
-            <li><a href="#tag_6">Tag:</a></li>
-            <li><a href="#param_6">Param:</a></li>
-            <li><a href="#input_6">Input:</a></li>
-            <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#pklfromstoragespy3">PKLfromStorageSPy3</a></li>
-        <!--
-            <li><a href="#tag_7">Tag:</a></li>
-            <li><a href="#param_7">Param:</a></li>
-            <li><a href="#input_7">Input:</a></li>
-            <li><a href="#output_7">Output:</a></li> -->
-        <li class="main "><a href="#pkltostroragespy3">PKLtoStrorageSPy3</a></li>
-        <!--
-            <li><a href="#tag_8">Tag:</a></li>
-            <li><a href="#param_8">Param:</a></li>
-            <li><a href="#input_8">Input:</a></li>
-            <li><a href="#output_8">Output:</a></li> -->
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#about">About</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="csv2pklunivspy3">CSV2PKLUnivSPy3</h2>
-<p>将csv转换为pkl格式</p>
-<h4 id="tag">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input">Input:</h4>
-<ul>
-<li>d_data1 (csv) </li>
-</ul>
-<h4 id="output">Output:</h4>
-<ul>
-<li>d_data2 (py3pkl) </li>
-</ul>
-<h2 id="datadownloaderunivspy3">DataDownloaderUnivSPy3</h2>
-<p>解析数据模块表示的资源引用，然后导入工作流。</p>
-<h4 id="tag_1">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_1">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input_1">Input:</h4>
-<ul>
-<li>data_source (datasource.file) </li>
-</ul>
-<h4 id="output_1">Output:</h4>
-<ul>
-<li>data (any) </li>
-</ul>
-<h2 id="datainfounivspy3">DataInfoUnivSPy3</h2>
-<p>数据统计：数据类型，最大值，最小值，中位数</p>
-<h4 id="tag_2">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_2">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input_2">Input:</h4>
-<ul>
-<li>d_data (py3pkl) </li>
-</ul>
-<h4 id="output_2">Output:</h4>
-<ul>
-<li>o_data_type_null (html) </li>
-<li>o_data_describe (html) </li>
-</ul>
-<h2 id="hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</h2>
-<p>从HDFS路径获取数据</p>
-<h4 id="tag_3">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_3">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input_3">Input:</h4>
-<ul>
-<li>o_path (any) </li>
-</ul>
-<h4 id="output_3">Output:</h4>
-<ul>
-<li>d_data (any) </li>
-</ul>
-<h2 id="hivedownloaderunivspy3">HiveDownloaderUnivSPy3</h2>
-<p>从Hive对应数据库获取数据</p>
-<h4 id="tag_4">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_4">Param:</h4>
-<ul>
-<li>script (string) : </li>
-</ul>
-<h4 id="input_4">Input:</h4>
-<ul>
-<li>o_path (any) </li>
-</ul>
-<h4 id="output_4">Output:</h4>
-<ul>
-<li>d_data (csv) </li>
-</ul>
-<h2 id="jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</h2>
-<p>通过JDBC方式，访问数据库。</p>
-<h4 id="tag_5">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_5">Param:</h4>
-<ul>
-<li>jdbc_url (string) : 数据库JDBC连接串</li>
-<li>driver_jar (string) : 数据库驱动路径</li>
-<li>query (string) : SQL语句</li>
-<li>driver_name (string) : 驱动类名</li>
-<li>delimiter (string) : 数据的分隔符</li>
-</ul>
-<h4 id="input_5">Input:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="output_5">Output:</h4>
-<ul>
-<li>output_file (any) </li>
-</ul>
-<h2 id="pkl2csvunivspy3">PKL2CSVUnivSPy3</h2>
-<p>将pkl转换为csv格式</p>
-<h4 id="tag_6">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_6">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input_6">Input:</h4>
-<ul>
-<li>d_data1 (py3pkl) </li>
-</ul>
-<h4 id="output_6">Output:</h4>
-<ul>
-<li>d_data2 (csv) </li>
-</ul>
-<h2 id="pklfromstoragespy3">PKLfromStorageSPy3</h2>
-<p>从个人存储空间中读入PKL文件</p>
-<h4 id="tag_7">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_7">Param:</h4>
-<ul>
-<li>input_name (string) : 从个人存储空间读入文件名</li>
-</ul>
-<h4 id="input_7">Input:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="output_7">Output:</h4>
-<ul>
-<li>o_pkl_file (py3pkl) </li>
-</ul>
-<h2 id="pkltostroragespy3">PKLtoStrorageSPy3</h2>
-<p>将PKL文件导入个人存储空间中</p>
-<h4 id="tag_8">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_8">Param:</h4>
-<ul>
-<li>output_name (string) : 填写输出文件的名字</li>
-<li>foldername (string) : </li>
-</ul>
-<h4 id="input_8">Input:</h4>
-<ul>
-<li>o_pkl_file (any) </li>
-</ul>
-<h4 id="output_8">Output:</h4>
-<ul>
-<li>None</li>
-</ul></div>
+<h1 id="screwjack">ScrewJack</h1>
+<p>ScrewJack is a tiny command line tool for manipulating modules.</p>
+<h2 id="installation">Installation</h2>
+<p>Install directly by pip:</p>
+<pre><code class="sh">pip install -U screwjack
+</code></pre>
+
+<p>Or, you can use the latest version:</p>
+<pre><code class="sh">git clone http://github.com/DataCanvasIO/screwjack.git screwjack.git
+cd screwjack.git
+pip install -r requirements.txt
+./bin/screwjack --help
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+<p><a href="http://screwjack.readthedocs.org">Online document</a> is also avaliable.</p>
+<h2 id="about">About</h2>
+<p>ScrewJack is licensed under BSD (3-Clause) License, see LICENSE file for detail. Comments and contribution are welcome.</p></div>
         </div>
 
         <footer class="col-md-12">
