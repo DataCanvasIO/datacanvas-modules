@@ -1,0 +1,33 @@
+site_name: DataCanvas Modules Manual
+nav:
+    - Home: index.md
+    - 单机模块: 
+        - 通用模块: utils_py.md
+        - SQL: SQL_py.md
+        - 数据操作: dataframe_py.md
+        - 数据预处理: preprocessing_py.md
+        - 特征选择: feature_selection_py.md
+        - 分类模型: classifier_py.md
+        - 聚类模型: cluster_py.md
+        - 回归模型: regressor.md
+        - 模型调参: hyperparameters_tuning_py.md
+        - 模型预测: prediction_py.md
+        - 模型评估: metrics_py.md
+        - 模型发布: model_release_py.md
+        - 可视化: visualization_py.md
+        - 自然语言处理: NLP_py.md
+        - 自动建模模块: auto_ML_py.md
+    - 分布式模块: 
+        - 数据探索: data_exploration_pyspark.md
+        - 数据预处理: preprocessing_pyspark.md
+        - 分类模型: classifier_pyspark.md
+        - 回归模型: regressor_pyspark.md
+        - 聚类模型: cluster_pyspark.md
+        - 模型选择及调参: model_selection_hyperparameters_tuning_pyspark.md
+        - 模型预测及评估: prediction_metrics_pyspark.md
+        - 模型发布: model_release_pyspark.md
+        - 自然语言处理: NLP_pyspark.md
+    - 深度学习模块: deeplearning_py.md
+    - R语言模块: R.md
+#theme: readthedocs
+#theme: material

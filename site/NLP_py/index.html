@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>自然语言处理 - DataCanvas Modules Manual</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">DataCanvas Modules Manual</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">单机模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../utils_py/">通用模块</a>
+</li>
+                                    
+<li >
+    <a href="../SQL_py/">SQL</a>
+</li>
+                                    
+<li >
+    <a href="../dataframe_py/">数据操作</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_py/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../feature_selection_py/">特征选择</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_py/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_py/">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../regressor/">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../hyperparameters_tuning_py/">模型调参</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_py/">模型预测</a>
+</li>
+                                    
+<li >
+    <a href="../metrics_py/">模型评估</a>
+</li>
+                                    
+<li >
+    <a href="../model_release_py/">模型发布</a>
+</li>
+                                    
+<li >
+    <a href="../visualization_py/">可视化</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">自然语言处理</a>
+</li>
+                                    
+<li >
+    <a href="../auto_ML_py/">自动建模模块</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">分布式模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../data_exploration_pyspark/">数据探索</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_pyspark/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_pyspark/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../regressor_pyspark/">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_pyspark/">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../model_selection_hyperparameters_tuning_pyspark/">模型选择及调参</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
+</li>
+                                    
+<li >
+    <a href="../model_release_pyspark/">模型发布</a>
+</li>
+                                    
+<li >
+    <a href="../NLP_pyspark/">自然语言处理</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../deeplearning_py/">深度学习模块</a>
+                            </li>
+                            <li >
+                                <a href="../R/">R语言模块</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../visualization_py/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../auto_ML_py/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#doc2vecpy3">Doc2VecPy3</a></li>
+        <!--
+            <li><a href="#tag">Tag:</a></li>
+            <li><a href="#param">Param:</a></li>
+            <li><a href="#input">Input:</a></li>
+            <li><a href="#output">Output:</a></li> -->
+        <li class="main "><a href="#fasttextspy3">FastTextSPy3</a></li>
+        <!--
+            <li><a href="#tag_1">Tag:</a></li>
+            <li><a href="#param_1">Param:</a></li>
+            <li><a href="#input_1">Input:</a></li>
+            <li><a href="#output_1">Output:</a></li> -->
+        <li class="main "><a href="#idfspy3">IDFSPy3</a></li>
+        <!--
+            <li><a href="#tag_2">Tag:</a></li>
+            <li><a href="#param_2">Param:</a></li>
+            <li><a href="#input_2">Input:</a></li>
+            <li><a href="#output_2">Output:</a></li> -->
+        <li class="main "><a href="#jiebaspy3">JiebaSPy3</a></li>
+        <!--
+            <li><a href="#tag_3">Tag:</a></li>
+            <li><a href="#param_3">Param:</a></li>
+            <li><a href="#input_3">Input:</a></li>
+            <li><a href="#output_3">Output:</a></li> -->
+        <li class="main "><a href="#word2cutspy3">Word2CutSPy3</a></li>
+        <!--
+            <li><a href="#tag_4">Tag:</a></li>
+            <li><a href="#param_4">Param:</a></li>
+            <li><a href="#input_4">Input:</a></li>
+            <li><a href="#output_4">Output:</a></li> -->
+        <li class="main "><a href="#word2vecspy3">Word2VecSPy3</a></li>
+        <!--
+            <li><a href="#tag_5">Tag:</a></li>
+            <li><a href="#param_5">Param:</a></li>
+            <li><a href="#input_5">Input:</a></li>
+            <li><a href="#output_5">Output:</a></li> -->
+        <li class="main "><a href="#wordfittingspy3">WordFittingSPy3</a></li>
+        <!--
+            <li><a href="#tag_6">Tag:</a></li>
+            <li><a href="#param_6">Param:</a></li>
+            <li><a href="#input_6">Input:</a></li>
+            <li><a href="#output_6">Output:</a></li> -->
+        <li class="main "><a href="#wordsegdspy3">WordSegdSPy3</a></li>
+        <!--
+            <li><a href="#tag_7">Tag:</a></li>
+            <li><a href="#param_7">Param:</a></li>
+            <li><a href="#input_7">Input:</a></li>
+            <li><a href="#output_7">Output:</a></li> -->
+        <li class="main "><a href="#gensimword2vecspy3">GensimWord2VecSPy3</a></li>
+        <!--
+            <li><a href="#tag_8">Tag:</a></li>
+            <li><a href="#param_8">Param:</a></li>
+            <li><a href="#input_8">Input:</a></li>
+            <li><a href="#output_8">Output:</a></li> -->
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="doc2vecpy3">Doc2VecPy3</h2>
+<p>自定义基于词袋模型与词聚类的doc2vec</p>
+<h4 id="tag">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input">Input:</h4>
+<ul>
+<li>
+<p>in1 (any): 输入</p>
+</li>
+<li>
+<p>idf_path (any): 输入</p>
+</li>
+<li>
+<p>stop_words_path (any): 输入</p>
+</li>
+<li>
+<p>wc_path (any): 输入</p>
+</li>
+</ul>
+<h4 id="output">Output:</h4>
+<ul>
+<li>out1 (csv): 输出 </li>
+</ul>
+<h2 id="fasttextspy3">FastTextSPy3</h2>
+<p>FastText是Facebook开发的一款快速文本分类器，提供简单而高效的文本分类和表征学习的方法</p>
+<h4 id="tag_1">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_1">Param:</h4>
+<ul>
+<li>model (string): skipgram 或者 cbow</li>
+<li>lr (double): 学习速率</li>
+<li>dim (int): 词向量维度</li>
+</ul>
+<h4 id="input_1">Input:</h4>
+<ul>
+<li>word (txt): 分词后的数据</li>
+</ul>
+<h4 id="output_1">Output:</h4>
+<ul>
+<li>model (bin): 包含模型参数的二进制文件以及字典和所有超参数。</li>
+<li>vec (bin): 词向量, 一词一行</li>
+</ul>
+<h2 id="idfspy3">IDFSPy3</h2>
+<p>逆向文件频率</p>
+<h4 id="tag_2">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_2">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_2">Input:</h4>
+<ul>
+<li>
+<p>in1 (any): 输入</p>
+</li>
+<li>
+<p>top_words_path (any): 输入</p>
+</li>
+</ul>
+<h4 id="output_2">Output:</h4>
+<ul>
+<li>out1 (any): 输出</li>
+</ul>
+<h2 id="jiebaspy3">JiebaSPy3</h2>
+<p>load进gensim生成的词向量模型，打印词向量</p>
+<h4 id="tag_3">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_3">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_3">Input:</h4>
+<ul>
+<li>model (model): gensim训练的词向量模型</li>
+</ul>
+<h4 id="output_3">Output:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="word2cutspy3">Word2CutSPy3</h2>
+<p>中文分词</p>
+<h4 id="tag_4">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_4">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_4">Input:</h4>
+<ul>
+<li>text_feature (py3pkl): 输入的文本</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>cut_feature (py3pkl): 分词后文本(pickle格式)</li>
+<li>cutted (txt): 分词后文本(txt格式可查看)</li>
+</ul>
+<h2 id="word2vecspy3">Word2VecSPy3</h2>
+<p>把文本特征转成词向量</p>
+<h4 id="tag_5">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_5">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_5">Input:</h4>
+<ul>
+<li>vectorizer (py3pkl): 训练后的词向量模型</li>
+<li>text_feature (py3pkl): 分词后文本</li>
+</ul>
+<h4 id="output_5">Output:</h4>
+<ul>
+<li>vec_feature (py3pkl): 词向量</li>
+</ul>
+<h2 id="wordfittingspy3">WordFittingSPy3</h2>
+<p>训练词向量生成模型</p>
+<h4 id="tag_6">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_6">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_6">Input:</h4>
+<ul>
+<li>word_set (py3pkl): 分词后文本</li>
+</ul>
+<h4 id="output_6">Output:</h4>
+<ul>
+<li>vectorizer (py3pkl): 训练后的词向量模型</li>
+</ul>
+<h2 id="wordsegdspy3">WordSegdSPy3</h2>
+<p>中文分词</p>
+<h4 id="tag_7">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_7">Param:</h4>
+<ul>
+<li>
+<p>cut_fields (string): 需要分词的字段，如果是多个字段用逗号隔开</p>
+</li>
+<li>
+<p>parallel_num (int): 分词并行进程数</p>
+</li>
+</ul>
+<h4 id="input_7">Input:</h4>
+<ul>
+<li>
+<p>in1 (json): 输入</p>
+</li>
+<li>
+<p>dic_path (any): 输入</p>
+</li>
+</ul>
+<h4 id="output_7">Output:</h4>
+<ul>
+<li>out1 (any): 输出</li>
+</ul>
+<h2 id="gensimword2vecspy3">GensimWord2VecSPy3</h2>
+<p>用gensim对原始的文本进行分词、去除停用词等操作，得到特征列表，再训练词向量模型得到词向量</p>
+<h4 id="tag_8">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_8">Param:</h4>
+<ul>
+<li>folderPath (string): 源文件路径</li>
+<li>file_encoding (string): 文件编码格式</li>
+<li>mincount (int): 忽略所有频数小于mincount的词</li>
+</ul>
+<h4 id="input_8">Input:</h4>
+<ul>
+<li>stopwords (txt): 停用词</li>
+<li>user_dict (txt): 原始文本</li>
+</ul>
+<h4 id="output_8">Output:</h4>
+<ul>
+<li>fileSegWordPath (txt): 分词后文本</li>
+<li>model: 训练的词向量模型</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
