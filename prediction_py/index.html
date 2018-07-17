@@ -221,14 +221,14 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>m_fitted_model (py3pkl): 算法训练好的模型</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>d_predict (csv) </li>
-<li>d_pred (csv) </li>
-<li>d_prob (csv) </li>
+<li>d_predict (csv): 预测值及预测概率</li>
+<li>d_pred (csv): 预测值</li>
+<li>d_prob (csv): 预测概率</li>
 </ul>
 <h2 id="logisticpredspy3">LogisticPredSPy3</h2>
 <p>使用训练好的逻辑回归模型进行预测 (在原有预测数据上要先添加截距)</p>
@@ -242,15 +242,15 @@
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_data1 (csv) </li>
-<li>cols (py3pkl) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_data1 (csv): 测试数据</li>
+<li>cols (py3pkl): 训练逻辑回归模型后筛选的变量</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>d_prob (csv) </li>
-<li>d_feature (csv) </li>
+<li>d_pred (csv): 预测值</li>
+<li>d_prob (csv): 预测概率</li>
+<li>d_feature (csv): 特征筛选后的自变量</li>
 </ul>
 <h2 id="stackingpredictspy3">StackingPredictSPy3</h2>
 <p>根据训练好的Stacking模型对数据进行预测</p>
@@ -264,14 +264,14 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>d_predict (csv) </li>
-<li>d_pred (csv) </li>
-<li>d_prob (csv) </li>
+<li>d_pred (csv): 预测值</li>
+<li>d_prob (csv): 预测概率</li>
+<li>d_predict (CSV): 预测值和预测概率</li>
 </ul></div>
         </div>
 

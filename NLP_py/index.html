@@ -257,14 +257,22 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>in1 (any) </li>
-<li>idf_path (any) </li>
-<li>stop_words_path (any) </li>
-<li>wc_path (any) </li>
+<li>
+<p>in1 (any): 输入</p>
+</li>
+<li>
+<p>idf_path (any): 输入</p>
+</li>
+<li>
+<p>stop_words_path (any): 输入</p>
+</li>
+<li>
+<p>wc_path (any): 输入</p>
+</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>out1 (csv) </li>
+<li>out1 (csv): 输出 </li>
 </ul>
 <h2 id="fasttextspy3">FastTextSPy3</h2>
 <p>FastText是Facebook开发的一款快速文本分类器，提供简单而高效的文本分类和表征学习的方法</p>
@@ -274,18 +282,18 @@
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>model (string) : </li>
-<li>lr (double) : </li>
-<li>dim (int) : </li>
+<li>model (string): skipgram 或者 cbow</li>
+<li>lr (double): 学习速率</li>
+<li>dim (int): 词向量维度</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>word (txt) </li>
+<li>word (txt): 分词后的数据</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>model (bin) </li>
-<li>vec (bin) </li>
+<li>model (bin): 包含模型参数的二进制文件以及字典和所有超参数。</li>
+<li>vec (bin): 词向量, 一词一行</li>
 </ul>
 <h2 id="idfspy3">IDFSPy3</h2>
 <p>逆向文件频率</p>
@@ -299,12 +307,16 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>in1 (any) </li>
-<li>stop_words_path (any) </li>
+<li>
+<p>in1 (any): 输入</p>
+</li>
+<li>
+<p>top_words_path (any): 输入</p>
+</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>out1 (any) </li>
+<li>out1 (any): 输出</li>
 </ul>
 <h2 id="jiebaspy3">JiebaSPy3</h2>
 <p>load进gensim生成的词向量模型，打印词向量</p>
@@ -318,7 +330,7 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>model (model) </li>
+<li>model (model): gensim训练的词向量模型</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
@@ -336,12 +348,12 @@
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>text_feature (py3pkl) </li>
+<li>text_feature (py3pkl): 输入的文本</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>cut_feature (py3pkl) </li>
-<li>cutted (txt) </li>
+<li>cut_feature (py3pkl): 分词后文本(pickle格式)</li>
+<li>cutted (txt): 分词后文本(txt格式可查看)</li>
 </ul>
 <h2 id="word2vecspy3">Word2VecSPy3</h2>
 <p>把文本特征转成词向量</p>
@@ -355,12 +367,12 @@
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>vectorizer (py3pkl) </li>
-<li>text_feature (py3pkl) </li>
+<li>vectorizer (py3pkl): 训练后的词向量模型</li>
+<li>text_feature (py3pkl): 分词后文本</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>vec_feature (py3pkl) </li>
+<li>vec_feature (py3pkl): 词向量</li>
 </ul>
 <h2 id="wordfittingspy3">WordFittingSPy3</h2>
 <p>训练词向量生成模型</p>
@@ -374,11 +386,11 @@
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>word_set (py3pkl) </li>
+<li>word_set (py3pkl): 分词后文本</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>vectorizer (py3pkl) </li>
+<li>vectorizer (py3pkl): 训练后的词向量模型</li>
 </ul>
 <h2 id="wordsegdspy3">WordSegdSPy3</h2>
 <p>中文分词</p>
@@ -388,17 +400,25 @@
 </ul>
 <h4 id="param_7">Param:</h4>
 <ul>
-<li>cut_fields (string) : 需要分词的字段，如果是多个字段用逗号隔开</li>
-<li>parallel_num (int) : 分词并行进程数</li>
+<li>
+<p>cut_fields (string): 需要分词的字段，如果是多个字段用逗号隔开</p>
+</li>
+<li>
+<p>parallel_num (int): 分词并行进程数</p>
+</li>
 </ul>
 <h4 id="input_7">Input:</h4>
 <ul>
-<li>in1 (json) </li>
-<li>dic_path (any) </li>
+<li>
+<p>in1 (json): 输入</p>
+</li>
+<li>
+<p>dic_path (any): 输入</p>
+</li>
 </ul>
 <h4 id="output_7">Output:</h4>
 <ul>
-<li>out1 (any) </li>
+<li>out1 (any): 输出</li>
 </ul>
 <h2 id="gensimword2vecspy3">GensimWord2VecSPy3</h2>
 <p>用gensim对原始的文本进行分词、去除停用词等操作，得到特征列表，再训练词向量模型得到词向量</p>
@@ -408,19 +428,19 @@
 </ul>
 <h4 id="param_8">Param:</h4>
 <ul>
-<li>folderPath (string) : 源文件</li>
-<li>file_encoding (string) : </li>
-<li>mincount (int) : </li>
+<li>folderPath (string): 源文件路径</li>
+<li>file_encoding (string): 文件编码格式</li>
+<li>mincount (int): 忽略所有频数小于mincount的词</li>
 </ul>
 <h4 id="input_8">Input:</h4>
 <ul>
-<li>stopwords (txt) </li>
-<li>user_dict (txt) </li>
+<li>stopwords (txt): 停用词</li>
+<li>user_dict (txt): 原始文本</li>
 </ul>
 <h4 id="output_8">Output:</h4>
 <ul>
-<li>fileSegWordPath (txt) </li>
-<li>model (model) </li>
+<li>fileSegWordPath (txt): 分词后文本</li>
+<li>model: 训练的词向量模型</li>
 </ul></div>
         </div>
 

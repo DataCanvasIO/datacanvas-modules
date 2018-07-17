@@ -269,11 +269,11 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>data (csv) </li>
+<li>data (csv): 输入</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>image (pdf) </li>
+<li>image (pdf): 输出</li>
 </ul>
 <h2 id="tensorflow-test">tensorflow-test</h2>
 <p>基于tensorflow框架，构建、训练神经网络模型，并对模型进行预测。</p>
@@ -283,7 +283,7 @@
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>data_path (string) : </li>
+<li>data_path (string) : 数据存放地址</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
@@ -305,11 +305,11 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>data (csv) </li>
+<li>data (csv): 输入</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>result (txt) </li>
+<li>result (txt): 输出</li>
 </ul>
 <h2 id="mxnet_test">mxnet_test</h2>
 <p>基于mxnet框架，构建2层神经网络，实现前向传播和反向传播算法。</p>
@@ -325,11 +325,11 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>data (csv) </li>
+<li>data (csv): 输入</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>out_1 (file) </li>
+<li>out_1 (file): 输出</li>
 </ul>
 <h2 id="imageclassifier_mxnet">imageclassifier_mxnet</h2>
 <p>基于mxnet框架的图像分类demo。</p>
@@ -339,15 +339,15 @@
 </ul>
 <h4 id="param_4">Param:</h4>
 <ul>
-<li>model_name (string) : </li>
+<li>model_name (string): 模型名称</li>
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>image (jpg) </li>
+<li>image (jpg): 输入</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>predict (txt) </li>
+<li>result (txt): 输出</li>
 </ul>
 <h2 id="dataloadmnistkeras">DataLoadMnistKeras</h2>
 <p>从指定路径加载划分为训练集和测试集的mnist数据，返回该路径。</p>
@@ -357,7 +357,7 @@
 </ul>
 <h4 id="param_5">Param:</h4>
 <ul>
-<li>path (string) : </li>
+<li>path (string): 加载路径</li>
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
@@ -365,7 +365,7 @@
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>mnist_path (txt) </li>
+<li>mnist_path (txt): 输出</li>
 </ul>
 <h2 id="datapretreatmentmnistkeras">DataPretreatmentMnistKeras</h2>
 <p>对数据集进行预处理，返回划分好的数据集和shape。</p>
@@ -375,26 +375,52 @@
 </ul>
 <h4 id="param_6">Param:</h4>
 <ul>
-<li>img_rows (int) : 图像像素高度</li>
-<li>img_cols (int) :  图像像素宽度</li>
-<li>num_classes (int) : 分类数目</li>
-<li>train_num (int) : 训练集数目</li>
-<li>test_num (int) : </li>
+<li>
+<p>img_rows (int): 图像像素高度</p>
+</li>
+<li>
+<p>img_cols (int): 图像像素宽度</p>
+</li>
+<li>
+<p>num_classes (int): 分类数目</p>
+</li>
+<li>
+<p>train_num (int): 训练集数目</p>
+</li>
+<li>
+<p>test_num (int): 测试集数目</p>
+</li>
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>path (txt) </li>
+<li>path (txt): 加载路径</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>x_train (csv) </li>
-<li>y_train (csv) </li>
-<li>x_train_shape (csv) </li>
-<li>y_train_shape (csv) </li>
-<li>x_test (csv) </li>
-<li>y_test (csv) </li>
-<li>x_test_shape (csv) </li>
-<li>y_test_shape (csv) </li>
+<li>
+<p>x_train (csv): 训练集特征</p>
+</li>
+<li>
+<p>y_train (csv): 训练集标签</p>
+</li>
+<li>
+<p>x_train_shape (csv): 训练集特征的维度</p>
+</li>
+<li>
+<p>y_train_shape (csv): 训练集标签的维度</p>
+</li>
+<li>
+<p>x_test (csv): 测试集特征</p>
+</li>
+<li>
+<p>y_test (csv): 测试集标签</p>
+</li>
+<li>
+<p>x_test_shape (csv): 测试集特征的维度</p>
+</li>
+<li>
+<p>y_test_shape (csv): 测试集标签的维度</p>
+</li>
 </ul>
 <h2 id="modelevaluatekeras">ModelEvaluateKeras</h2>
 <p>用测试集数据进行模型评估。</p>
@@ -404,24 +430,46 @@
 </ul>
 <h4 id="param_7">Param:</h4>
 <ul>
-<li>mlServerAddr (string) : </li>
-<li>modelName (string) : </li>
-<li>EVALUATE_batch_size (string) : </li>
-<li>EVALUATE_verbose (int) : </li>
-<li>EVALUATE_sample_weight (string) : </li>
+<li>
+<p>mlServerAddr (string): mlserver地址</p>
+</li>
+<li>
+<p>modelName (string): 模型名称</p>
+</li>
+<li>
+<p>EVALUATE_batch_size (string): 批大小</p>
+</li>
+<li>
+<p>EVALUATE_verbose (string): 日志显示</p>
+</li>
+<li>
+<p>EVALUATE_sample_weight (string): 权值的numpy array</p>
+</li>
 </ul>
 <h4 id="input_7">Input:</h4>
 <ul>
-<li>model_trained (h5) </li>
-<li>x_test (csv) </li>
-<li>y_test (csv) </li>
-<li>x_test_shape (csv) </li>
-<li>y_test_shape (csv) </li>
-<li>blockId (pkl) </li>
+<li>
+<p>model_trained (h5): 训练好的模型</p>
+</li>
+<li>
+<p>x_test (csv): 测试集特征</p>
+</li>
+<li>
+<p>y_test (csv): 测试集标签</p>
+</li>
+<li>
+<p>x_test_shape (csv): 测试集特征的维度</p>
+</li>
+<li>
+<p>y_test_shape (csv): 测试集标签的维度</p>
+</li>
+<li>
+<p>blockId (pkl): 输入</p>
+</li>
 </ul>
 <h4 id="output_7">Output:</h4>
 <ul>
-<li>model (model.h5) </li>
+<li>model (model.h5): 输出</li>
 </ul>
 <h2 id="modelmnistkeras">ModelMnistKeras</h2>
 <p>利用keras搭建一个两层的卷积神经网络模型。</p>
@@ -431,9 +479,15 @@
 </ul>
 <h4 id="param_8">Param:</h4>
 <ul>
-<li>img_rows (int) : </li>
-<li>img_cols (int) : </li>
-<li>num_classes (int) : </li>
+<li>
+<p>img_rows (int): 图像像素高度</p>
+</li>
+<li>
+<p>img_cols (int): 图像像素宽度</p>
+</li>
+<li>
+<p>num_classes (int): 分类数目</p>
+</li>
 </ul>
 <h4 id="input_8">Input:</h4>
 <ul>
@@ -441,8 +495,12 @@
 </ul>
 <h4 id="output_8">Output:</h4>
 <ul>
-<li>model (h5) </li>
-<li>model_json (json) </li>
+<li>
+<p>model (h5): 输出</p>
+</li>
+<li>
+<p>model_json (json): 输出</p>
+</li>
 </ul>
 <h2 id="modelstructshowkeras">ModelStructShowKeras</h2>
 <p>利用model.summary打印模型概况。</p>
@@ -456,11 +514,11 @@
 </ul>
 <h4 id="input_9">Input:</h4>
 <ul>
-<li>model (h5) </li>
+<li>model (h5): 输入</li>
 </ul>
 <h4 id="output_9">Output:</h4>
 <ul>
-<li>model_struct (png) </li>
+<li>model_struct (png): 输出</li>
 </ul>
 <h2 id="modeltrainkeras">ModelTrainKeras</h2>
 <p>进行模型训练，返回训练好的模型。</p>
@@ -470,40 +528,93 @@
 </ul>
 <h4 id="param_10">Param:</h4>
 <ul>
-<li>COMPILE_optimizer (string) : 编译优化器</li>
-<li>COMPILE_loss (string) : 编译损失函数（目标函数）</li>
-<li>COMPILE_metrics (string) : 模型训练/测试的度量指标</li>
-<li>COMPILE_sample_weight_mode (string) : 样本权重类型(一维或多维)</li>
-<li>COMPILE_weighted_metrics (string) : metrics权重列表</li>
-<li>COMPILE_target_tensors (string) : 自定义目标张量</li>
-<li>FIT_epochs (int) : 训练轮数目</li>
-<li>FIT_verbose (int) : 训练过程日志显示</li>
-<li>FIT_batch_size (int) : 训练样本数量/批次</li>
-<li>FIT_callbacks (string) : 训练过程中回调函数集</li>
-<li>FIT_validation_split (double) : 从训练集抽取验证集比例</li>
-<li>FIT_validation_data (string) : 指定的验证集</li>
-<li>FIT_shuffle (int) : 是否在每训练轮次打乱样本顺序</li>
-<li>FIT_class_weight (string) : 训练样本类权重</li>
-<li>FIT_sample_weight (string) : 样本权重(依赖样本权重类型为temporal)</li>
-<li>FIT_initial_epoch (int) : 训练起始轮次（用于继续中断的训练）</li>
-<li>FIT_steps_per_epoch (string) : 每轮次训练包含的步数/批次</li>
-<li>FIT_validation_steps (string) : 处理验证集用的步数/批次（依赖训练步数/训练轮次）</li>
-<li>COMPILE_loss_weights (string) : 损失函数权重列表</li>
-<li>categorical_classes (int) : </li>
+<li>
+<p>COMPILE_optimizer (string): 编译优化器</p>
+</li>
+<li>
+<p>COMPILE_loss (string): 编译损失函数</p>
+</li>
+<li>
+<p>COMPILE_metrics (string): 模型训练/测试的度量指标</p>
+</li>
+<li>
+<p>COMPILE_sample_weight_mode (string): 样本权重类型</p>
+</li>
+<li>
+<p>COMPILE_weighted_metrics (string): metrics权重列表</p>
+</li>
+<li>
+<p>COMPILE_target_tensors (string): 自定义目标张量</p>
+</li>
+<li>
+<p>FIT_epochs (int): 训练轮数目</p>
+</li>
+<li>
+<p>FIT_verbose (int): 训练过程日志显示</p>
+</li>
+<li>
+<p>FIT_batch_size (int): 训练样本数量/批次</p>
+</li>
+<li>
+<p>FIT_callbacks (string): 训练过程中回调函数集</p>
+</li>
+<li>
+<p>FIT_validation_split (double): 从训练集抽取验证集比例</p>
+</li>
+<li>
+<p>FIT_validation_data (string): 指定的验证集</p>
+</li>
+<li>
+<p>FIT_shuffle (int): 是否在每训练轮次打乱样本顺序</p>
+</li>
+<li>
+<p>FIT_class_weight (string): 训练样本类权重</p>
+</li>
+<li>
+<p>FIT_sample_weight (string): 样本权重(依赖样本权重类型为temporal)</p>
+</li>
+<li>
+<p>FIT_initial_epoch (int): 训练起始轮次（用于继续中断的训练）</p>
+</li>
+<li>
+<p>FIT_steps_per_epoch (string): 每轮次训练包含的步数/批次</p>
+</li>
+<li>
+<p>FIT_validation_steps (string): 处理验证集用的步数/批次（依赖训练步数/训练轮次）</p>
+</li>
+<li>
+<p>COMPILE_loss_weights (string): 损失函数权重列表</p>
+</li>
 </ul>
 <h4 id="input_10">Input:</h4>
 <ul>
-<li>model (h5) </li>
-<li>x_train (csv) </li>
-<li>y_train (csv) </li>
-<li>x_train_shape (csv) </li>
-<li>y_train_shape (csv) </li>
+<li>
+<p>model (h5): 输入</p>
+</li>
+<li>
+<p>x_train (csv): 训练集特征</p>
+</li>
+<li>
+<p>y_train (csv): 训练集标签</p>
+</li>
+<li>
+<p>x_train_shape (csv): 训练集特征的维度</p>
+</li>
+<li>
+<p>y_train_shape (csv): 训练集标签的维度</p>
+</li>
 </ul>
 <h4 id="output_10">Output:</h4>
 <ul>
-<li>model_trained (h5) </li>
-<li>model_json (json) </li>
-<li>blockId (pkl) </li>
+<li>
+<p>model_trained (h5): 训练好的模型</p>
+</li>
+<li>
+<p>model_json (json): 模型的json格式</p>
+</li>
+<li>
+<p>blockId (pkl): 输出 </p>
+</li>
 </ul></div>
         </div>
 

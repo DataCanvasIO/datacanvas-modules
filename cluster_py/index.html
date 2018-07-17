@@ -253,14 +253,14 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>o_cluster_centers_indices (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
+<li>o_cluster_centers_indices (csv): 聚类中心对应的索引</li>
 </ul>
 <h2 id="agglomerativeclusspy3">AgglomerativeClusSPy3</h2>
 <p>是一种自底而上的层次聚类方法，它能够根据指定的相似度或距离定义计算出类之间的距离。它从每一个点开始作为一个类，然后迭代的融合最近的类。能创建一个树形层次结构的聚类模型。</p>
@@ -271,17 +271,17 @@
 <h4 id="param_1">Param:</h4>
 <ul>
 <li>n_clusters (int) : 指定聚类数</li>
-<li>affinity (string) : 距离算法</li>
+<li>affinity (string) : 距离算法 (euclidean/l1/l2/manhattan/cosine/precomputed)</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h2 id="birchclusspy3">BirchClusSPy3</h2>
 <p>是一个综合的层次聚类算法。它用到了聚类特征(Clustering Feature, CF)和聚类特征树(CF Tree)两个概念，用于概括聚类描述,该算法能够用一 遍扫描有效地进行聚类，并能够有效地处理离群点。Birch 算法是基于距离的层次聚类，综 合了层次凝聚和迭代的重定位方法</p>
@@ -296,13 +296,13 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h2 id="dbscanclusspy3">DBSCANClusSPy3</h2>
 <p>是一个比较有代表性的基于密度的聚类算法。与划分和层次聚类方法不同，它将簇定义为密度相连的点的最大集合，能够把具有足够高密度的区域划分为簇，并可在噪声的空间数据库中发现任意形状的聚类。</p>
@@ -317,13 +317,13 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h2 id="kmeans2clusspy3">KMeans2ClusSPy3</h2>
 <p>K-means算法是硬聚类算法，是典型的基于原型的目标函数聚类方法的代表，它是数据点到原型的某种距离作为优化的目标函数，利用函数求极值的方法得到迭代运算的调整规则。K-means算法以欧式距离作为相似度测度，它是求对应某一初始聚类中心向量V最优分类，使得评价指标J最小。算法采用误差平方和准则函数作为聚类准则函数。</p>
@@ -338,14 +338,14 @@
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>d_data (csv) </li>
+<li>d_feature (csv): 特征变量</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>o_centers (py3pkl) </li>
-<li>o_labels (py3pkl) </li>
-<li>o_metrics (py3pkl) </li>
-<li>o_distortions (py3pkl) </li>
+<li>o_centers (py3pkl): 聚类中心</li>
+<li>o_labels (py3pkl): 预测聚类</li>
+<li>o_metrics (py3pkl): 轮廓系数和intertia</li>
+<li>o_distortions (py3pkl): 畸变函数</li>
 </ul>
 <h2 id="kmeansclusspy3">KMeansClusSPy3</h2>
 <p>K-means算法是硬聚类算法，是典型的基于原型的目标函数聚类方法的代表，它是数据点到原型的某种距离作为优化的目标函数，利用函数求极值的方法得到迭代运算的调整规则。K-means算法以欧式距离作为相似度测度，它是求对应某一初始聚类中心向量V最优分类，使得评价指标J最小。算法采用误差平方和准则函数作为聚类准则函数。</p>
@@ -360,13 +360,13 @@
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h2 id="kmeansvisuspy3">KMeansVisuSPy3</h2>
 <p>聚类中心雷达图和肘部图</p>
@@ -381,13 +381,13 @@
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>o_centers (py3pkl) </li>
-<li>o_distortions (py3pkl) </li>
+<li>o_centers (py3pkl): 聚类中心</li>
+<li>o_distortions (py3pkl): 畸变函数</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>distortion_plot (html) </li>
-<li>centers_plot (html) </li>
+<li>distortion_plot: 肘部图 </li>
+<li>centers_plot (py3pkl): 聚类中心雷达图</li>
 </ul>
 <h2 id="spectralclusspy3">SpectralClusSPy3</h2>
 <p>谱聚类是从图论中演化出来的算法，后来在聚类中得到了广泛的应用。它的主要思想是把所有的数据看做空间中的点，这些点之间可以用边连接起来。距离较远的两个点之间的边权重值较低，而距离较近的两个点之间的边权重值较高，通过对所有数据点组成的图进行切图，让切图后不同的子图间边权重和尽可能的低，而子图内的边权重和尽可能的高，从而达到聚类的目的。</p>
@@ -402,13 +402,13 @@
 </ul>
 <h4 id="input_7">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_7">Output:</h4>
 <ul>
-<li>d_pred (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul></div>
         </div>
 

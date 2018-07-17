@@ -295,11 +295,11 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl)： 指定列转换类型后的数据</li>
 </ul>
 <h2 id="colsdropdataspy3">ColsDropDataSPy3</h2>
 <p>删除指定列</p>
@@ -309,15 +309,15 @@
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>cols (string) : </li>
+<li>cols (string): 选择要删除的变量</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (csv): 数据</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 删除指定列后的数据</li>
 </ul>
 <h2 id="colsselect2dataspy3">ColsSelect2DataSPy3</h2>
 <h4 id="tag_2">Tag:</h4>
@@ -330,12 +330,12 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
-<li>selected_cols (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
+<li>selected_cols (py3pkl): 选择的变量</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>d_selected_data (csv) </li>
+<li>d_selected_data (csv)： 选择变量后的dataframe</li>
 </ul>
 <h2 id="colsselectcsvdataspy3">ColsSelectCSVDataSPy3</h2>
 <p>选择需要的变量，并以CSV形式输出</p>
@@ -345,15 +345,15 @@
 </ul>
 <h4 id="param_3">Param:</h4>
 <ul>
-<li>cols (string) : </li>
+<li>cols (string): 选择需要的变量</li>
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>d_data (csv) </li>
+<li>d_data (csv): 数据</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>d_selected_data (csv) </li>
+<li>d_selected_data (csv): 变量选择后的dataframe</li>
 </ul>
 <h2 id="colsselectdataspy3">ColsSelectDataSPy3</h2>
 <p>选择需要的变量</p>
@@ -363,15 +363,15 @@
 </ul>
 <h4 id="param_4">Param:</h4>
 <ul>
-<li>cols (string) : </li>
+<li>cols (string): 选择需要的变量</li>
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (csv): 数据</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>d_selected_data (py3pkl) </li>
+<li>d_selected_data (py3pkl): 变量选择后的dataframe</li>
 </ul>
 <h2 id="concatdataspy3">ConcatDataSPy3</h2>
 <p>合并两个数据集</p>
@@ -385,12 +385,12 @@
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>d_data1 (csv) </li>
-<li>d_data2 (csv) </li>
+<li>d_data1 (csv): 数据1</li>
+<li>d_data2 (csv): 数据2</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>d_data (csv) </li>
+<li>d_data (csv): 合并后的数据</li>
 </ul>
 <h2 id="date2daysdataspy3">Date2DaysDataSPy3</h2>
 <p>将日期转换为天数(可以是两个日期间距离的天数也可以是一个日期距今的天数)</p>
@@ -400,18 +400,18 @@
 </ul>
 <h4 id="param_6">Param:</h4>
 <ul>
-<li>var1 (string) : var1 - var2</li>
-<li>var2 (string) : var1 - var2</li>
-<li>whether_use_2_variables (int) : 是否使用两个日期变量，如果否，则只使用var1，计算var1距当前时间天数</li>
-<li>new_var (string) : 新生成变量的变量名</li>
+<li>var1 (string): 日期变量1</li>
+<li>var2 (string): 日期变量2</li>
+<li>whether_use_2_variables (int): 是否使用两个日期变量，如果否，则只使用var1，计算var1距当前时间天数</li>
+<li>new_var (string): 新生成变量的变量名</li>
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 数据</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>d_data2 (py3pkl) </li>
+<li>d_data2 (py3pkl): 日期处理后的数据</li>
 </ul>
 <h2 id="dateparsingdataspy3">DateParsingDataSPy3</h2>
 <p>解析日期型变量，生成四个新变量：月、日、一周的第几天、是否为周末</p>
@@ -426,11 +426,11 @@
 </ul>
 <h4 id="input_7">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 输入数据</li>
 </ul>
 <h4 id="output_7">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 衍生变量后数据</li>
 </ul>
 <h2 id="dropduplicatesdataspy3">DropDuplicatesDataSPy3</h2>
 <p>根据指定变量去掉重复行</p>
@@ -445,11 +445,11 @@
 </ul>
 <h4 id="input_8">Input:</h4>
 <ul>
-<li>d_data1 (csv) </li>
+<li>d_data1 (csv): 数据</li>
 </ul>
 <h4 id="output_8">Output:</h4>
 <ul>
-<li>d_changed_data (csv) </li>
+<li>d_changed_data (csv): 去重后数据</li>
 </ul>
 <h2 id="fillnadataspy3">FillNADataSPy3</h2>
 <p>将指定变量的缺失值填补为0</p>
@@ -459,15 +459,15 @@
 </ul>
 <h4 id="param_9">Param:</h4>
 <ul>
-<li>cols (string) : </li>
+<li>cols (string) : 待填补的列名</li>
 </ul>
 <h4 id="input_9">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output_9">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl)： 特定列缺失填补完的数据</li>
 </ul>
 <h2 id="maplambdadataspy3">MapLambdaDataSPy3</h2>
 <p>对数据使用map函数从而进行特征的清洗</p>
@@ -482,11 +482,11 @@
 </ul>
 <h4 id="input_10">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 数据</li>
 </ul>
 <h4 id="output_10">Output:</h4>
 <ul>
-<li>d_data2 (py3pkl) </li>
+<li>d_data2 (py3pkl): 处理后的数据</li>
 </ul>
 <h2 id="mappingdataspy3">MappingDataSPy3</h2>
 <p>类别字段映射</p>
@@ -500,11 +500,11 @@
 </ul>
 <h4 id="input_11">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 数据</li>
 </ul>
 <h4 id="output_11">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 映射后数据</li>
 </ul>
 <h2 id="mergedataspy3">MergeDataSPy3</h2>
 <p>根据主键对数据进行合并操作</p>
@@ -519,12 +519,12 @@
 </ul>
 <h4 id="input_12">Input:</h4>
 <ul>
-<li>d_data1 (csv) </li>
-<li>d_data2 (csv) </li>
+<li>d_data1 (csv): 数据1</li>
+<li>d_data2 (csv): 数据2</li>
 </ul>
 <h4 id="output_12">Output:</h4>
 <ul>
-<li>d_changed_data (csv) </li>
+<li>d_changed_data (csv): 合并后数据</li>
 </ul>
 <h2 id="replacedataspy3">ReplaceDataSPy3</h2>
 <p>将数据中的某个值全部替换为另一个值</p>
@@ -534,17 +534,17 @@
 </ul>
 <h4 id="param_13">Param:</h4>
 <ul>
-<li>value_after (string) : 替换后的值</li>
-<li>value_before1 (string) : </li>
-<li>value_before2 (string) : 替换前的值</li>
+<li>value_before1 (string): float型要替换的值，默认参数为#时，选择value_before2作为要替换的值</li>
+<li>value_before2 (string): 字符串类型要替换的值</li>
+<li>value_after (string): 替换后的值</li>
 </ul>
 <h4 id="input_13">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 替换前的数据</li>
 </ul>
 <h4 id="output_13">Output:</h4>
 <ul>
-<li>d_data2 (py3pkl) </li>
+<li>d_data2 (py3pkl): 替换后的数据</li>
 </ul>
 <h2 id="splitfeatspy3">SplitFeatSPy3</h2>
 <p>将特征数据集和标签数据集拆分为训练集（特征、标签），测试集（特征、标签）。</p>
@@ -554,19 +554,19 @@
 </ul>
 <h4 id="param_14">Param:</h4>
 <ul>
-<li>test_size (double) : 测试集比例</li>
+<li>test_size (double): 测试集比例 (0-1.0)</li>
 </ul>
 <h4 id="input_14">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_14">Output:</h4>
 <ul>
-<li>d_feature_train (csv) </li>
-<li>d_feature_test (csv) </li>
-<li>d_label_train (csv) </li>
-<li>d_label_test (csv) </li>
+<li>d_feature_train (csv): 训练集特征变量</li>
+<li>d_feature_test (csv): 标签集特征变量</li>
+<li>d_label_train (csv): 训练集标签变量</li>
+<li>d_label_test (csv): 标签集特征变量</li>
 </ul></div>
         </div>
 

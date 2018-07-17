@@ -244,9 +244,7 @@
         <li class="main "><a href="#missingimputedataspy3">MissingImputeDataSPy3</a></li>
         <!--
             <li><a href="#tag_9">Tag:</a></li>
-            <li><a href="#param_9">Param:</a></li>
-            <li><a href="#input_9">Input:</a></li>
-            <li><a href="#output_9">Output:</a></li> -->
+            <li><a href="#param_9">Param:</a></li> -->
         <li class="main "><a href="#onehotencoderdataspy3">OneHotEncoderDataSPy3</a></li>
         <!--
             <li><a href="#tag_10">Tag:</a></li>
@@ -282,12 +280,12 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
+<li>d_data1 (py3pkl): 输入数据</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>d_data2 (py3pkl) </li>
-<li>all_var (py3pkl) </li>
+<li>d_data1 (py3pkl): 分箱后数据</li>
+<li>all_var (py3pkl): 分箱的变量及种类数小于5未分箱的类别变量</li>
 </ul>
 <h2 id="dummyfitdataspy3">DummyFitDataSPy3</h2>
 <p>对数据做哑编码转化(训练数据时使用)</p>
@@ -301,12 +299,12 @@
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>d_dummy_data (py3pkl) </li>
-<li>cols (py3pkl) </li>
+<li>d_dummy_data (py3pkl): 哑编码后的数据</li>
+<li>cols (py3pkl): 哑编码后的所有变量</li>
 </ul>
 <h2 id="dummytransformdataspy3">DummyTransformDataSPy3</h2>
 <p>对数据做哑编码转化(将数据转化为同训练数据相同的变量)</p>
@@ -320,12 +318,12 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
-<li>cols (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
+<li>cols (py3pkl): 训练数据哑编码后的所有变量</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>d_dummy_data (py3pkl) </li>
+<li>d_dummy_data (py3pkl): 哑编码后的数据</li>
 </ul>
 <h2 id="imbalancedataspy3">ImbalanceDataSPy3</h2>
 <p>对数据进行过采样处理</p>
@@ -339,13 +337,13 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>X (csv) </li>
-<li>Y (csv) </li>
+<li>X (csv): X</li>
+<li>Y (csv): Y</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>x_resampled (csv) </li>
-<li>y_resampled (csv) </li>
+<li>x_resampled (csv): 过采样后X</li>
+<li>y_resampled (csv): 过采样后Y</li>
 </ul>
 <h2 id="labelencoderdataspy3">LabelEncoderDataSPy3</h2>
 <p>对类别型文本变量进行编码</p>
@@ -355,16 +353,16 @@
 </ul>
 <h4 id="param_4">Param:</h4>
 <ul>
-<li>col (string) : 数据中需要更改成虚拟变量的原列</li>
-<li>signal (int) : 选择是否按照数据类型自动转换</li>
+<li>col (string): 手动选择要进行数值编码的列</li>
+<li>signal (int): 选择是否自动搜索变量类型，然后进行筛选。 1为选择自动搜索</li>
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 输入数据</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 数值编码转换后数据</li>
 </ul>
 <h2 id="minmaxscalerfitdataspy3">MinMaxScalerFitDataSPy3</h2>
 <p>对连续型变量进行归一化处理, 使用这种缩放的目的包括实现特征极小方差的鲁棒性以及在稀疏矩阵中保留零元素。适用于训练数据。</p>
@@ -378,12 +376,12 @@
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
-<li>m_minmax_model (py3pkl) </li>
+<li>d_changed_data (py3pkl): 归一化后的数据</li>
+<li>m_minmax_model (py3pkl): 归一化训练好的模型</li>
 </ul>
 <h2 id="minmaxscalertransformdataspy3">MinMaxScalerTransformDataSPy3</h2>
 <p>对连续型变量进行归一化处理, 使用这种缩放的目的包括实现特征极小方差的鲁棒性以及在稀疏矩阵中保留零元素。适用于测试数据。</p>
@@ -397,12 +395,12 @@
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
-<li>model (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
+<li>model (py3pkl): 归一化训练好的模型</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 归一化后的数据</li>
 </ul>
 <h2 id="missingdropdataspy3">MissingDropDataSPy3</h2>
 <p>删除拥有唯一值的字段；删除缺失百分比大于一定比率的字段(类别变量大于30%，连续变量大于60%)。</p>
@@ -410,19 +408,19 @@
 <ul>
 <li>数据预处理</li>
 </ul>
-<h4 id="param_7">Param:</h4>
+<h3 id="param_7">Param:</h3>
 <ul>
-<li>percent_obj (int) : </li>
-<li>percent_non_obj (int) : </li>
-<li>percent_unique (double) : </li>
+<li>percent_obj (int): object型变量删除阈值</li>
+<li>percent_non_obj (int): 非object型变量删除阈值</li>
+<li>percent_unique (double): 唯一值变量删除阈值</li>
 </ul>
-<h4 id="input_7">Input:</h4>
+<h3 id="input_7">Input:</h3>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
-<h4 id="output_7">Output:</h4>
+<h3 id="output_7">Output:</h3>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl)： 字段删除后的数据</li>
 </ul>
 <h2 id="missingfilldataspy3">MissingFillDataSPy3</h2>
 <p>小比例缺失值用众数或中位数填充。</p>
@@ -430,18 +428,18 @@
 <ul>
 <li>数据预处理</li>
 </ul>
-<h4 id="param_8">Param:</h4>
+<h3 id="param_8">Param:</h3>
 <ul>
-<li>percent_obj (int) : </li>
-<li>percent_non_obj (int) : </li>
+<li>percent_obj (int): 类别变量填充阈值</li>
+<li>percent_non_obj (int): 非类别变量填充阈值</li>
 </ul>
-<h4 id="input_8">Input:</h4>
+<h3 id="input_8">Input:</h3>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
-<h4 id="output_8">Output:</h4>
+<h3 id="output_8">Output:</h3>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 缺失值填充后的数据</li>
 </ul>
 <h2 id="missingimputedataspy3">MissingImputeDataSPy3</h2>
 <p>用传播算法对缺失值进行填充</p>
@@ -449,20 +447,20 @@
 <ul>
 <li>数据预处理</li>
 </ul>
-<h4 id="param_9">Param:</h4>
+<h3 id="param_9">Param:</h3>
 <ul>
-<li>lower_null_percent_object (int) : </li>
-<li>upper_null_percent_object (int) : </li>
-<li>lower_null_percent_nonobject (int) : </li>
-<li>upper_null_percent_nonobject (int) : </li>
+<li>lower_null_percent (int): 类别变量填充阈值下限</li>
+<li>upper_null_percent (int): 类别变量填充阈值上限 </li>
+<li>lower_null_percent1 (int): 非类别变量填充阈值下限</li>
+<li>upper_null_percent1 (int): 非类别变量填充阈值上限</li>
 </ul>
 <h4 id="input_9">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output_9">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 缺失值填充后的数据</li>
 </ul>
 <h2 id="onehotencoderdataspy3">OneHotEncoderDataSPy3</h2>
 <p>将数据转化为虚拟数据，即将数据拆分为多个以0或1表示的列</p>
@@ -476,11 +474,11 @@
 </ul>
 <h4 id="input_10">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 输入数据</li>
 </ul>
 <h4 id="output_10">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 独热编码转换后数据</li>
 </ul>
 <h2 id="quantiletrasformerdataspy3">QuantileTrasformerDataSPy3</h2>
 <p>分位数转换的目的是把特征数据转换到一定的范围内, 或者让他们符合一定的分布。分位数转换利用的是数据的分位数信息进行变换。
@@ -491,20 +489,20 @@
 </ul>
 <h4 id="param_11">Param:</h4>
 <ul>
-<li>n_quantiles (int) : 计算所用的分位数，默认值为1000</li>
-<li>output_distribution (string) : 换数据遵循的分布函数，默认值为uniform</li>
-<li>ignore_implicit_zeros (string) : 只针对稀疏矩阵，默认值为False，当为True时，则在计算分位数时稀疏矩阵中的稀疏条目将被忽略</li>
-<li>subsample (int) : 用于计算有效分为数的最大样本数，默认值为100000</li>
-<li>copy (string) : </li>
+<li>n_quantiles (int): 计算所用的分位数，默认值为1000</li>
+<li>output_distribution (string): 换数据遵循的分布函数，默认值为uniform</li>
+<li>ignore_implicit_zeros (string): 只针对稀疏矩阵，默认值为False，当为True时，则在计算分位数时稀疏矩阵中的稀疏条目将被忽略</li>
+<li>subsample (int): 用于计算有效分为数的最大样本数，默认值为100000</li>
+<li>copy (string): 是否复制原有数据</li>
 </ul>
 <h4 id="input_11">Input:</h4>
 <ul>
-<li>d_data (py3pkl) </li>
+<li>d_data (py3pkl): 输入数据</li>
 </ul>
 <h4 id="output_11">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
-<li>transformer (py3pkl) </li>
+<li>d_changed_data (py3pkl): 分位数转换后数据</li>
+<li>transformer (py3pkl) ：转换器</li>
 </ul>
 <h2 id="woe_iv_dataspy3">WOE_IV_DataSPy3</h2>
 <p>IV的全称是Information Value，中文意思是信息价值，或者信息量。我们需要一些具体的量化指标来衡量每个自变量的预测能力，并根据这些量化指标的大小，来确定哪些变量进入模型。IV就是这样一种指标，他可以用来衡量自变量的预测能力。类似的指标还有信息增益、基尼系数等等。高IV表示该特征和目标变量的关联度高；目标变量只能是二分类；特征分箱越细，IV越高。</p>
@@ -520,17 +518,17 @@
 </ul>
 <h4 id="input_12">Input:</h4>
 <ul>
-<li>d_data1 (py3pkl) </li>
-<li>o_all_var (py3pkl) </li>
+<li>d_data1 (py3pkl): 输入数据</li>
+<li>o_all_var (py3pkl): 所有需要计算WOE的变量</li>
 </ul>
 <h4 id="output_12">Output:</h4>
 <ul>
-<li>o_IV_bar_plot (jpg) </li>
-<li>o_WOE_corr_plot (jpg) </li>
-<li>o_vars_after_corr (txt) </li>
-<li>o_vars_after_VIF (txt) </li>
-<li>d_data2 (py3pkl) </li>
-<li>o_vars_after_VIF_pkl (py3pkl) </li>
+<li>o_IV_bar_plot (jpg): IV分布柱形图</li>
+<li>o_WOE_corr_plot (jpg): 计算WOE后的相关性热力图</li>
+<li>o_vars_after_corr (txt): 根据阈值相关性筛选后剩余的变量</li>
+<li>o_vars_after_VIF (txt): 多重共线性筛选后剩余的变量</li>
+<li>d_data2 (py3pkl): 计算WOE后的数据输出</li>
+<li>o_vars_after_VIF_pkl (py3pkl): 多重共线性筛选后剩余的变量 (pkl格式)</li>
 </ul></div>
         </div>
 

@@ -246,15 +246,15 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_true (csv) </li>
-<li>d_pred (csv) </li>
-<li>d_prob (csv) </li>
+<li>d_true (csv): 真实标签</li>
+<li>d_pred (csv): 预测的标签变量</li>
+<li>d_prob (csv): 预测概率</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>o_metric (csv) </li>
-<li>o_classification_report (txt) </li>
-<li>o_confusion_matrix (jpg) </li>
+<li>o_metric (csv): 各评估指标（准确率、Kappa分数、F分数、ROC值等）</li>
+<li>o_classification_report (txt): 评估报告(F分数、精确率、召回率)</li>
+<li>o_confusion_matrix (jpg): 混淆矩阵图</li>
 </ul>
 <h2 id="clasrocevalspy3a">ClasRocEvalSPy3a</h2>
 <p>输出分类模型的ROC曲线</p>
@@ -269,13 +269,13 @@
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
-<li>m_fitted_model (py3pkl) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>o_roc_curve (jpg) </li>
+<li>o_roc_curve (jpg): ROC曲线图</li>
 </ul>
 <h2 id="plotlearningcurvespy3_bestmodel">PlotLearningCurveSPy3_BestModel</h2>
 <p>画出学习曲线，根据训练集和测试集分数判断是否过拟合或欠拟合。</p>
@@ -286,19 +286,19 @@
 </ul>
 <h4 id="param_2">Param:</h4>
 <ul>
-<li>n_jobs (int) : Number of jobs to run in parallel</li>
-<li>n_splits (int) : 交叉验证时使用折数</li>
-<li>test_size (double) : 验证集百分比</li>
+<li>n_jobs (int): 平行化运行工作的个数</li>
+<li>n_splits (int): 交叉验证时使用折数</li>
+<li>test_size (double): 验证集百分比</li>
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
-<li>best_model (py3pkl) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+<li>best_model (py3pkl): 训练好的模型</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>learning_curve (jpg) </li>
+<li>learning_curve (jpg): 学习曲线图</li>
 </ul>
 <h2 id="plotlearningcurvespy3">PlotLearningCurveSPy3</h2>
 <p>画出学习曲线，根据训练集和测试集分数判断是否过拟合或欠拟合。</p>
@@ -309,19 +309,19 @@
 </ul>
 <h4 id="param_3">Param:</h4>
 <ul>
-<li>n_jobs (int) : Number of jobs to run in parallel</li>
-<li>n_splits (int) : 交叉验证时使用折数</li>
-<li>test_size (double) : 验证集百分比</li>
+<li>n_jobs (int): 平行化运行工作的个数</li>
+<li>n_splits (int): 交叉验证时使用折数</li>
+<li>test_size (double): 验证集百分比</li>
 <li>model (string) : 输入模型estimator, 例如GaussianNB()</li>
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>learning_curve (jpg) </li>
+<li>learning_curve (jpg): 学习曲线图</li>
 </ul>
 <h2 id="regrevalspy3">RegrEvalSPy3</h2>
 <p>对回归模型进行评估（包括mae,mse,r2等）</p>
@@ -335,12 +335,12 @@
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>d_true (csv) </li>
-<li>d_pred (csv) </li>
+<li>d_true (csv): 真实标签</li>
+<li>d_pred (csv): 预测标签</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>o_metric (csv) </li>
+<li>o_metric (csv): 返回的模型各评估值</li>
 </ul>
 <h2 id="reportpdfclasevalspy3">ReportPDFClasEvalSPy3</h2>
 <p>输出分类评估报告</p>
@@ -355,18 +355,18 @@
 </ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>o_metric (csv) </li>
-<li>o_classification_report (txt) </li>
-<li>o_confusion_matrix (jpg) </li>
-<li>o_roc_curve (jpg) </li>
-<li>o_metric_2 (csv) </li>
-<li>o_classification_report_2 (txt) </li>
-<li>o_confusion_matrix_2 (jpg) </li>
-<li>o_roc_curve_2 (jpg) </li>
+<li>o_metric (csv): 各评估指标（准确率、Kappa分数、F分数、ROC值等）</li>
+<li>o_classification_report (txt): 评估报告(F分数、精确率、召回率)</li>
+<li>o_confusion_matrix (jpg): 混淆矩阵图</li>
+<li>o_roc_curve (jpg): ROC曲线图</li>
+<li>o_metric_2 (csv): 各评估指标（准确率、Kappa分数、F分数、ROC值等）</li>
+<li>o_classification_report_2 (txt): 评估报告(F分数、精确率、召回率)</li>
+<li>o_confusion_matrix_2 (jpg): 混淆矩阵图</li>
+<li>o_roc_curve_2 (jpg): ROC曲线图</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>evaluation_report (pdf) </li>
+<li>evaluation_report (pdf): 评估报告</li>
 </ul>
 <h2 id="scoressendspy3">ScoresSendSPy3</h2>
 <p>发送评估数据</p>
@@ -380,12 +380,12 @@
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>Scores (csv) </li>
-<li>model (any) </li>
+<li>Scores (csv): 分数</li>
+<li>model (any): 最优模型</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>modelScores (py3pkl) </li>
+<li>modelScores ( py3pkl): 模型评估分数</li>
 </ul></div>
         </div>
 

@@ -229,19 +229,19 @@
 </ul>
 <h4 id="param">Param:</h4>
 <ul>
-<li>corr_type (string) : </li>
-<li>corr_threshold (double) : 消除强相关时的阈值</li>
+<li>corr_type (string): 计算相关性方法</li>
+<li>corr_threshold (double): 消除强相关变量的阈值</li>
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>o_featrue_label_corr (csv) </li>
+<li>d_feature (csv): 数据</li>
+<li>o_featrue_label_corr (csv): 与标签变量间的相关性分数 (chi2/互信息/F检验分数)</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>d_feature_selected (csv) </li>
-<li>o_corr_XX (html) </li>
-<li>o_corr_heatmap (jpg) </li>
+<li>d_feature_selected (csv): 相关性筛选后的数据</li>
+<li>o_corr_XX (html): 相关性矩阵</li>
+<li>o_corr_heatmap (jpg): 相关性热力图</li>
 </ul>
 <h2 id="corrxyfeatspy3">CorrXYFeatSPy3</h2>
 <p>计算特征变量和标签变量之间的相关性（卡方/互信息/F检验），并通过设定的参数来筛选相应的特征变量</p>
@@ -251,18 +251,18 @@
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>feature_percent (int) : </li>
-<li>sample_rate (double) : </li>
+<li>feature_percent (int): 保留变量个数百分比 (0-100)</li>
+<li>sample_rate (double): 抽样比例 (0-1)</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>d_feature (py3pkl) </li>
-<li>d_label (py3pkl) </li>
+<li>d_feature (py3pkl): 目标变量</li>
+<li>d_label (py3pkl): 标签变量</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>d_feature_selected (csv) </li>
-<li>o_feature_label_corr (csv) </li>
+<li>d_feature_selected (csv): 相关性筛选后的数据</li>
+<li>o_featrue_label_corr (csv): 与标签变量间的相关性分数 (卡方/互信息/F检验分数)</li>
 </ul>
 <h2 id="rfefeatspy3">RFEFeatSPy3</h2>
 <p>递归特征消除的主要思想是反复的构建模型（如SVM或者回归模型）然后选出最好的（或者最差的）的特征（可以根据系数来选），把选出来的特征放到一边，然后在剩余的特征上重复这个过程，直到所有特征都遍历了。</p>
@@ -272,18 +272,18 @@
 </ul>
 <h4 id="param_2">Param:</h4>
 <ul>
-<li>percent_to_keep (double) : 保留变量个数百分比</li>
+<li>percent_to_keep (double): 保留变量个数百分比 (0-1)</li>
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_feature (csv) </li>
-<li>d_label (csv) </li>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>d_changed_data (csv) </li>
-<li>d_rfe_support (html) </li>
-<li>rfe_cols (py3pkl) </li>
+<li>d_changed_data (csv): 递归特征消除后的数据</li>
+<li>d_rfe_support (html): 统计哪些变量保留，哪些不保留</li>
+<li>rfe_cols (py3pkl): 筛选后保留的变量</li>
 </ul>
 <h2 id="variancethresholdfitfeatspy3">VarianceThresholdFitFeatSPy3</h2>
 <p>根据方差去掉取值变化小的特征，用于训练集数据。</p>
@@ -297,12 +297,12 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>d_feature (py3pkl) </li>
+<li>d_feature (py3pkl): 数据</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
-<li>model (py3pkl) </li>
+<li>d_changed_data (py3pkl): 方差筛选后的数据</li>
+<li>model (py3pkl): 方差筛选训练好的模型</li>
 </ul>
 <h2 id="variancethresholdtransformfeatspy3">VarianceThresholdTransformFeatSPy3</h2>
 <p>去掉取值变化小的特征，用于测试集数据。</p>
@@ -316,12 +316,12 @@
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>model (py3pkl) </li>
-<li>d_feature (py3pkl) </li>
+<li>d_feature (py3pkl): 数据</li>
+<li>model (py3pkl): 方差筛选训练好的模型</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
-<li>d_changed_data (py3pkl) </li>
+<li>d_changed_data (py3pkl): 方差筛选后的数据</li>
 </ul></div>
         </div>
 

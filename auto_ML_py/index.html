@@ -205,42 +205,48 @@
             <li><a href="#param_2">Param:</a></li>
             <li><a href="#input_2">Input:</a></li>
             <li><a href="#output_2">Output:</a></li> -->
-        <li class="main "><a href="#ml_multiclassmodeleval">ML_MultiClassModelEval</a></li>
+        <li class="main "><a href="#ml_localfile2csv">ML_LocalFile2CSV</a></li>
         <!--
             <li><a href="#tag_3">Tag:</a></li>
             <li><a href="#param_3">Param:</a></li>
             <li><a href="#input_3">Input:</a></li>
             <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#ml_numfeaturehandle">ML_NumFeatureHandle</a></li>
+        <li class="main "><a href="#ml_multiclassmodeleval">ML_MultiClassModelEval</a></li>
         <!--
             <li><a href="#tag_4">Tag:</a></li>
             <li><a href="#param_4">Param:</a></li>
             <li><a href="#input_4">Input:</a></li>
             <li><a href="#output_4">Output:</a></li> -->
-        <li class="main "><a href="#ml_prehandle">ML_PreHandle</a></li>
+        <li class="main "><a href="#ml_numfeaturehandle">ML_NumFeatureHandle</a></li>
         <!--
             <li><a href="#tag_5">Tag:</a></li>
             <li><a href="#param_5">Param:</a></li>
             <li><a href="#input_5">Input:</a></li>
             <li><a href="#output_5">Output:</a></li> -->
-        <li class="main "><a href="#ml_regmodeleval">ML_RegModelEval</a></li>
+        <li class="main "><a href="#ml_prehandle">ML_PreHandle</a></li>
         <!--
             <li><a href="#tag_6">Tag:</a></li>
             <li><a href="#param_6">Param:</a></li>
             <li><a href="#input_6">Input:</a></li>
             <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#ml_sampledata">ML_SampleData</a></li>
+        <li class="main "><a href="#ml_regmodeleval">ML_RegModelEval</a></li>
         <!--
             <li><a href="#tag_7">Tag:</a></li>
             <li><a href="#param_7">Param:</a></li>
             <li><a href="#input_7">Input:</a></li>
             <li><a href="#output_7">Output:</a></li> -->
-        <li class="main "><a href="#ml_splitset">ML_SplitSet</a></li>
+        <li class="main "><a href="#ml_sampledata">ML_SampleData</a></li>
         <!--
             <li><a href="#tag_8">Tag:</a></li>
             <li><a href="#param_8">Param:</a></li>
             <li><a href="#input_8">Input:</a></li>
             <li><a href="#output_8">Output:</a></li> -->
+        <li class="main "><a href="#ml_splitset">ML_SplitSet</a></li>
+        <!--
+            <li><a href="#tag_9">Tag:</a></li>
+            <li><a href="#param_9">Param:</a></li>
+            <li><a href="#input_9">Input:</a></li>
+            <li><a href="#output_9">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -257,13 +263,14 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>model (model.pkl) </li>
-<li>X_test (csv) </li>
-<li>y_test (csv) </li>
+<li>blockId (py3pkl): 模块ID</li>
+<li>model (model.pkl): 最优模型</li>
+<li>X_test (csv): 测试数据x</li>
+<li>y_test (csv): 测试数据y</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>modelScores (py3pkl) </li>
+<li>modelScores (py3pkl): 模型评估分数</li>
 </ul>
 <h2 id="ml_categoryfeaturehandle">ML_CategoryFeatureHandle</h2>
 <p>自动建模-类别特征处理</p>
@@ -279,11 +286,11 @@
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>sampleData (csv) </li>
+<li>sampledata (csv): 输入的数据</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>categoryFeatureHandleData (csv) </li>
+<li>categoryFeatureHandleData (csv): 类别特征处理后的数据</li>
 </ul>
 <h2 id="ml_hyperparamscv">ML_HyperparamsCV</h2>
 <p>自动建模
@@ -300,41 +307,57 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>X_train (csv) </li>
-<li>y_train (csv) </li>
+<li>X_train (csv): 训练数据x</li>
+<li>y_train (csv): 训练数据y</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>model (model.pkl) </li>
-<li>blockId (py3pkl) </li>
+<li>blockId (py3pkl): 模块ID</li>
+<li>model (model.pkl): 最优模型</li>
 </ul>
-<h2 id="ml_multiclassmodeleval">ML_MultiClassModelEval</h2>
-<p>自动建模 - 多分类评估模块</p>
+<h2 id="ml_localfile2csv">ML_LocalFile2CSV</h2>
+<p>把数据模块转换为csv文件</p>
 <h4 id="tag_3">Tag:</h4>
-<ul>
-<li>自动建模</li>
-</ul>
 <h4 id="param_3">Param:</h4>
 <ul>
 <li>None</li>
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>model (model.pkl) </li>
-<li>X_test (csv) </li>
-<li>y_test (csv) </li>
+<li>DS (any): 连接本地数据模块</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>modelScores (py3pkl) </li>
+<li>originalData (csv): 数据输出</li>
 </ul>
-<h2 id="ml_numfeaturehandle">ML_NumFeatureHandle</h2>
-<p>自动建模-数值特征处理</p>
+<h2 id="ml_multiclassmodeleval">ML_MultiClassModelEval</h2>
+<p>自动建模 - 多分类评估模块</p>
 <h4 id="tag_4">Tag:</h4>
 <ul>
 <li>自动建模</li>
 </ul>
 <h4 id="param_4">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_4">Input:</h4>
+<ul>
+<li>blockId (py3pkl): 模块ID</li>
+<li>model (model.pkl): 最优模型</li>
+<li>X_test (csv): 测试数据x</li>
+<li>y_test (csv): 测试数据y</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>modelScores (py3pkl): 模型评估分数</li>
+</ul>
+<h2 id="ml_numfeaturehandle">ML_NumFeatureHandle</h2>
+<p>自动建模-数值特征处理</p>
+<h4 id="tag_5">Tag:</h4>
+<ul>
+<li>自动建模</li>
+</ul>
+<h4 id="param_5">Param:</h4>
 <ul>
 <li>targetCol (string) : 目标列</li>
 <li>cols (string) : 数值列，多列使用逗号分割</li>
@@ -344,71 +367,65 @@
 <li>constantValue (double) : 固定值，binarizeThreshold为CONSTANT必填</li>
 <li>quantizeNum (int) : handling为QUANTIZE必填</li>
 </ul>
-<h4 id="input_4">Input:</h4>
-<ul>
-<li>sampleData (csv) </li>
-</ul>
-<h4 id="output_4">Output:</h4>
-<ul>
-<li>numFeatureHandleData (csv) </li>
-</ul>
-<h2 id="ml_prehandle">ML_PreHandle</h2>
-<p>自动建模-特征工程-数据预处理</p>
-<h4 id="tag_5">Tag:</h4>
-<ul>
-<li>自动建模</li>
-</ul>
-<h4 id="param_5">Param:</h4>
-<ul>
-<li>cols (string) : 列名，多列用逗号分割</li>
-<li>variableType (string) : 列的类型</li>
-<li>handling (string) : 缺失值处理策略
-ASREGULAR - 作为常规值
-IMPUTE - 填充
-DROPROWS - 删除该行</li>
-<li>impute (string) : 缺失值填充策略
-MOSTFREQUENT-众数,
-MEAN-平均数
-MEDIAN-中位数
-CONSTANT-固定值</li>
-<li>constantValue (string) : 缺失值填充固定值</li>
-<li>targetCol (string) : 目标列</li>
-</ul>
 <h4 id="input_5">Input:</h4>
 <ul>
-<li>originalData (csv) </li>
+<li>sampledata (csv): 输入的数据</li>
 </ul>
 <h4 id="output_5">Output:</h4>
 <ul>
-<li>handleData (csv) </li>
+<li>numFeatureHandleData (csv): 数值特征处理后的数据</li>
 </ul>
-<h2 id="ml_regmodeleval">ML_RegModelEval</h2>
-<p>自动建模 - 回归模型评估</p>
+<h2 id="ml_prehandle">ML_PreHandle</h2>
+<p>自动建模-特征工程-数据预处理</p>
 <h4 id="tag_6">Tag:</h4>
 <ul>
 <li>自动建模</li>
 </ul>
 <h4 id="param_6">Param:</h4>
 <ul>
-<li>None</li>
+<li>cols (string) : 列名，多列用逗号分割</li>
+<li>variableType (string) : 列的类型</li>
+<li>handling (string) : 缺失值处理策略</li>
+<li>impute (string) : 缺失值填充策略</li>
+<li>constantValue (string) : 缺失值填充固定值</li>
+<li>targetCol (string) : 目标列</li>
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
-<li>model (model.pkl) </li>
-<li>X_test (csv) </li>
-<li>y_test (csv) </li>
+<li>originalData (csv): 输入的数据</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
-<li>modelScores (py3pkl) </li>
+<li>handleData (csv): 输出的数据</li>
 </ul>
-<h2 id="ml_sampledata">ML_SampleData</h2>
-<p>自动建模 - 数据采样</p>
+<h2 id="ml_regmodeleval">ML_RegModelEval</h2>
+<p>自动建模 - 回归模型评估</p>
 <h4 id="tag_7">Tag:</h4>
 <ul>
 <li>自动建模</li>
 </ul>
 <h4 id="param_7">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_7">Input:</h4>
+<ul>
+<li>blockId (py3pkl): 模块ID</li>
+<li>model (model.pkl): 最优模型</li>
+<li>X_test (csv): 测试数据x</li>
+<li>y_test (csv): 测试数据y</li>
+</ul>
+<h4 id="output_7">Output:</h4>
+<ul>
+<li>modelScores (py3pkl): 模型评估分数</li>
+</ul>
+<h2 id="ml_sampledata">ML_SampleData</h2>
+<p>自动建模 - 数据采样</p>
+<h4 id="tag_8">Tag:</h4>
+<ul>
+<li>自动建模</li>
+</ul>
+<h4 id="param_8">Param:</h4>
 <ul>
 <li>method (string) : 采样方法</li>
 <li>recordsNum (int) : 采样行数</li>
@@ -416,21 +433,21 @@ CONSTANT-固定值</li>
 <li>column (string) : 保持类平衡采样的特征列</li>
 <li>cols (string) : 要采样的列，多列使用逗号分割</li>
 </ul>
-<h4 id="input_7">Input:</h4>
+<h4 id="input_8">Input:</h4>
 <ul>
-<li>handleData (csv) </li>
+<li>handleData (csv): 输入的数据</li>
 </ul>
-<h4 id="output_7">Output:</h4>
+<h4 id="output_8">Output:</h4>
 <ul>
-<li>sampleData (csv) </li>
+<li>sampledata (csv): 采样后数据</li>
 </ul>
 <h2 id="ml_splitset">ML_SplitSet</h2>
 <p>自动建模-数据拆分</p>
-<h4 id="tag_8">Tag:</h4>
+<h4 id="tag_9">Tag:</h4>
 <ul>
 <li>自动建模</li>
 </ul>
-<h4 id="param_8">Param:</h4>
+<h4 id="param_9">Param:</h4>
 <ul>
 <li>targetCol (string) : 目标列</li>
 <li>split (string) : 拆分策略</li>
@@ -438,16 +455,16 @@ CONSTANT-固定值</li>
 <li>foldNum (int) : K-折，kFoldCrossTest=True</li>
 <li>trainRatio (double) : 训练集的样本比例，kFoldCrossTest=FALSE</li>
 </ul>
-<h4 id="input_8">Input:</h4>
+<h4 id="input_9">Input:</h4>
 <ul>
-<li>featureHandleData (csv) </li>
+<li>featureHandleData (csv): 输入的数据</li>
 </ul>
-<h4 id="output_8">Output:</h4>
+<h4 id="output_9">Output:</h4>
 <ul>
-<li>X_train (csv) </li>
-<li>y_train (csv) </li>
-<li>X_test (csv) </li>
-<li>y_test (csv) </li>
+<li>X_train (csv): 训练集X</li>
+<li>y_train (csv): 训练集y</li>
+<li>X_test (csv): 测试集x</li>
+<li>y_test (csv): 测试集y</li>
 </ul></div>
         </div>
 
