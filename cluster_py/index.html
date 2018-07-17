@@ -223,24 +223,18 @@
             <li><a href="#param_5">Param:</a></li>
             <li><a href="#input_5">Input:</a></li>
             <li><a href="#output_5">Output:</a></li> -->
-        <li class="main "><a href="#kmeanspy3">KMeansPy3</a></li>
+        <li class="main "><a href="#kmeansvisuspy3">KMeansVisuSPy3</a></li>
         <!--
             <li><a href="#tag_6">Tag:</a></li>
             <li><a href="#param_6">Param:</a></li>
             <li><a href="#input_6">Input:</a></li>
             <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#kmeansvisuspy3">KMeansVisuSPy3</a></li>
+        <li class="main "><a href="#spectralclusspy3">SpectralClusSPy3</a></li>
         <!--
             <li><a href="#tag_7">Tag:</a></li>
             <li><a href="#param_7">Param:</a></li>
             <li><a href="#input_7">Input:</a></li>
             <li><a href="#output_7">Output:</a></li> -->
-        <li class="main "><a href="#spectralclusspy3">SpectralClusSPy3</a></li>
-        <!--
-            <li><a href="#tag_8">Tag:</a></li>
-            <li><a href="#param_8">Param:</a></li>
-            <li><a href="#input_8">Input:</a></li>
-            <li><a href="#output_8">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -374,63 +368,44 @@
 <li>d_pred (csv) </li>
 <li>m_fitted_model (py3pkl) </li>
 </ul>
-<h2 id="kmeanspy3">KMeansPy3</h2>
-<p>KMeans聚类</p>
-<h4 id="tag_6">Tag:</h4>
-<ul>
-<li>聚类模型</li>
-</ul>
-<h4 id="param_6">Param:</h4>
-<ul>
-<li>header (string) : </li>
-<li>n_cluster (int) : 聚类数</li>
-</ul>
-<h4 id="input_6">Input:</h4>
-<ul>
-<li>in1 (csv) </li>
-</ul>
-<h4 id="output_6">Output:</h4>
-<ul>
-<li>out1 (csv) </li>
-</ul>
 <h2 id="kmeansvisuspy3">KMeansVisuSPy3</h2>
 <p>聚类中心雷达图和肘部图</p>
-<h4 id="tag_7">Tag:</h4>
+<h4 id="tag_6">Tag:</h4>
 <ul>
 <li>聚类模型</li>
 <li>可视化</li>
 </ul>
-<h4 id="param_7">Param:</h4>
+<h4 id="param_6">Param:</h4>
 <ul>
 <li>None</li>
 </ul>
-<h4 id="input_7">Input:</h4>
+<h4 id="input_6">Input:</h4>
 <ul>
 <li>o_centers (py3pkl) </li>
 <li>o_distortions (py3pkl) </li>
 </ul>
-<h4 id="output_7">Output:</h4>
+<h4 id="output_6">Output:</h4>
 <ul>
 <li>distortion_plot (html) </li>
 <li>centers_plot (html) </li>
 </ul>
 <h2 id="spectralclusspy3">SpectralClusSPy3</h2>
 <p>谱聚类是从图论中演化出来的算法，后来在聚类中得到了广泛的应用。它的主要思想是把所有的数据看做空间中的点，这些点之间可以用边连接起来。距离较远的两个点之间的边权重值较低，而距离较近的两个点之间的边权重值较高，通过对所有数据点组成的图进行切图，让切图后不同的子图间边权重和尽可能的低，而子图内的边权重和尽可能的高，从而达到聚类的目的。</p>
-<h4 id="tag_8">Tag:</h4>
+<h4 id="tag_7">Tag:</h4>
 <ul>
 <li>聚类模型</li>
 </ul>
-<h4 id="param_8">Param:</h4>
+<h4 id="param_7">Param:</h4>
 <ul>
 <li>n_clusters (int) : 指定聚类个数</li>
 <li>affinity (string) : 指定核函数</li>
 </ul>
-<h4 id="input_8">Input:</h4>
+<h4 id="input_7">Input:</h4>
 <ul>
 <li>d_feature (csv) </li>
 <li>d_label (csv) </li>
 </ul>
-<h4 id="output_8">Output:</h4>
+<h4 id="output_7">Output:</h4>
 <ul>
 <li>d_pred (csv) </li>
 <li>m_fitted_model (py3pkl) </li>

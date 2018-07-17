@@ -199,7 +199,7 @@
             <li><a href="#param_1">Param:</a></li>
             <li><a href="#input_1">Input:</a></li>
             <li><a href="#output_1">Output:</a></li> -->
-        <li class="main "><a href="#idfdpy3_copy">IDFDPy3_copy</a></li>
+        <li class="main "><a href="#idfdpy3">IDFDPy3</a></li>
         <!--
             <li><a href="#tag_2">Tag:</a></li>
             <li><a href="#param_2">Param:</a></li>
@@ -229,12 +229,18 @@
             <li><a href="#param_6">Param:</a></li>
             <li><a href="#input_6">Input:</a></li>
             <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#word2vecdpy3">Word2VecDPy3</a></li>
+        <li class="main "><a href="#wordcutdpy3">WordCutDPy3</a></li>
         <!--
             <li><a href="#tag_7">Tag:</a></li>
             <li><a href="#param_7">Param:</a></li>
             <li><a href="#input_7">Input:</a></li>
             <li><a href="#output_7">Output:</a></li> -->
+        <li class="main "><a href="#word2vecdpy3">Word2VecDPy3</a></li>
+        <!--
+            <li><a href="#tag_8">Tag:</a></li>
+            <li><a href="#param_8">Param:</a></li>
+            <li><a href="#input_8">Input:</a></li>
+            <li><a href="#output_8">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -283,7 +289,7 @@
 <ul>
 <li>out1 (any) </li>
 </ul>
-<h2 id="idfdpy3_copy">IDFDPy3_copy</h2>
+<h2 id="idfdpy3">IDFDPy3</h2>
 <p>利用IDFModel获取特征向量（通常由HashingTF或CountVectorizer创建）并缩放每列</p>
 <h4 id="tag_2">Tag:</h4>
 <ul>
@@ -386,13 +392,34 @@
 <ul>
 <li>out1 (any) </li>
 </ul>
+<h2 id="wordcutdpy3">WordCutDPy3</h2>
+<p>分词</p>
+<h4 id="tag_7">Tag:</h4>
+<ul>
+<li>自然语言处理</li>
+</ul>
+<h4 id="param_7">Param:</h4>
+<ul>
+<li>sep (string) : </li>
+<li>tmp_path (string) : </li>
+</ul>
+<h4 id="input_7">Input:</h4>
+<ul>
+<li>session_in (json) </li>
+<li>data (datasource.hdfs) </li>
+</ul>
+<h4 id="output_7">Output:</h4>
+<ul>
+<li>session_out (json) </li>
+<li>cutfile (txt) </li>
+</ul>
 <h2 id="word2vecdpy3">Word2VecDPy3</h2>
 <p>将每个单词映射到一个唯一的固定大小向量</p>
-<h4 id="tag_7">Tag:</h4>
+<h4 id="tag_8">Tag:</h4>
 <ul>
 <li>自然语言处理_分布式</li>
 </ul>
-<h4 id="param_7">Param:</h4>
+<h4 id="param_8">Param:</h4>
 <ul>
 <li>inputCol (string) : </li>
 <li>outputCol (string) : </li>
@@ -405,11 +432,11 @@
 <li>windowSize (int) : 窗口大小</li>
 <li>maxSentenceLength (int) : 最大句子长度</li>
 </ul>
-<h4 id="input_7">Input:</h4>
+<h4 id="input_8">Input:</h4>
 <ul>
 <li>in1 (any) </li>
 </ul>
-<h4 id="output_7">Output:</h4>
+<h4 id="output_8">Output:</h4>
 <ul>
 <li>out1 (any) </li>
 </ul></div>
