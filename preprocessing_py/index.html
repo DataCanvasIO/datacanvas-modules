@@ -257,12 +257,18 @@
             <li><a href="#param_11">Param:</a></li>
             <li><a href="#input_11">Input:</a></li>
             <li><a href="#output_11">Output:</a></li> -->
-        <li class="main "><a href="#woe_iv_dataspy3">WOE_IV_DataSPy3</a></li>
+        <li class="main "><a href="#quantiletrasformerdataspy3_transform">QuantileTrasformerDataSPy3_transform</a></li>
         <!--
             <li><a href="#tag_12">Tag:</a></li>
             <li><a href="#param_12">Param:</a></li>
             <li><a href="#input_12">Input:</a></li>
             <li><a href="#output_12">Output:</a></li> -->
+        <li class="main "><a href="#woe_iv_dataspy3">WOE_IV_DataSPy3</a></li>
+        <!--
+            <li><a href="#tag_13">Tag:</a></li>
+            <li><a href="#param_13">Param:</a></li>
+            <li><a href="#input_13">Input:</a></li>
+            <li><a href="#output_13">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -504,24 +510,43 @@
 <li>d_changed_data (py3pkl): 分位数转换后数据</li>
 <li>transformer (py3pkl) ：转换器</li>
 </ul>
-<h2 id="woe_iv_dataspy3">WOE_IV_DataSPy3</h2>
-<p>IV的全称是Information Value，中文意思是信息价值，或者信息量。我们需要一些具体的量化指标来衡量每个自变量的预测能力，并根据这些量化指标的大小，来确定哪些变量进入模型。IV就是这样一种指标，他可以用来衡量自变量的预测能力。类似的指标还有信息增益、基尼系数等等。高IV表示该特征和目标变量的关联度高；目标变量只能是二分类；特征分箱越细，IV越高。</p>
-<p>WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自变量的一种编码形式。WOE表示的实际上是“当前分组中响应客户占所有响应客户的比例”和“当前分组中没有响应的客户占所有没有响应的客户的比例”的差异。</p>
+<h2 id="quantiletrasformerdataspy3_transform">QuantileTrasformerDataSPy3_transform</h2>
+<p>读入QuantileTransformer训练好的模型，并对数据进行分位数转换</p>
 <h4 id="tag_12">Tag:</h4>
 <ul>
-<li>可视化</li>
 <li>数据预处理</li>
 </ul>
 <h4 id="param_12">Param:</h4>
 <ul>
-<li>label (string) : 标签变量</li>
+<li>None</li>
 </ul>
 <h4 id="input_12">Input:</h4>
+<ul>
+<li>transformer (py3pkl): 训练好的Quantile模型</li>
+<li>d_data (py3pkl): 输入数据</li>
+</ul>
+<h4 id="output_12">Output:</h4>
+<ul>
+<li>d_changed_data (py3pkl): 分位数转换后数据</li>
+</ul>
+<h2 id="woe_iv_dataspy3">WOE_IV_DataSPy3</h2>
+<p>IV的全称是Information Value，中文意思是信息价值，或者信息量。我们需要一些具体的量化指标来衡量每个自变量的预测能力，并根据这些量化指标的大小，来确定哪些变量进入模型。IV就是这样一种指标，他可以用来衡量自变量的预测能力。类似的指标还有信息增益、基尼系数等等。高IV表示该特征和目标变量的关联度高；目标变量只能是二分类；特征分箱越细，IV越高。</p>
+<p>WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自变量的一种编码形式。WOE表示的实际上是“当前分组中响应客户占所有响应客户的比例”和“当前分组中没有响应的客户占所有没有响应的客户的比例”的差异。</p>
+<h4 id="tag_13">Tag:</h4>
+<ul>
+<li>可视化</li>
+<li>数据预处理</li>
+</ul>
+<h4 id="param_13">Param:</h4>
+<ul>
+<li>label (string) : 标签变量</li>
+</ul>
+<h4 id="input_13">Input:</h4>
 <ul>
 <li>d_data1 (py3pkl): 输入数据</li>
 <li>o_all_var (py3pkl): 所有需要计算WOE的变量</li>
 </ul>
-<h4 id="output_12">Output:</h4>
+<h4 id="output_13">Output:</h4>
 <ul>
 <li>o_IV_bar_plot (jpg): IV分布柱形图</li>
 <li>o_WOE_corr_plot (jpg): 计算WOE后的相关性热力图</li>
