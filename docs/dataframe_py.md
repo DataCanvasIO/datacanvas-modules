@@ -32,7 +32,7 @@
 
 #### Input:
 
-* d_data (csv): 数据
+* d_data (py3pkl): 数据
 
 #### Output:
 
@@ -87,7 +87,7 @@
 
 #### Input:
 
-* d_data (csv): 数据
+* d_data (py3pkl): 数据
 
 #### Output:
 

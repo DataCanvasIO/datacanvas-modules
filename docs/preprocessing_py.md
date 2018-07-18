@@ -243,6 +243,26 @@
 * d_changed_data (py3pkl): 分位数转换后数据
 * transformer (py3pkl) ：转换器
 
+
+## QuantileTrasformerDataSPy3_transform
+
+读入QuantileTransformer训练好的模型，并对数据进行分位数转换
+
+#### Tag:
+* 数据预处理
+
+#### Param:
+* None
+
+#### Input:
+* transformer (py3pkl): 训练好的Quantile模型
+* d_data (py3pkl): 输入数据
+
+#### Output:
+
+* d_changed_data (py3pkl): 分位数转换后数据
+
+
 ## WOE_IV_DataSPy3
 
 IV的全称是Information Value，中文意思是信息价值，或者信息量。我们需要一些具体的量化指标来衡量每个自变量的预测能力，并根据这些量化指标的大小，来确定哪些变量进入模型。IV就是这样一种指标，他可以用来衡量自变量的预测能力。类似的指标还有信息增益、基尼系数等等。高IV表示该特征和目标变量的关联度高；目标变量只能是二分类；特征分箱越细，IV越高。
