@@ -211,36 +211,42 @@
             <li><a href="#param_3">Param:</a></li>
             <li><a href="#input_3">Input:</a></li>
             <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#kmeansvisuspy3">KMeansVisuSPy3</a></li>
+        <li class="main "><a href="#kdeplotvisuspy3">KDEPlotVisuSPy3</a></li>
         <!--
             <li><a href="#tag_4">Tag:</a></li>
             <li><a href="#param_4">Param:</a></li>
             <li><a href="#input_4">Input:</a></li>
             <li><a href="#output_4">Output:</a></li> -->
-        <li class="main "><a href="#plotlearningcurvespy3_bestmodel">PlotLearningCurveSPy3_BestModel</a></li>
+        <li class="main "><a href="#kmeansvisuspy3">KMeansVisuSPy3</a></li>
         <!--
             <li><a href="#tag_5">Tag:</a></li>
             <li><a href="#param_5">Param:</a></li>
             <li><a href="#input_5">Input:</a></li>
             <li><a href="#output_5">Output:</a></li> -->
-        <li class="main "><a href="#plotlearningcurvespy3">PlotLearningCurveSPy3</a></li>
+        <li class="main "><a href="#plotlearningcurvespy3_bestmodel">PlotLearningCurveSPy3_BestModel</a></li>
         <!--
             <li><a href="#tag_6">Tag:</a></li>
             <li><a href="#param_6">Param:</a></li>
             <li><a href="#input_6">Input:</a></li>
             <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#reportpdfclasevalspy3">ReportPDFClasEvalSPy3</a></li>
+        <li class="main "><a href="#plotlearningcurvespy3">PlotLearningCurveSPy3</a></li>
         <!--
             <li><a href="#tag_7">Tag:</a></li>
             <li><a href="#param_7">Param:</a></li>
             <li><a href="#input_7">Input:</a></li>
             <li><a href="#output_7">Output:</a></li> -->
-        <li class="main "><a href="#woe_iv_dataspy3">WOE_IV_DataSPy3</a></li>
+        <li class="main "><a href="#reportpdfclasevalspy3">ReportPDFClasEvalSPy3</a></li>
         <!--
             <li><a href="#tag_8">Tag:</a></li>
             <li><a href="#param_8">Param:</a></li>
             <li><a href="#input_8">Input:</a></li>
             <li><a href="#output_8">Output:</a></li> -->
+        <li class="main "><a href="#woe_iv_dataspy3">WOE_IV_DataSPy3</a></li>
+        <!--
+            <li><a href="#tag_9">Tag:</a></li>
+            <li><a href="#param_9">Param:</a></li>
+            <li><a href="#input_9">Input:</a></li>
+            <li><a href="#output_9">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -325,51 +331,47 @@
 <ul>
 <li>d_form (html): html形式的数据 </li>
 </ul>
-<h2 id="kmeansvisuspy3">KMeansVisuSPy3</h2>
-<p>聚类中心雷达图和肘部图</p>
+<h2 id="kdeplotvisuspy3">KDEPlotVisuSPy3</h2>
+<p>核密度估计图能帮助我们查看单个变量的分布(可以将其视为平滑的直方图)</p>
 <h4 id="tag_4">Tag:</h4>
 <ul>
-<li>聚类模型</li>
 <li>可视化</li>
 </ul>
 <h4 id="param_4">Param:</h4>
 <ul>
-<li>None</li>
+<li>target (string): 标签变量</li>
+<li>var (string): 需要查看分布的变量</li>
 </ul>
 <h4 id="input_4">Input:</h4>
+<ul>
+<li>d_data (py3pkl): 输入的数据</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>o_kde_plot (pdf): 生成的KDE图</li>
+</ul>
+<h2 id="kmeansvisuspy3">KMeansVisuSPy3</h2>
+<p>聚类中心雷达图和肘部图</p>
+<h4 id="tag_5">Tag:</h4>
+<ul>
+<li>聚类模型</li>
+<li>可视化</li>
+</ul>
+<h4 id="param_5">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_5">Input:</h4>
 <ul>
 <li>o_centers (py3pkl): 聚类中心</li>
 <li>o_distortions (py3pkl): 畸变函数</li>
 </ul>
-<h4 id="output_4">Output:</h4>
+<h4 id="output_5">Output:</h4>
 <ul>
 <li>distortion_plot (html): 肘部图 </li>
 <li>centers_plot (html): 聚类中心雷达图 </li>
 </ul>
 <h2 id="plotlearningcurvespy3_bestmodel">PlotLearningCurveSPy3_BestModel</h2>
-<p>画出学习曲线，根据训练集和测试集分数判断是否过拟合或欠拟合。</p>
-<h4 id="tag_5">Tag:</h4>
-<ul>
-<li>模型评估</li>
-<li>可视化</li>
-</ul>
-<h4 id="param_5">Param:</h4>
-<ul>
-<li>n_jobs (int) : Number of jobs to run in parallel</li>
-<li>n_splits (int) : 交叉验证时使用折数</li>
-<li>test_size (double) : 验证集百分比</li>
-</ul>
-<h4 id="input_5">Input:</h4>
-<ul>
-<li>d_feature (csv): 特征变量</li>
-<li>d_label (csv): 目标变量</li>
-<li>best_model (py3pkl): 训练好的模型</li>
-</ul>
-<h4 id="output_5">Output:</h4>
-<ul>
-<li>learning_curve (jpg): 学习曲线图 </li>
-</ul>
-<h2 id="plotlearningcurvespy3">PlotLearningCurveSPy3</h2>
 <p>画出学习曲线，根据训练集和测试集分数判断是否过拟合或欠拟合。</p>
 <h4 id="tag_6">Tag:</h4>
 <ul>
@@ -381,19 +383,19 @@
 <li>n_jobs (int) : Number of jobs to run in parallel</li>
 <li>n_splits (int) : 交叉验证时使用折数</li>
 <li>test_size (double) : 验证集百分比</li>
-<li>model (string) : 输入模型estimator, 例如GaussianNB()</li>
 </ul>
 <h4 id="input_6">Input:</h4>
 <ul>
 <li>d_feature (csv): 特征变量</li>
 <li>d_label (csv): 目标变量</li>
+<li>best_model (py3pkl): 训练好的模型</li>
 </ul>
 <h4 id="output_6">Output:</h4>
 <ul>
 <li>learning_curve (jpg): 学习曲线图 </li>
 </ul>
-<h2 id="reportpdfclasevalspy3">ReportPDFClasEvalSPy3</h2>
-<p>输出分类评估报告</p>
+<h2 id="plotlearningcurvespy3">PlotLearningCurveSPy3</h2>
+<p>画出学习曲线，根据训练集和测试集分数判断是否过拟合或欠拟合。</p>
 <h4 id="tag_7">Tag:</h4>
 <ul>
 <li>模型评估</li>
@@ -401,9 +403,32 @@
 </ul>
 <h4 id="param_7">Param:</h4>
 <ul>
-<li>None</li>
+<li>n_jobs (int) : Number of jobs to run in parallel</li>
+<li>n_splits (int) : 交叉验证时使用折数</li>
+<li>test_size (double) : 验证集百分比</li>
+<li>model (string) : 输入模型estimator, 例如GaussianNB()</li>
 </ul>
 <h4 id="input_7">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output_7">Output:</h4>
+<ul>
+<li>learning_curve (jpg): 学习曲线图 </li>
+</ul>
+<h2 id="reportpdfclasevalspy3">ReportPDFClasEvalSPy3</h2>
+<p>输出分类评估报告</p>
+<h4 id="tag_8">Tag:</h4>
+<ul>
+<li>模型评估</li>
+<li>可视化</li>
+</ul>
+<h4 id="param_8">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_8">Input:</h4>
 <ul>
 <li>o_metric (csv): 各评估指标（准确率、Kappa分数、F分数、ROC值等）</li>
 <li>o_classification_report (txt): 评估报告(F分数、精确率、召回率)</li>
@@ -414,28 +439,28 @@
 <li>o_confusion_matrix_2 (jpg): 混淆矩阵图</li>
 <li>o_roc_curve_2 (jpg): ROC曲线图</li>
 </ul>
-<h4 id="output_7">Output:</h4>
+<h4 id="output_8">Output:</h4>
 <ul>
 <li>evaluation_report (pdf): 评估报告 </li>
 </ul>
 <h2 id="woe_iv_dataspy3">WOE_IV_DataSPy3</h2>
 <p>IV的全称是Information Value，中文意思是信息价值，或者信息量。我们需要一些具体的量化指标来衡量每个自变量的预测能力，并根据这些量化指标的大小，来确定哪些变量进入模型。IV就是这样一种指标，他可以用来衡量自变量的预测能力。类似的指标还有信息增益、基尼系数等等。高IV表示该特征和目标变量的关联度高；目标变量只能是二分类；特征分箱越细，IV越高。</p>
 <p>WOE的全称是“Weight of Evidence”，即证据权重。WOE是对原始自变量的一种编码形式。WOE表示的实际上是“当前分组中响应客户占所有响应客户的比例”和“当前分组中没有响应的客户占所有没有响应的客户的比例”的差异。</p>
-<h4 id="tag_8">Tag:</h4>
+<h4 id="tag_9">Tag:</h4>
 <ul>
 <li>可视化</li>
 <li>数据预处理</li>
 </ul>
-<h4 id="param_8">Param:</h4>
+<h4 id="param_9">Param:</h4>
 <ul>
 <li>label (string) : 标签变量</li>
 </ul>
-<h4 id="input_8">Input:</h4>
+<h4 id="input_9">Input:</h4>
 <ul>
 <li>d_data1 (py3pkl): 输入数据</li>
 <li>o_all_var (py3pkl): 所有需要计算WOE的变量</li>
 </ul>
-<h4 id="output_8">Output:</h4>
+<h4 id="output_9">Output:</h4>
 <ul>
 <li>o_IV_bar_plot (jpg): IV分布柱形图</li>
 <li>o_WOE_corr_plot (jpg): 计算WOE后的相关性热力图</li>
