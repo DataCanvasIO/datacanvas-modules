@@ -162,7 +162,7 @@
 
 #### Param:
 * col (string) : 指定变量
-* method (string) : 选择去重方法
+* method (string) : 选择去重后保留数据方法 (first或者last)
 
 #### Input:
 

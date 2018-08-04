@@ -71,6 +71,23 @@
 #### Output:
 * d_form (html): html形式的数据 
 
+## KDEPlotVisuSPy3
+
+核密度估计图能帮助我们查看单个变量的分布(可以将其视为平滑的直方图)
+
+#### Tag:
+* 可视化
+
+#### Param:
+* target (string): 标签变量
+* var (string): 需要查看分布的变量
+
+#### Input:
+* d_data (py3pkl): 输入的数据
+
+#### Output:
+* o_kde_plot (pdf): 生成的KDE图
+
 ## KMeansVisuSPy3
 
 聚类中心雷达图和肘部图
