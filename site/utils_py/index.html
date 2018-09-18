@@ -199,48 +199,54 @@
             <li><a href="#param_1">Param:</a></li>
             <li><a href="#input_1">Input:</a></li>
             <li><a href="#output_1">Output:</a></li> -->
-        <li class="main "><a href="#datainfounivspy3">DataInfoUnivSPy3</a></li>
+        <li class="main "><a href="#datatohiveunivspy3">DataToHiveUnivSPy3</a></li>
         <!--
             <li><a href="#tag_2">Tag:</a></li>
             <li><a href="#param_2">Param:</a></li>
             <li><a href="#input_2">Input:</a></li>
             <li><a href="#output_2">Output:</a></li> -->
-        <li class="main "><a href="#hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</a></li>
+        <li class="main "><a href="#datainfounivspy3">DataInfoUnivSPy3</a></li>
         <!--
             <li><a href="#tag_3">Tag:</a></li>
             <li><a href="#param_3">Param:</a></li>
             <li><a href="#input_3">Input:</a></li>
             <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#hivedownloaderunivspy3">HiveDownloaderUnivSPy3</a></li>
+        <li class="main "><a href="#hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</a></li>
         <!--
             <li><a href="#tag_4">Tag:</a></li>
             <li><a href="#param_4">Param:</a></li>
             <li><a href="#input_4">Input:</a></li>
             <li><a href="#output_4">Output:</a></li> -->
-        <li class="main "><a href="#jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</a></li>
+        <li class="main "><a href="#hivedownloaderunivspy3">HiveDownloaderUnivSPy3</a></li>
         <!--
             <li><a href="#tag_5">Tag:</a></li>
             <li><a href="#param_5">Param:</a></li>
             <li><a href="#input_5">Input:</a></li>
             <li><a href="#output_5">Output:</a></li> -->
-        <li class="main "><a href="#pkl2csvunivspy3">PKL2CSVUnivSPy3</a></li>
+        <li class="main "><a href="#jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</a></li>
         <!--
             <li><a href="#tag_6">Tag:</a></li>
             <li><a href="#param_6">Param:</a></li>
             <li><a href="#input_6">Input:</a></li>
             <li><a href="#output_6">Output:</a></li> -->
-        <li class="main "><a href="#pklfromstoragespy3">PKLfromStorageSPy3</a></li>
+        <li class="main "><a href="#pkl2csvunivspy3">PKL2CSVUnivSPy3</a></li>
         <!--
             <li><a href="#tag_7">Tag:</a></li>
             <li><a href="#param_7">Param:</a></li>
             <li><a href="#input_7">Input:</a></li>
             <li><a href="#output_7">Output:</a></li> -->
-        <li class="main "><a href="#pkltostroragespy3">PKLtoStrorageSPy3</a></li>
+        <li class="main "><a href="#pklfromstoragespy3">PKLfromStorageSPy3</a></li>
         <!--
             <li><a href="#tag_8">Tag:</a></li>
             <li><a href="#param_8">Param:</a></li>
             <li><a href="#input_8">Input:</a></li>
             <li><a href="#output_8">Output:</a></li> -->
+        <li class="main "><a href="#pkltostroragespy3">PKLtoStrorageSPy3</a></li>
+        <!--
+            <li><a href="#tag_9">Tag:</a></li>
+            <li><a href="#param_9">Param:</a></li>
+            <li><a href="#input_9">Input:</a></li>
+            <li><a href="#output_9">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -281,27 +287,28 @@
 <ul>
 <li>data (any): 数据</li>
 </ul>
-<h2 id="datainfounivspy3">DataInfoUnivSPy3</h2>
-<p>数据统计：数据类型，最大值，最小值，中位数</p>
+<h2 id="datatohiveunivspy3">DataToHiveUnivSPy3</h2>
+<p>将数据存入Hive表里</p>
 <h4 id="tag_2">Tag:</h4>
 <ul>
 <li>通用模块</li>
 </ul>
 <h4 id="param_2">Param:</h4>
 <ul>
-<li>None</li>
+<li>jdbc_url (string): jdbc地址，例如jdbc:hive2://cdh2:10000/database</li>
+<li>table (string): Hive表名</li>
+<li>hdfs_file_name (string): HDFS路径 </li>
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>d_data (py3pkl): 数据</li>
+<li>d_data (csv): csv数据</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>o_data_type_null (html): 数据类型与缺失值统计</li>
-<li>o_data_describe (html): 均值，标准差，最小值，25分位数，50分位数，75分位数，最大值 </li>
+<li>None</li>
 </ul>
-<h2 id="hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</h2>
-<p>从HDFS路径获取数据</p>
+<h2 id="datainfounivspy3">DataInfoUnivSPy3</h2>
+<p>数据统计：数据类型，最大值，最小值，中位数</p>
 <h4 id="tag_3">Tag:</h4>
 <ul>
 <li>通用模块</li>
@@ -312,37 +319,56 @@
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>o_path (any): hdfs路径</li>
+<li>d_data (py3pkl): 数据</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>d_data (csv): 获取到的数据 </li>
+<li>o_data_type_null (html): 数据类型与缺失值统计</li>
+<li>o_data_describe (html): 均值，标准差，最小值，25分位数，50分位数，75分位数，最大值 </li>
 </ul>
-<h2 id="hivedownloaderunivspy3">HiveDownloaderUnivSPy3</h2>
-<p>从Hive对应数据库获取数据</p>
+<h2 id="hdfsdownloaderunivspy3">HDFSdownloaderUnivSPy3</h2>
+<p>从HDFS路径获取数据</p>
 <h4 id="tag_4">Tag:</h4>
 <ul>
 <li>通用模块</li>
 </ul>
 <h4 id="param_4">Param:</h4>
 <ul>
-<li>script (string) : </li>
+<li>None</li>
 </ul>
 <h4 id="input_4">Input:</h4>
 <ul>
-<li>o_path (any): hive路径</li>
+<li>o_path (any): hdfs路径</li>
 </ul>
 <h4 id="output_4">Output:</h4>
 <ul>
 <li>d_data (csv): 获取到的数据 </li>
 </ul>
-<h2 id="jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</h2>
-<p>通过JDBC方式，访问数据库。</p>
+<h2 id="hivedownloaderunivspy3">HiveDownloaderUnivSPy3</h2>
+<p>从Hive对应数据库获取数据</p>
 <h4 id="tag_5">Tag:</h4>
 <ul>
 <li>通用模块</li>
 </ul>
 <h4 id="param_5">Param:</h4>
+<ul>
+<li>script (string) : </li>
+</ul>
+<h4 id="input_5">Input:</h4>
+<ul>
+<li>o_path (any): hive路径</li>
+</ul>
+<h4 id="output_5">Output:</h4>
+<ul>
+<li>d_data (csv): 获取到的数据 </li>
+</ul>
+<h2 id="jdbcdownloaderunivspy3">JDBCdownloaderUnivSPy3</h2>
+<p>通过JDBC方式，访问数据库。</p>
+<h4 id="tag_6">Tag:</h4>
+<ul>
+<li>通用模块</li>
+</ul>
+<h4 id="param_6">Param:</h4>
 <ul>
 <li>jdbc_url (string) : 数据库JDBC连接串</li>
 <li>driver_jar (string) : 数据库驱动路径</li>
@@ -350,66 +376,66 @@
 <li>driver_name (string) : 驱动类名</li>
 <li>delimiter (string) : 数据的分隔符</li>
 </ul>
-<h4 id="input_5">Input:</h4>
+<h4 id="input_6">Input:</h4>
 <ul>
 <li>None</li>
 </ul>
-<h4 id="output_5">Output:</h4>
+<h4 id="output_6">Output:</h4>
 <ul>
 <li>output_file (any): 输出数据</li>
 </ul>
 <h2 id="pkl2csvunivspy3">PKL2CSVUnivSPy3</h2>
 <p>将pkl转换为csv格式</p>
-<h4 id="tag_6">Tag:</h4>
-<ul>
-<li>通用模块</li>
-</ul>
-<h4 id="param_6">Param:</h4>
-<ul>
-<li>None</li>
-</ul>
-<h4 id="input_6">Input:</h4>
-<ul>
-<li>d_data1 (py3pkl): py3pkl数据</li>
-</ul>
-<h4 id="output_6">Output:</h4>
-<ul>
-<li>d_data2 (csv): 返回csv格式数据</li>
-</ul>
-<h2 id="pklfromstoragespy3">PKLfromStorageSPy3</h2>
-<p>从个人存储空间中读入PKL文件</p>
 <h4 id="tag_7">Tag:</h4>
 <ul>
 <li>通用模块</li>
 </ul>
 <h4 id="param_7">Param:</h4>
 <ul>
-<li>input_name (string) : 从个人存储空间读入文件名</li>
+<li>None</li>
 </ul>
 <h4 id="input_7">Input:</h4>
 <ul>
-<li>None</li>
+<li>d_data1 (py3pkl): py3pkl数据</li>
 </ul>
 <h4 id="output_7">Output:</h4>
 <ul>
-<li>o_pkl_file (py3pkl): 输出PKL文件 </li>
+<li>d_data2 (csv): 返回csv格式数据</li>
 </ul>
-<h2 id="pkltostroragespy3">PKLtoStrorageSPy3</h2>
-<p>将PKL文件导入个人存储空间中</p>
+<h2 id="pklfromstoragespy3">PKLfromStorageSPy3</h2>
+<p>从个人存储空间中读入PKL文件</p>
 <h4 id="tag_8">Tag:</h4>
 <ul>
 <li>通用模块</li>
 </ul>
 <h4 id="param_8">Param:</h4>
 <ul>
-<li>output_name (string) : 填写输出文件的名字</li>
-<li>foldername (string) : 文件夹名</li>
+<li>input_name (string) : 从个人存储空间读入文件名</li>
 </ul>
 <h4 id="input_8">Input:</h4>
 <ul>
-<li>o_pkl_file (any) : 读入的PKL文件</li>
+<li>None</li>
 </ul>
 <h4 id="output_8">Output:</h4>
+<ul>
+<li>o_pkl_file (py3pkl): 输出PKL文件 </li>
+</ul>
+<h2 id="pkltostroragespy3">PKLtoStrorageSPy3</h2>
+<p>将PKL文件导入个人存储空间中</p>
+<h4 id="tag_9">Tag:</h4>
+<ul>
+<li>通用模块</li>
+</ul>
+<h4 id="param_9">Param:</h4>
+<ul>
+<li>output_name (string) : 填写输出文件的名字</li>
+<li>foldername (string) : 文件夹名</li>
+</ul>
+<h4 id="input_9">Input:</h4>
+<ul>
+<li>o_pkl_file (any) : 读入的PKL文件</li>
+</ul>
+<h4 id="output_9">Output:</h4>
 <ul>
 <li>None</li>
 </ul></div>

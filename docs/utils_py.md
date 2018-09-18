@@ -31,6 +31,24 @@
 #### Output:
 * data (any): 数据
 
+## DataToHiveUnivSPy3
+
+将数据存入Hive表里
+
+#### Tag:
+* 通用模块
+
+#### Param:
+* jdbc_url (string): jdbc地址，例如jdbc:hive2://cdh2:10000/database
+* table (string): Hive表名
+* hdfs_file_name (string): HDFS路径 
+
+#### Input:
+* d_data (csv): csv数据
+
+#### Output:
+* None
+
 ## DataInfoUnivSPy3
 
 数据统计：数据类型，最大值，最小值，中位数
