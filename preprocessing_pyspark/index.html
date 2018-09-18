@@ -289,30 +289,36 @@
             <li><a href="#param_16">Param:</a></li>
             <li><a href="#input_16">Input:</a></li>
             <li><a href="#output_16">Output:</a></li> -->
-        <li class="main "><a href="#stringindexerdpy3">StringIndexerDPy3</a></li>
+        <li class="main "><a href="#startpointdpy3">StartPointDPy3</a></li>
         <!--
             <li><a href="#tag_17">Tag:</a></li>
             <li><a href="#param_17">Param:</a></li>
             <li><a href="#input_17">Input:</a></li>
             <li><a href="#output_17">Output:</a></li> -->
-        <li class="main "><a href="#vectorassemblerdpy3">VectorAssemblerDPy3</a></li>
+        <li class="main "><a href="#stringindexerdpy3">StringIndexerDPy3</a></li>
         <!--
             <li><a href="#tag_18">Tag:</a></li>
             <li><a href="#param_18">Param:</a></li>
             <li><a href="#input_18">Input:</a></li>
             <li><a href="#output_18">Output:</a></li> -->
-        <li class="main "><a href="#vectorindexerdpy3">VectorIndexerDPy3</a></li>
+        <li class="main "><a href="#vectorassemblerdpy3">VectorAssemblerDPy3</a></li>
         <!--
             <li><a href="#tag_19">Tag:</a></li>
             <li><a href="#param_19">Param:</a></li>
             <li><a href="#input_19">Input:</a></li>
             <li><a href="#output_19">Output:</a></li> -->
-        <li class="main "><a href="#vectorslicerdpy3">VectorSlicerDPy3</a></li>
+        <li class="main "><a href="#vectorindexerdpy3">VectorIndexerDPy3</a></li>
         <!--
             <li><a href="#tag_20">Tag:</a></li>
             <li><a href="#param_20">Param:</a></li>
             <li><a href="#input_20">Input:</a></li>
             <li><a href="#output_20">Output:</a></li> -->
+        <li class="main "><a href="#vectorslicerdpy3">VectorSlicerDPy3</a></li>
+        <!--
+            <li><a href="#tag_21">Tag:</a></li>
+            <li><a href="#param_21">Param:</a></li>
+            <li><a href="#input_21">Input:</a></li>
+            <li><a href="#output_21">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -634,82 +640,100 @@
 <ul>
 <li>out1 (any) : 输出数据 </li>
 </ul>
-<h2 id="stringindexerdpy3">StringIndexerDPy3</h2>
-<p>将字符串列编码为标签索引列</p>
+<h2 id="startpointdpy3">StartPointDPy3</h2>
+<p>pipeline起始模块</p>
 <h4 id="tag_17">Tag:</h4>
 <ul>
 <li>数据预处理_分布式</li>
 </ul>
 <h4 id="param_17">Param:</h4>
 <ul>
-<li>cols (string) : 要转换的变量，如果#，则对输入的字符串变量进行转换</li>
-<li>label (string) : 标签</li>
+<li>None</li>
 </ul>
 <h4 id="input_17">Input:</h4>
 <ul>
-<li>in1 (any): 输入dataframe</li>
-<li>in2 (any): 输入string变量</li>
-<li>in3 (any): 输入非string变量</li>
+<li>None</li>
 </ul>
 <h4 id="output_17">Output:</h4>
 <ul>
-<li>out1 (any): 输出dataframe</li>
-<li>out2 (any): 输出变量</li>
+<li>out1 (any) : 输出空白pipeline, 作为pipeline开始的标志</li>
 </ul>
-<h2 id="vectorassemblerdpy3">VectorAssemblerDPy3</h2>
-<p>将给定的多列表组合成一个单一的相量列</p>
+<h2 id="stringindexerdpy3">StringIndexerDPy3</h2>
+<p>将字符串列编码为标签索引列</p>
 <h4 id="tag_18">Tag:</h4>
 <ul>
 <li>数据预处理_分布式</li>
 </ul>
 <h4 id="param_18">Param:</h4>
 <ul>
-<li>label (string) : 标签变量</li>
-<li>cols (string) : 如果为#，则组合除标签外所有变量</li>
-<li>method (string) : 选择变量方法</li>
+<li>cols (string) : 要转换的变量，如果#，则对输入的字符串变量进行转换</li>
+<li>label (string) : 标签</li>
 </ul>
 <h4 id="input_18">Input:</h4>
 <ul>
 <li>in1 (any): 输入dataframe</li>
-<li>in2 (any): 输入数据所有变量</li>
+<li>in2 (any): 输入string变量</li>
+<li>in3 (any): 输入非string变量</li>
 </ul>
 <h4 id="output_18">Output:</h4>
 <ul>
-<li>out1 (any): 输出数据</li>
+<li>out1 (any): 输出dataframe</li>
+<li>out2 (any): 输出变量</li>
 </ul>
-<h2 id="vectorindexerdpy3">VectorIndexerDPy3</h2>
-<p>根据最大类别数识别类别变量，然后对向量中的类别变量索引化，主要作用是提高决策树或随机森林算法的分类效果</p>
+<h2 id="vectorassemblerdpy3">VectorAssemblerDPy3</h2>
+<p>将给定的多列表组合成一个单一的相量列</p>
 <h4 id="tag_19">Tag:</h4>
 <ul>
 <li>数据预处理_分布式</li>
 </ul>
 <h4 id="param_19">Param:</h4>
 <ul>
-<li>maxCategories (int) : 定义类别型变量的最大类别数</li>
+<li>label (string) : 标签变量</li>
+<li>cols (string) : 如果为#，则组合除标签外所有变量</li>
+<li>method (string) : 选择变量方法</li>
 </ul>
 <h4 id="input_19">Input:</h4>
 <ul>
-<li>in1 (any) : 输入数据</li>
+<li>in1 (any): 输入dataframe</li>
+<li>in2 (any): 输入数据所有变量</li>
 </ul>
 <h4 id="output_19">Output:</h4>
 <ul>
-<li>out1 (any) : 输出数据 </li>
+<li>out1 (any): 输出数据</li>
 </ul>
-<h2 id="vectorslicerdpy3">VectorSlicerDPy3</h2>
-<p>VectorSlicer是一个变换器，它采用一个特征向量并输出一个带有原始特征子阵列的新特征向量。 它对于从向量列中提取变量非常有用。</p>
+<h2 id="vectorindexerdpy3">VectorIndexerDPy3</h2>
+<p>根据最大类别数识别类别变量，然后对向量中的类别变量索引化，主要作用是提高决策树或随机森林算法的分类效果</p>
 <h4 id="tag_20">Tag:</h4>
 <ul>
 <li>数据预处理_分布式</li>
 </ul>
 <h4 id="param_20">Param:</h4>
 <ul>
-<li>indices (string) : 选择指定变量的index</li>
+<li>maxCategories (int) : 定义类别型变量的最大类别数</li>
 </ul>
 <h4 id="input_20">Input:</h4>
 <ul>
 <li>in1 (any) : 输入数据</li>
 </ul>
 <h4 id="output_20">Output:</h4>
+<ul>
+<li>out1 (any) : 输出数据 </li>
+</ul>
+<h2 id="vectorslicerdpy3">VectorSlicerDPy3</h2>
+<p>VectorSlicer是一个变换器，它采用一个特征向量并输出一个带有原始特征子阵列的新特征向量。 它对于从向量列中提取变量非常有用。</p>
+<h4 id="tag_21">Tag:</h4>
+<ul>
+<li>数据预处理_分布式</li>
+</ul>
+<h4 id="param_21">Param:</h4>
+<ul>
+<li>indices (string) : 选择指定变量的index</li>
+</ul>
+<h4 id="input_21">Input:</h4>
+<ul>
+<li>in1 (any) : 输入数据</li>
+</ul>
+<h4 id="output_21">Output:</h4>
 <ul>
 <li>out1 (any) : 输出数据 </li>
 </ul></div>
