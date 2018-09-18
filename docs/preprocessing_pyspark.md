@@ -282,6 +282,22 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 #### Output:
 * out1 (any) : 输出数据 
 
+## StartPointDPy3
+
+pipeline起始模块
+
+#### Tag:
+* 数据预处理_分布式
+
+#### Param:
+* None
+
+#### Input:
+* None
+
+#### Output:
+* out1 (any) : 输出空白pipeline, 作为pipeline开始的标志
+
 ## StringIndexerDPy3
 
 将字符串列编码为标签索引列
