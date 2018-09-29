@@ -139,19 +139,7 @@
 </li>
                                     
 <li >
-    <a href="../model_selection_hyperparameters_tuning_pyspark/">模型选择及调参</a>
-</li>
-                                    
-<li >
     <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
-</li>
-                                    
-<li >
-    <a href="../model_release_pyspark/">模型发布</a>
-</li>
-                                    
-<li >
-    <a href="../NLP_pyspark/">自然语言处理</a>
 </li>
                                 </ul>
                             </li>
@@ -175,7 +163,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../model_selection_hyperparameters_tuning_pyspark/">
+                                <a rel="prev" href="../prediction_metrics_pyspark/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -223,8 +211,6 @@
 </ul>
 <h4 id="param">Param:</h4>
 <ul>
-<li>featuresCol (string) : 进行聚类的特征字段名</li>
-<li>predictionCol (string) : 预测结果的字段名</li>
 <li>k (int) : 设置你想聚成的类数</li>
 <li>maxIter (int) : 最大迭代次数</li>
 <li>seed (string) : 种子</li>
@@ -232,11 +218,11 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul>
 <h2 id="gaussianmixturedpy3">GaussianMixtureDPy3</h2>
 <p>GaussianMixture聚类</p>
@@ -246,21 +232,18 @@
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>featuresCol (string) : 进行聚类的特征字段名</li>
-<li>predictionCol (string) : 预测结果的字段名</li>
 <li>k (int) : 设置你想聚成的类数</li>
-<li>tol (double) : </li>
+<li>tol (double) : 容忍度</li>
 <li>maxIter (int) : 最大迭代次数</li>
 <li>seed (int) : 种子</li>
-<li>probabilityCol (string) : 输出预测概率字段</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul>
 <h2 id="kmeansdpy3">KMeansDPy3</h2>
 <p>kmeans聚类</p>
@@ -270,8 +253,6 @@
 </ul>
 <h4 id="param_2">Param:</h4>
 <ul>
-<li>featuresCol (string) : 进行聚类的特征字段名</li>
-<li>predictionCol (string) : 预测结果的字段名</li>
 <li>k (int) : 设置你想聚成的类数</li>
 <li>initMode (string) : 设置kmeans模型类型</li>
 <li>initSteps (int) : </li>
@@ -281,11 +262,11 @@
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul>
 <h2 id="ldadpy3">LDADPy3</h2>
 <p>LDA聚类</p>
@@ -295,28 +276,18 @@
 </ul>
 <h4 id="param_3">Param:</h4>
 <ul>
-<li>featuresCol (string) : 进行聚类的特征字段名</li>
 <li>k (int) : 设置你想聚成的类数</li>
 <li>maxIter (int) : 最大迭代次数</li>
 <li>seed (int) : 种子</li>
-<li>checkpointInterval (int) : </li>
-<li>optimizer (string) : </li>
-<li>learningOffset (double) : </li>
-<li>learningDecay (double) : </li>
-<li>subsamplingRate (double) : </li>
-<li>optimizeDocConcentration (string) : </li>
-<li>docConcentration (string) : 按逗号分隔</li>
-<li>topicConcentration (int) : </li>
-<li>topicDistributionCol (string) : 指标聚类话题的输出字段</li>
-<li>keepLastCheckpoint (string) : </li>
+<li>optimizer (string) : 优化函数</li>
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul></div>
         </div>
 

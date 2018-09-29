@@ -139,19 +139,7 @@
 </li>
                                     
 <li >
-    <a href="../model_selection_hyperparameters_tuning_pyspark/">模型选择及调参</a>
-</li>
-                                    
-<li >
     <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
-</li>
-                                    
-<li >
-    <a href="../model_release_pyspark/">模型发布</a>
-</li>
-                                    
-<li >
-    <a href="../NLP_pyspark/">自然语言处理</a>
 </li>
                                 </ul>
                             </li>
@@ -187,85 +175,87 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#chisquaretestdpy3">ChiSquareTestDPy3</a></li>
+        <li class="main active"><a href="#featureinfodpy3">FeatureInfoDPy3</a></li>
         <!--
             <li><a href="#tag">Tag:</a></li>
             <li><a href="#param">Param:</a></li>
             <li><a href="#input">Input:</a></li>
             <li><a href="#output">Output:</a></li> -->
-        <li class="main "><a href="#correlationdpy3">CorrelationDPy3</a></li>
+        <li class="main "><a href="#groupbydpy3">GroupbyDPy3</a></li>
         <!--
             <li><a href="#tag_1">Tag:</a></li>
             <li><a href="#param_1">Param:</a></li>
             <li><a href="#input_1">Input:</a></li>
             <li><a href="#output_1">Output:</a></li> -->
-        <li class="main "><a href="#featureinfodpy3">FeatureInfoDPy3</a></li>
+        <li class="main "><a href="#groupbysumdpy3">GroupbySumDPy3</a></li>
         <!--
             <li><a href="#tag_2">Tag:</a></li>
             <li><a href="#param_2">Param:</a></li>
             <li><a href="#input_2">Input:</a></li>
             <li><a href="#output_2">Output:</a></li> -->
-        <li class="main "><a href="#groupbysumdpy3">GroupbySumDPy3</a></li>
+        <li class="main "><a href="#pivotingdpy3">PivotingDPy3</a></li>
         <!--
             <li><a href="#tag_3">Tag:</a></li>
             <li><a href="#param_3">Param:</a></li>
             <li><a href="#input_3">Input:</a></li>
             <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#pivotingdpy3">PivotingDPy3</a></li>
-        <!--
-            <li><a href="#tag_4">Tag:</a></li>
-            <li><a href="#param_4">Param:</a></li>
-            <li><a href="#input_4">Input:</a></li>
-            <li><a href="#output_4">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="chisquaretestdpy3">ChiSquareTestDPy3</h2>
-<p>卡方检验自变量与因变量之间关系</p>
+<h2 id="featureinfodpy3">FeatureInfoDPy3</h2>
+<p>数据信息统计：行数统计、变量数统计、缺失值百分比统计、各变量缺失值统计</p>
 <h4 id="tag">Tag:</h4>
 <ul>
 <li>数据探索_分布式</li>
 </ul>
 <h4 id="param">Param:</h4>
 <ul>
-<li>label (string) : 目标变量</li>
+<li>None</li>
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>in1 (any) : 输入数据</li>
+<li>input_data : 输入数据</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>None</li>
+<li>output_data (any): 输出dataframe</li>
+<li>string_vars (any): 输出string变量</li>
+<li>not_string_vars: 输出非string变量</li>
+<li>cols (any): 输出数据所有变量</li>
+<li>out5 (any): 输出dataframe</li>
 </ul>
-<h2 id="correlationdpy3">CorrelationDPy3</h2>
-<p>计算变量间相关系数矩阵</p>
+<h2 id="groupbydpy3">GroupbyDPy3</h2>
+<p>选择指定列进行数据透视操作</p>
 <h4 id="tag_1">Tag:</h4>
 <ul>
 <li>数据探索_分布式</li>
 </ul>
 <h4 id="param_1">Param:</h4>
 <ul>
-<li>None</li>
+<li>cols (string) : 分类变量</li>
+<li>col : 指定做操作的变量</li>
+<li>operation : 指定操作类型</li>
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>in1 (any) : 输入数据</li>
+<li>input_data (any) : 输入数据</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>None</li>
+<li>output_data (any) : 输出数据</li>
 </ul>
-<h2 id="featureinfodpy3">FeatureInfoDPy3</h2>
-<p>数据信息统计：行数统计、变量数统计、缺失值百分比统计、各变量缺失值统计</p>
+<h2 id="groupbysumdpy3">GroupbySumDPy3</h2>
+<p>根据指定变量进行分组并求和、取均值、取最大值、取最小值、计数</p>
 <h4 id="tag_2">Tag:</h4>
 <ul>
 <li>数据探索_分布式</li>
 </ul>
 <h4 id="param_2">Param:</h4>
 <ul>
-<li>None</li>
+<li>cols (string) : groupby变量</li>
+<li>col (string) : 指定做操作的变量</li>
+<li>operation (string) : 指定操作类型</li>
 </ul>
 <h4 id="input_2">Input:</h4>
 <ul>
@@ -273,51 +263,27 @@
 </ul>
 <h4 id="output_2">Output:</h4>
 <ul>
-<li>out1 (any): 输出dataframe</li>
-<li>out2 (any): 输出string变量</li>
-<li>out3 (any): 输出非string变量</li>
-<li>out4 (any): 输出数据所有变量</li>
-<li>out5 (any): 输出dataframe</li>
+<li>out1 (any) : 输出数据</li>
 </ul>
-<h2 id="groupbysumdpy3">GroupbySumDPy3</h2>
-<p>根据指定变量进行分组并求和、取均值、取最大值、取最小值、计数</p>
+<h2 id="pivotingdpy3">PivotingDPy3</h2>
+<p>选择指定列进行数据透视操作</p>
 <h4 id="tag_3">Tag:</h4>
 <ul>
 <li>数据探索_分布式</li>
 </ul>
 <h4 id="param_3">Param:</h4>
 <ul>
-<li>cols (string) : groupby变量</li>
-<li>col (string) : 指定做操作的变量</li>
-<li>operation (string) : 指定操作类型</li>
+<li>cols (string) : 分组列(横坐标)</li>
+<li>var1 (string) : 透视列（纵坐标）</li>
+<li>var2 (string) : 求和列</li>
 </ul>
 <h4 id="input_3">Input:</h4>
 <ul>
-<li>in1 (any) : 输入数据</li>
+<li>input_data (any) : 输入数据</li>
 </ul>
 <h4 id="output_3">Output:</h4>
 <ul>
-<li>out1 (any) : 输出数据</li>
-</ul>
-<h2 id="pivotingdpy3">PivotingDPy3</h2>
-<p>选择指定列进行数据透视操作</p>
-<h4 id="tag_4">Tag:</h4>
-<ul>
-<li>数据探索_分布式</li>
-</ul>
-<h4 id="param_4">Param:</h4>
-<ul>
-<li>cols (string) : 分组列</li>
-<li>var1 (string) : 透视列</li>
-<li>var2 (string) : 求和列</li>
-</ul>
-<h4 id="input_4">Input:</h4>
-<ul>
-<li>in1 (any) : 输入数据</li>
-</ul>
-<h4 id="output_4">Output:</h4>
-<ul>
-<li>out1 (any) : 输出数据</li>
+<li>output_data (any) : 输出数据</li>
 </ul></div>
         </div>
 

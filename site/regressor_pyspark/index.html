@@ -139,19 +139,7 @@
 </li>
                                     
 <li >
-    <a href="../model_selection_hyperparameters_tuning_pyspark/">模型选择及调参</a>
-</li>
-                                    
-<li >
     <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
-</li>
-                                    
-<li >
-    <a href="../model_release_pyspark/">模型发布</a>
-</li>
-                                    
-<li >
-    <a href="../NLP_pyspark/">自然语言处理</a>
 </li>
                                 </ul>
                             </li>
@@ -199,24 +187,12 @@
             <li><a href="#param_1">Param:</a></li>
             <li><a href="#input_1">Input:</a></li>
             <li><a href="#output_1">Output:</a></li> -->
-        <li class="main "><a href="#generalizedlinearregressiondpy3">GeneralizedLinearRegressionDPy3</a></li>
+        <li class="main "><a href="#randomforestregressordpy3">RandomForestRegressorDPy3</a></li>
         <!--
             <li><a href="#tag_2">Tag:</a></li>
             <li><a href="#param_2">Param:</a></li>
             <li><a href="#input_2">Input:</a></li>
             <li><a href="#output_2">Output:</a></li> -->
-        <li class="main "><a href="#linearregressiondpy3">LinearRegressionDPy3</a></li>
-        <!--
-            <li><a href="#tag_3">Tag:</a></li>
-            <li><a href="#param_3">Param:</a></li>
-            <li><a href="#input_3">Input:</a></li>
-            <li><a href="#output_3">Output:</a></li> -->
-        <li class="main "><a href="#randomforestregressordpy3">RandomForestRegressorDPy3</a></li>
-        <!--
-            <li><a href="#tag_4">Tag:</a></li>
-            <li><a href="#param_4">Param:</a></li>
-            <li><a href="#input_4">Input:</a></li>
-            <li><a href="#output_4">Output:</a></li> -->
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -241,11 +217,11 @@
 </ul>
 <h4 id="input">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul>
 <h2 id="gbtregressordpy3">GBTRegressorDPy3</h2>
 <p>分布式提升回归树</p>
@@ -269,71 +245,19 @@
 </ul>
 <h4 id="input_1">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
 <h4 id="output_1">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline </li>
+<li>model (any) : 输出pipeline</li>
 </ul>
-<h2 id="generalizedlinearregressiondpy3">GeneralizedLinearRegressionDPy3</h2>
-<p>分布式广义线性回归模型</p>
+<h2 id="randomforestregressordpy3">RandomForestRegressorDPy3</h2>
+<p>分布式随机森林回归模型</p>
 <h4 id="tag_2">Tag:</h4>
 <ul>
 <li>回归模型_分布式</li>
 </ul>
 <h4 id="param_2">Param:</h4>
-<ul>
-<li>family (string) : 指数族</li>
-<li>link (string) : 关联函数</li>
-<li>fitIntercept (string) : 是否考虑截距</li>
-<li>maxIter (int) : 最大迭代次数</li>
-<li>tol (double) : 收敛判据</li>
-<li>regParam (double) : 正则化参数</li>
-<li>weightCol (string) : 将某列所有权重设置为1.0</li>
-<li>solver (string) : 优化算法</li>
-<li>linkPredictionCol (string) : 链路预测列名</li>
-</ul>
-<h4 id="input_2">Input:</h4>
-<ul>
-<li>in1 (any) : 输入pipeline</li>
-</ul>
-<h4 id="output_2">Output:</h4>
-<ul>
-<li>out1 (any) : 输出pipeline </li>
-</ul>
-<h2 id="linearregressiondpy3">LinearRegressionDPy3</h2>
-<p>分布式线性回归模型</p>
-<h4 id="tag_3">Tag:</h4>
-<ul>
-<li>回归模型_分布式</li>
-</ul>
-<h4 id="param_3">Param:</h4>
-<ul>
-<li>maxIter (int) : 最大迭代次数</li>
-<li>regParam (double) : 正则化参数</li>
-<li>elasticNetParam (double) : 回归混合参数，等于0时为l2惩罚，等于1时为l1惩罚</li>
-<li>tol (double) : 收敛判据</li>
-<li>fitIntercept (string) : 是否考虑截距</li>
-<li>standardization (string) : 是否标准化</li>
-<li>solver (string) : 优化算法</li>
-<li>weightCol (string) : 将该列所有实例权重设置为1.0</li>
-<li>aggregationDepth (int) : 聚集树时的建议深度</li>
-</ul>
-<h4 id="input_3">Input:</h4>
-<ul>
-<li>in1 (any) : 输入pipeline</li>
-</ul>
-<h4 id="output_3">Output:</h4>
-<ul>
-<li>out1 (any) : 输出pipeline</li>
-</ul>
-<h2 id="randomforestregressordpy3">RandomForestRegressorDPy3</h2>
-<p>分布式随机森林回归模型</p>
-<h4 id="tag_4">Tag:</h4>
-<ul>
-<li>回归模型_分布式</li>
-</ul>
-<h4 id="param_4">Param:</h4>
 <ul>
 <li>maxDepth (int) : 最大深度</li>
 <li>maxBins (int) : 每个特征分裂时划分的最大数量</li>
@@ -344,14 +268,15 @@
 <li>seed (double) : 随机种子</li>
 <li>numTrees (int) : 树的个数</li>
 <li>featureSubsetStrategy (string) : 切分每个结点时考虑的特征数目</li>
+<li>label (string) :</li>
 </ul>
-<h4 id="input_4">Input:</h4>
+<h4 id="input_2">Input:</h4>
 <ul>
-<li>in1 (any) : 输入pipeline</li>
+<li>input_data (any) : 输入pipeline</li>
 </ul>
-<h4 id="output_4">Output:</h4>
+<h4 id="output_2">Output:</h4>
 <ul>
-<li>out1 (any) : 输出pipeline</li>
+<li>model (any) : 输出pipeline</li>
 </ul></div>
         </div>
 
