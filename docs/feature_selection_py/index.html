@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Feature selection py - DataCanvas Modules Manual</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">DataCanvas Modules Manual</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../index.md">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">单机模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../utils_py.md">通用模块</a>
+</li>
+                                    
+<li >
+    <a href="../../SQL_py.md">SQL</a>
+</li>
+                                    
+<li >
+    <a href="../../dataframe_py.md">数据操作</a>
+</li>
+                                    
+<li >
+    <a href="../../preprocessing_py.md">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../../feature_selection_py.md">特征选择</a>
+</li>
+                                    
+<li >
+    <a href="../../classifier_py.md">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../../cluster_py.md">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../../regressor.md">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../../hyperparameters_tuning_py.md">模型调参</a>
+</li>
+                                    
+<li >
+    <a href="../../prediction_py.md">模型预测</a>
+</li>
+                                    
+<li >
+    <a href="../../metrics_py.md">模型评估</a>
+</li>
+                                    
+<li >
+    <a href="../../model_release_py.md">模型发布</a>
+</li>
+                                    
+<li >
+    <a href="../../visualization_py.md">可视化</a>
+</li>
+                                    
+<li >
+    <a href="../../NLP_py.md">自然语言处理</a>
+</li>
+                                    
+<li >
+    <a href="../../auto_ML_py.md">自动建模模块</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">分布式模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../data_exploration_pyspark.md">数据探索</a>
+</li>
+                                    
+<li >
+    <a href="../../preprocessing_pyspark.md">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../../classifier_pyspark.md">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../../regressor_pyspark.md">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../../cluster_pyspark.md">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../../prediction_metrics_pyspark.md">模型预测及评估</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../deeplearning_py.md">深度学习模块</a>
+                            </li>
+                            <li >
+                                <a href="../../R.md">R语言模块</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#corrxxfeatspy3">CorrXXFeatSpy3</a></li>
+        <!--
+            <li><a href="#tag">Tag:</a></li>
+            <li><a href="#param">Param:</a></li>
+            <li><a href="#input">Input:</a></li>
+            <li><a href="#output">Output:</a></li> -->
+        <li class="main "><a href="#corrxyfeatspy3">CorrXYFeatSPy3</a></li>
+        <!--
+            <li><a href="#tag_1">Tag:</a></li>
+            <li><a href="#param_1">Param:</a></li>
+            <li><a href="#input_1">Input:</a></li>
+            <li><a href="#output_1">Output:</a></li> -->
+        <li class="main "><a href="#rfefeatspy3">RFEFeatSPy3</a></li>
+        <!--
+            <li><a href="#tag_2">Tag:</a></li>
+            <li><a href="#param_2">Param:</a></li>
+            <li><a href="#input_2">Input:</a></li>
+            <li><a href="#output_2">Output:</a></li> -->
+        <li class="main "><a href="#variancethresholdfitfeatspy3">VarianceThresholdFitFeatSPy3</a></li>
+        <!--
+            <li><a href="#tag_3">Tag:</a></li>
+            <li><a href="#param_3">Param:</a></li>
+            <li><a href="#input_3">Input:</a></li>
+            <li><a href="#output_3">Output:</a></li> -->
+        <li class="main "><a href="#variancethresholdtransformfeatspy3">VarianceThresholdTransformFeatSPy3</a></li>
+        <!--
+            <li><a href="#tag_4">Tag:</a></li>
+            <li><a href="#param_4">Param:</a></li>
+            <li><a href="#input_4">Input:</a></li>
+            <li><a href="#output_4">Output:</a></li> -->
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="corrxxfeatspy3">CorrXXFeatSpy3</h2>
+<p>计算特征变量和特征变量之间的(pearson/spearman/kendall)相关性，并通过设定的参数来消除强相关的特征变量</p>
+<h4 id="tag">Tag:</h4>
+<ul>
+<li>特征选择</li>
+</ul>
+<h4 id="param">Param:</h4>
+<ul>
+<li>corr_type (string): 计算相关性方法</li>
+<li>corr_threshold (double): 消除强相关变量的阈值</li>
+</ul>
+<h4 id="input">Input:</h4>
+<ul>
+<li>d_feature (csv): 数据</li>
+<li>o_featrue_label_corr (csv): 与标签变量间的相关性分数 (chi2/互信息/F检验分数)</li>
+</ul>
+<h4 id="output">Output:</h4>
+<ul>
+<li>d_feature_selected (csv): 相关性筛选后的数据</li>
+<li>o_corr_XX (html): 相关性矩阵</li>
+<li>o_corr_heatmap (jpg): 相关性热力图</li>
+</ul>
+<h2 id="corrxyfeatspy3">CorrXYFeatSPy3</h2>
+<p>计算特征变量和标签变量之间的相关性（卡方/互信息/F检验），并通过设定的参数来筛选相应的特征变量</p>
+<h4 id="tag_1">Tag:</h4>
+<ul>
+<li>特征选择</li>
+</ul>
+<h4 id="param_1">Param:</h4>
+<ul>
+<li>feature_percent (int): 保留变量个数百分比 (0-100)</li>
+<li>sample_rate (double): 抽样比例 (0-1)</li>
+</ul>
+<h4 id="input_1">Input:</h4>
+<ul>
+<li>d_feature (py3pkl): 目标变量</li>
+<li>d_label (py3pkl): 标签变量</li>
+</ul>
+<h4 id="output_1">Output:</h4>
+<ul>
+<li>d_feature_selected (csv): 相关性筛选后的数据</li>
+<li>o_featrue_label_corr (csv): 与标签变量间的相关性分数 (卡方/互信息/F检验分数)</li>
+</ul>
+<h2 id="rfefeatspy3">RFEFeatSPy3</h2>
+<p>递归特征消除的主要思想是反复的构建模型（如SVM或者回归模型）然后选出最好的（或者最差的）的特征（可以根据系数来选），把选出来的特征放到一边，然后在剩余的特征上重复这个过程，直到所有特征都遍历了。</p>
+<h4 id="tag_2">Tag:</h4>
+<ul>
+<li>特征选择</li>
+</ul>
+<h4 id="param_2">Param:</h4>
+<ul>
+<li>percent_to_keep (double): 保留变量个数百分比 (0-1)</li>
+</ul>
+<h4 id="input_2">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 标签变量</li>
+</ul>
+<h4 id="output_2">Output:</h4>
+<ul>
+<li>d_changed_data (csv): 递归特征消除后的数据</li>
+<li>d_rfe_support (html): 统计哪些变量保留，哪些不保留</li>
+<li>rfe_cols (py3pkl): 筛选后保留的变量</li>
+</ul>
+<h2 id="variancethresholdfitfeatspy3">VarianceThresholdFitFeatSPy3</h2>
+<p>根据方差去掉取值变化小的特征，用于训练集数据。</p>
+<h4 id="tag_3">Tag:</h4>
+<ul>
+<li>特征选择</li>
+</ul>
+<h4 id="param_3">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_3">Input:</h4>
+<ul>
+<li>d_feature (py3pkl): 数据</li>
+</ul>
+<h4 id="output_3">Output:</h4>
+<ul>
+<li>d_changed_data (py3pkl): 方差筛选后的数据</li>
+<li>model (py3pkl): 方差筛选训练好的模型</li>
+</ul>
+<h2 id="variancethresholdtransformfeatspy3">VarianceThresholdTransformFeatSPy3</h2>
+<p>去掉取值变化小的特征，用于测试集数据。</p>
+<h4 id="tag_4">Tag:</h4>
+<ul>
+<li>特征选择</li>
+</ul>
+<h4 id="param_4">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_4">Input:</h4>
+<ul>
+<li>d_feature (py3pkl): 数据</li>
+<li>model (py3pkl): 方差筛选训练好的模型</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>d_changed_data (py3pkl): 方差筛选后的数据</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
