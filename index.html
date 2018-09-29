@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta name="description" content="None">
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
@@ -25,7 +25,7 @@
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body>
+    <body class="homepage">
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -46,7 +46,7 @@
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
+                            <li class="active">
                                 <a href=".">Home</a>
                             </li>
                             <li class="dropdown">
@@ -157,21 +157,71 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="utils_py/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#datacanvas-aps-25">DataCanvas APS 2.5</a></li>
+        <!-- -->
+        <li class="main "><a href="#screwjack">ScrewJack</a></li>
+        <!--
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li> -->
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
+<h1 id="datacanvas-aps-25">DataCanvas APS 2.5</h1>
+<hr />
+<p><strong>九章云极的DataCanvas产品是国内最早，世界领先的数据科学平台，主要优势体现在以下几点：</strong></p>
+<ol>
+<li>
+<p>九章云极DataCanvas APS采用开放架构，支持多种机器学习引擎，不仅限于R、Python、Spark、TensorFlow等。而大部分友商仅仅基于某种特定的引擎实现（如: Spark），采用特定架构将会使得机器学习算法受限于该架构的实现能力，并不能对未来新的机器学习框架，特别是深度学习框架形成全面快速的支持。</p>
+</li>
+<li>
+<p>九章云极DataCanvas APS 内置100多种算法模型，客户可以开箱即用。同时这些算法模块以白盒方式呈现给客户，客户可以查看、修改、升级以及编写自己的算法模型。而友商的算法模块一是黑盒，二是无法让用户自由开发添加，分析场景将受限于产品本身的基本算法实现。</p>
+</li>
+<li>
+<p>九章云极DataCanvas APS 开发训练完成的模型支持以运行在docker容器内的微服务形式通过Devops方法自动发布到用户生产环境，首先可以将AI模型融合于客户现有的服务/微服务运行环境，第二实现了服务的负载均衡与高可用，第三自动化的方法可以使得模型定期优化自动更新成为可能。而部分友商的模型需要以特定方式运行在私有的集群中，不便于企业IT架构的统一管理，或者输出jar文件，需要手工部署，无法实现自动升级。</p>
+</li>
+<li>
+<p>九章云极DataCanvas APS 与DataCanvas RT套件无缝集成，可以将ML/DL/AI的模型运行在一个真正企业级实时流式计算引擎中，支持10亿/日级的处理能力。而大部分友商的实时环境，仅仅是开源系统对模型API的简单调用。</p>
+</li>
+<li>
+<p>九章云极DataCanvas APS支持自动建模能力，在确定目标问题的前提下，支持自动模型选择、自动超参数优化、自动模型评估等功能极大的降低了机器学习建模的门槛。</p>
+</li>
+</ol>
+<h1 id="screwjack">ScrewJack</h1>
+<hr />
+<p>ScrewJack是一个用于操作模块的小型命令行工具。</p>
+<h2 id="installation">Installation</h2>
+<p>可以直接用pip安装:</p>
+<pre><code class="sh">pip install -U screwjack
+</code></pre>
 
+<p>或者，也可以使用最新的版本</p>
+<pre><code class="sh">git clone http://github.com/DataCanvasIO/screwjack.git screwjack.git
+cd screwjack.git
+pip install -r requirements.txt
+./bin/screwjack --help
+</code></pre>
 
+<h2 id="usage">Usage</h2>
+<p>细节请查看<a href="http://screwjack.readthedocs.org">在线文档</a>。</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -179,7 +229,7 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "",
+            var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js" defer></script>
@@ -251,3 +301,8 @@
 
     </body>
 </html>
+
+<!--
+MkDocs version : 1.0a1
+Build Date UTC : 2018-09-29 13:38:35
+-->

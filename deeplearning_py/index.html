@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>深度学习模块 - DataCanvas Modules Manual</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">DataCanvas Modules Manual</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">单机模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../utils_py/">通用模块</a>
+</li>
+                                    
+<li >
+    <a href="../SQL_py/">SQL</a>
+</li>
+                                    
+<li >
+    <a href="../dataframe_py/">数据操作</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_py/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../feature_selection_py/">特征选择</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_py/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_py/">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../regressor/">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../hyperparameters_tuning_py/">模型调参</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_py/">模型预测</a>
+</li>
+                                    
+<li >
+    <a href="../metrics_py/">模型评估</a>
+</li>
+                                    
+<li >
+    <a href="../model_release_py/">模型发布</a>
+</li>
+                                    
+<li >
+    <a href="../visualization_py/">可视化</a>
+</li>
+                                    
+<li >
+    <a href="../NLP_py/">自然语言处理</a>
+</li>
+                                    
+<li >
+    <a href="../auto_ML_py/">自动建模模块</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">分布式模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../data_exploration_pyspark/">数据探索</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_pyspark/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_pyspark/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../regressor_pyspark/">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_pyspark/">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="./">深度学习模块</a>
+                            </li>
+                            <li >
+                                <a href="../R/">R语言模块</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../prediction_metrics_pyspark/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../R/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#keras_test">keras_test</a></li>
+        <!--
+            <li><a href="#tag">Tag:</a></li>
+            <li><a href="#param">Param:</a></li>
+            <li><a href="#input">Input:</a></li>
+            <li><a href="#output">Output:</a></li> -->
+        <li class="main "><a href="#tensorflow-test">tensorflow-test</a></li>
+        <!--
+            <li><a href="#tag_1">Tag:</a></li>
+            <li><a href="#param_1">Param:</a></li>
+            <li><a href="#input_1">Input:</a></li>
+            <li><a href="#output_1">Output:</a></li> -->
+        <li class="main "><a href="#pytorch_test">pytorch_test</a></li>
+        <!--
+            <li><a href="#tag_2">Tag:</a></li>
+            <li><a href="#param_2">Param:</a></li>
+            <li><a href="#input_2">Input:</a></li>
+            <li><a href="#output_2">Output:</a></li> -->
+        <li class="main "><a href="#mxnet_test">mxnet_test</a></li>
+        <!--
+            <li><a href="#tag_3">Tag:</a></li>
+            <li><a href="#param_3">Param:</a></li>
+            <li><a href="#input_3">Input:</a></li>
+            <li><a href="#output_3">Output:</a></li> -->
+        <li class="main "><a href="#imageclassifier_mxnet">imageclassifier_mxnet</a></li>
+        <!--
+            <li><a href="#tag_4">Tag:</a></li>
+            <li><a href="#param_4">Param:</a></li>
+            <li><a href="#input_4">Input:</a></li>
+            <li><a href="#output_4">Output:</a></li> -->
+        <li class="main "><a href="#dataloadmnistkeras">DataLoadMnistKeras</a></li>
+        <!--
+            <li><a href="#tag_5">Tag:</a></li>
+            <li><a href="#param_5">Param:</a></li>
+            <li><a href="#input_5">Input:</a></li>
+            <li><a href="#output_5">Output:</a></li> -->
+        <li class="main "><a href="#datapretreatmentmnistkeras">DataPretreatmentMnistKeras</a></li>
+        <!--
+            <li><a href="#tag_6">Tag:</a></li>
+            <li><a href="#param_6">Param:</a></li>
+            <li><a href="#input_6">Input:</a></li>
+            <li><a href="#output_6">Output:</a></li> -->
+        <li class="main "><a href="#modelevaluatekeras">ModelEvaluateKeras</a></li>
+        <!--
+            <li><a href="#tag_7">Tag:</a></li>
+            <li><a href="#param_7">Param:</a></li>
+            <li><a href="#input_7">Input:</a></li>
+            <li><a href="#output_7">Output:</a></li> -->
+        <li class="main "><a href="#modelmnistkeras">ModelMnistKeras</a></li>
+        <!--
+            <li><a href="#tag_8">Tag:</a></li>
+            <li><a href="#param_8">Param:</a></li>
+            <li><a href="#input_8">Input:</a></li>
+            <li><a href="#output_8">Output:</a></li> -->
+        <li class="main "><a href="#modelstructshowkeras">ModelStructShowKeras</a></li>
+        <!--
+            <li><a href="#tag_9">Tag:</a></li>
+            <li><a href="#param_9">Param:</a></li>
+            <li><a href="#input_9">Input:</a></li>
+            <li><a href="#output_9">Output:</a></li> -->
+        <li class="main "><a href="#modeltrainkeras">ModelTrainKeras</a></li>
+        <!--
+            <li><a href="#tag_10">Tag:</a></li>
+            <li><a href="#param_10">Param:</a></li>
+            <li><a href="#input_10">Input:</a></li>
+            <li><a href="#output_10">Output:</a></li> -->
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="keras_test">keras_test</h2>
+<p>keras测试</p>
+<h4 id="tag">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input">Input:</h4>
+<ul>
+<li>data (csv): 输入</li>
+</ul>
+<h4 id="output">Output:</h4>
+<ul>
+<li>image (pdf): 输出</li>
+</ul>
+<h2 id="tensorflow-test">tensorflow-test</h2>
+<p>基于tensorflow框架，构建、训练神经网络模型，并对模型进行预测。</p>
+<h4 id="tag_1">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_1">Param:</h4>
+<ul>
+<li>data_path (string) : 数据存放地址</li>
+</ul>
+<h4 id="input_1">Input:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="output_1">Output:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="pytorch_test">pytorch_test</h2>
+<p>基于pytorch框架，构建2层神经网络，实现前向传播和反向传播算法。</p>
+<h4 id="tag_2">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_2">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_2">Input:</h4>
+<ul>
+<li>data (csv): 输入</li>
+</ul>
+<h4 id="output_2">Output:</h4>
+<ul>
+<li>result (txt): 输出</li>
+</ul>
+<h2 id="mxnet_test">mxnet_test</h2>
+<p>基于mxnet框架，构建2层神经网络，实现前向传播和反向传播算法。</p>
+<h4 id="tag_3">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_3">Param:</h4>
+<ul>
+<li>lr (double) : 学习率</li>
+<li>num_epochs (int) : 迭代次数</li>
+<li>batch_size (int) : 梯度下降值</li>
+</ul>
+<h4 id="input_3">Input:</h4>
+<ul>
+<li>data (csv): 输入</li>
+</ul>
+<h4 id="output_3">Output:</h4>
+<ul>
+<li>out_1 (file): 输出</li>
+</ul>
+<h2 id="imageclassifier_mxnet">imageclassifier_mxnet</h2>
+<p>基于mxnet框架的图像分类demo。</p>
+<h4 id="tag_4">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_4">Param:</h4>
+<ul>
+<li>model_name (string): 模型名称</li>
+</ul>
+<h4 id="input_4">Input:</h4>
+<ul>
+<li>image (jpg): 输入</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>result (txt): 输出</li>
+</ul>
+<h2 id="dataloadmnistkeras">DataLoadMnistKeras</h2>
+<p>从指定路径加载划分为训练集和测试集的mnist数据，返回该路径。</p>
+<h4 id="tag_5">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_5">Param:</h4>
+<ul>
+<li>path (string): 加载路径</li>
+</ul>
+<h4 id="input_5">Input:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="output_5">Output:</h4>
+<ul>
+<li>mnist_path (txt): 输出</li>
+</ul>
+<h2 id="datapretreatmentmnistkeras">DataPretreatmentMnistKeras</h2>
+<p>对数据集进行预处理，返回划分好的数据集和shape。</p>
+<h4 id="tag_6">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_6">Param:</h4>
+<ul>
+<li>
+<p>img_rows (int): 图像像素高度</p>
+</li>
+<li>
+<p>img_cols (int): 图像像素宽度</p>
+</li>
+<li>
+<p>num_classes (int): 分类数目</p>
+</li>
+<li>
+<p>train_num (int): 训练集数目</p>
+</li>
+<li>
+<p>test_num (int): 测试集数目</p>
+</li>
+</ul>
+<h4 id="input_6">Input:</h4>
+<ul>
+<li>path (txt): 加载路径</li>
+</ul>
+<h4 id="output_6">Output:</h4>
+<ul>
+<li>
+<p>x_train (csv): 训练集特征</p>
+</li>
+<li>
+<p>y_train (csv): 训练集标签</p>
+</li>
+<li>
+<p>x_train_shape (csv): 训练集特征的维度</p>
+</li>
+<li>
+<p>y_train_shape (csv): 训练集标签的维度</p>
+</li>
+<li>
+<p>x_test (csv): 测试集特征</p>
+</li>
+<li>
+<p>y_test (csv): 测试集标签</p>
+</li>
+<li>
+<p>x_test_shape (csv): 测试集特征的维度</p>
+</li>
+<li>
+<p>y_test_shape (csv): 测试集标签的维度</p>
+</li>
+</ul>
+<h2 id="modelevaluatekeras">ModelEvaluateKeras</h2>
+<p>用测试集数据进行模型评估。</p>
+<h4 id="tag_7">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_7">Param:</h4>
+<ul>
+<li>
+<p>mlServerAddr (string): mlserver地址</p>
+</li>
+<li>
+<p>modelName (string): 模型名称</p>
+</li>
+<li>
+<p>EVALUATE_batch_size (string): 批大小</p>
+</li>
+<li>
+<p>EVALUATE_verbose (string): 日志显示</p>
+</li>
+<li>
+<p>EVALUATE_sample_weight (string): 权值的numpy array</p>
+</li>
+</ul>
+<h4 id="input_7">Input:</h4>
+<ul>
+<li>
+<p>model_trained (h5): 训练好的模型</p>
+</li>
+<li>
+<p>x_test (csv): 测试集特征</p>
+</li>
+<li>
+<p>y_test (csv): 测试集标签</p>
+</li>
+<li>
+<p>x_test_shape (csv): 测试集特征的维度</p>
+</li>
+<li>
+<p>y_test_shape (csv): 测试集标签的维度</p>
+</li>
+<li>
+<p>blockId (pkl): 输入</p>
+</li>
+</ul>
+<h4 id="output_7">Output:</h4>
+<ul>
+<li>model (model.h5): 输出</li>
+</ul>
+<h2 id="modelmnistkeras">ModelMnistKeras</h2>
+<p>利用keras搭建一个两层的卷积神经网络模型。</p>
+<h4 id="tag_8">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_8">Param:</h4>
+<ul>
+<li>
+<p>img_rows (int): 图像像素高度</p>
+</li>
+<li>
+<p>img_cols (int): 图像像素宽度</p>
+</li>
+<li>
+<p>num_classes (int): 分类数目</p>
+</li>
+</ul>
+<h4 id="input_8">Input:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="output_8">Output:</h4>
+<ul>
+<li>
+<p>model (h5): 输出</p>
+</li>
+<li>
+<p>model_json (json): 输出</p>
+</li>
+</ul>
+<h2 id="modelstructshowkeras">ModelStructShowKeras</h2>
+<p>利用model.summary打印模型概况。</p>
+<h4 id="tag_9">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_9">Param:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h4 id="input_9">Input:</h4>
+<ul>
+<li>model (h5): 输入</li>
+</ul>
+<h4 id="output_9">Output:</h4>
+<ul>
+<li>model_struct (png): 输出</li>
+</ul>
+<h2 id="modeltrainkeras">ModelTrainKeras</h2>
+<p>进行模型训练，返回训练好的模型。</p>
+<h4 id="tag_10">Tag:</h4>
+<ul>
+<li>深度学习</li>
+</ul>
+<h4 id="param_10">Param:</h4>
+<ul>
+<li>
+<p>COMPILE_optimizer (string): 编译优化器</p>
+</li>
+<li>
+<p>COMPILE_loss (string): 编译损失函数</p>
+</li>
+<li>
+<p>COMPILE_metrics (string): 模型训练/测试的度量指标</p>
+</li>
+<li>
+<p>COMPILE_sample_weight_mode (string): 样本权重类型</p>
+</li>
+<li>
+<p>COMPILE_weighted_metrics (string): metrics权重列表</p>
+</li>
+<li>
+<p>COMPILE_target_tensors (string): 自定义目标张量</p>
+</li>
+<li>
+<p>FIT_epochs (int): 训练轮数目</p>
+</li>
+<li>
+<p>FIT_verbose (int): 训练过程日志显示</p>
+</li>
+<li>
+<p>FIT_batch_size (int): 训练样本数量/批次</p>
+</li>
+<li>
+<p>FIT_callbacks (string): 训练过程中回调函数集</p>
+</li>
+<li>
+<p>FIT_validation_split (double): 从训练集抽取验证集比例</p>
+</li>
+<li>
+<p>FIT_validation_data (string): 指定的验证集</p>
+</li>
+<li>
+<p>FIT_shuffle (int): 是否在每训练轮次打乱样本顺序</p>
+</li>
+<li>
+<p>FIT_class_weight (string): 训练样本类权重</p>
+</li>
+<li>
+<p>FIT_sample_weight (string): 样本权重(依赖样本权重类型为temporal)</p>
+</li>
+<li>
+<p>FIT_initial_epoch (int): 训练起始轮次（用于继续中断的训练）</p>
+</li>
+<li>
+<p>FIT_steps_per_epoch (string): 每轮次训练包含的步数/批次</p>
+</li>
+<li>
+<p>FIT_validation_steps (string): 处理验证集用的步数/批次（依赖训练步数/训练轮次）</p>
+</li>
+<li>
+<p>COMPILE_loss_weights (string): 损失函数权重列表</p>
+</li>
+</ul>
+<h4 id="input_10">Input:</h4>
+<ul>
+<li>
+<p>model (h5): 输入</p>
+</li>
+<li>
+<p>x_train (csv): 训练集特征</p>
+</li>
+<li>
+<p>y_train (csv): 训练集标签</p>
+</li>
+<li>
+<p>x_train_shape (csv): 训练集特征的维度</p>
+</li>
+<li>
+<p>y_train_shape (csv): 训练集标签的维度</p>
+</li>
+</ul>
+<h4 id="output_10">Output:</h4>
+<ul>
+<li>
+<p>model_trained (h5): 训练好的模型</p>
+</li>
+<li>
+<p>model_json (json): 模型的json格式</p>
+</li>
+<li>
+<p>blockId (pkl): 输出 </p>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

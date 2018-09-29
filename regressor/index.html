@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>回归模型 - DataCanvas Modules Manual</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">DataCanvas Modules Manual</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">单机模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../utils_py/">通用模块</a>
+</li>
+                                    
+<li >
+    <a href="../SQL_py/">SQL</a>
+</li>
+                                    
+<li >
+    <a href="../dataframe_py/">数据操作</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_py/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../feature_selection_py/">特征选择</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_py/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_py/">聚类模型</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../hyperparameters_tuning_py/">模型调参</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_py/">模型预测</a>
+</li>
+                                    
+<li >
+    <a href="../metrics_py/">模型评估</a>
+</li>
+                                    
+<li >
+    <a href="../model_release_py/">模型发布</a>
+</li>
+                                    
+<li >
+    <a href="../visualization_py/">可视化</a>
+</li>
+                                    
+<li >
+    <a href="../NLP_py/">自然语言处理</a>
+</li>
+                                    
+<li >
+    <a href="../auto_ML_py/">自动建模模块</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">分布式模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../data_exploration_pyspark/">数据探索</a>
+</li>
+                                    
+<li >
+    <a href="../preprocessing_pyspark/">数据预处理</a>
+</li>
+                                    
+<li >
+    <a href="../classifier_pyspark/">分类模型</a>
+</li>
+                                    
+<li >
+    <a href="../regressor_pyspark/">回归模型</a>
+</li>
+                                    
+<li >
+    <a href="../cluster_pyspark/">聚类模型</a>
+</li>
+                                    
+<li >
+    <a href="../prediction_metrics_pyspark/">模型预测及评估</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../deeplearning_py/">深度学习模块</a>
+                            </li>
+                            <li >
+                                <a href="../R/">R语言模块</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../cluster_py/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../hyperparameters_tuning_py/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#adaboostregrspy3">AdaboostRegrSPy3</a></li>
+        <!--
+            <li><a href="#tag">Tag:</a></li>
+            <li><a href="#param">Param:</a></li>
+            <li><a href="#input">Input:</a></li>
+            <li><a href="#output">Output:</a></li> -->
+        <li class="main "><a href="#baggingregrspy3">BaggingRegrSPy3</a></li>
+        <!--
+            <li><a href="#tag_1">Tag:</a></li>
+            <li><a href="#param_1">Param:</a></li>
+            <li><a href="#input_1">Input:</a></li>
+            <li><a href="#output_1">Output:</a></li> -->
+        <li class="main "><a href="#decisiontreeregspy3">DecisionTreeRegSPy3</a></li>
+        <!--
+            <li><a href="#tag_2">Tag:</a></li>
+            <li><a href="#param_2">Param:</a></li>
+            <li><a href="#input_2">Input:</a></li>
+            <li><a href="#output_2">Output:</a></li> -->
+        <li class="main "><a href="#extratreesregrspy3">ExtratreesRegrSPy3</a></li>
+        <!--
+            <li><a href="#tag_3">Tag:</a></li>
+            <li><a href="#param_3">Param:</a></li>
+            <li><a href="#input_3">Input:</a></li>
+            <li><a href="#output_3">Output:</a></li> -->
+        <li class="main "><a href="#gradientboostingregrspy3">GradientboostingRegrSPy3</a></li>
+        <!--
+            <li><a href="#tag_4">Tag:</a></li>
+            <li><a href="#param_4">Param:</a></li>
+            <li><a href="#input_4">Input:</a></li>
+            <li><a href="#output_4">Output:</a></li> -->
+        <li class="main "><a href="#randomforestregrspy3">RandomforestRegrSPy3</a></li>
+        <!--
+            <li><a href="#tag_5">Tag:</a></li>
+            <li><a href="#param_5">Param:</a></li>
+            <li><a href="#input_5">Input:</a></li>
+            <li><a href="#output_5">Output:</a></li> -->
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="adaboostregrspy3">AdaboostRegrSPy3</h2>
+<p>一种对同一个训练集训练不同的回归器(弱回归器)，然后把这些弱回归器集合起来构成一个更强的最终回归器(强回归器)的迭代算法。其算法本身是通过改变数据分布来实现的，它根据每次训练集之中每个样本的预测是否正确，以及上次的总体的准确率，来确定每个样本的权值。将修改过权值的新数据集送给下层回归器进行训练，最后将每次训练得到的回归器最后融合起来，作为最后的决策回归器。使用adaboost回归器可以排除一些不必要的训练数据特征，并放在关键的训练数据上面。</p>
+<h4 id="tag">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param">Param:</h4>
+<ul>
+<li>n_estimators (int) : 评估器数量</li>
+<li>learning_rate (double) : 收敛速度</li>
+</ul>
+<h4 id="input">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output">Output:</h4>
+<ul>
+<li>d_pred (csv): 预测值</li>
+<li>o_import_feat (csv): 预测概率</li>
+<li>m_fitted_model (py3pkl): 训练好的模型</li>
+</ul>
+<h2 id="baggingregrspy3">BaggingRegrSPy3</h2>
+<p>bagging是一种用来提高学习算法准确度的方法，这种方法通过构造一个预测函数系列，然后以一定的方式将它们组合成一个预测函数。Bagging要求“不稳定”（不稳定是指数据集的小的变动能够使得分类结果的显著的变动）的分类方法。比如：决策树，神经网络算法。</p>
+<h4 id="tag_1">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param_1">Param:</h4>
+<ul>
+<li>n_estimators (int) : 评估器数量</li>
+<li>max_samples (double) : 抽取的样本数量</li>
+</ul>
+<h4 id="input_1">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output_1">Output:</h4>
+<ul>
+<li>d_pred (csv): 预测值</li>
+<li>m_fitted_model (py3pkl): 训练好的模型 </li>
+</ul>
+<h2 id="decisiontreeregspy3">DecisionTreeRegSPy3</h2>
+<p>决策树(decision tree)是一种基本的分类与回归方法。决策树模型呈树形结构，在分类问题中，表示基于特征对实例进行分类的过程。它可以认为是if-then规则的集合，也可以认为是定义在特征空间与类空间上的条件概率分布。其主要优点是模型具有可读性，分类速度快。学习时，利用训练数据，根据损失函数最小化的原则建立决策树模型。预测时，对新的数据，利用决策树模型进行分类。
+决策树学习通常包括3个步骤：特征选择、决策树的生成和决策树的修剪。</p>
+<h4 id="tag_2">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param_2">Param:</h4>
+<ul>
+<li>min_impurity_split (double): 预剪枝时节点的不纯度(gini或者entropy)低于此阈值就不再分裂; 注：9999.0表示默认值None</li>
+<li>max_depth (int): 树的最大深度。默认值不限制，当不设置的时候，树不能无限生长，它会由其他参数来控制它的生长；9999.0表示默认值None</li>
+<li>min_samples_split (int): 节点继续往下分裂的最小样本数要求</li>
+<li>min_samples_leaf (int): 叶子节点的最小样本数要求</li>
+<li>max_features (double): 节点分裂时使用的最大特征数，数据集比较大的时候，对特征进行抽样，提高速度；注：9999.0表示默认值None</li>
+<li>criterion (string): 节点最佳分裂的判断标准，可选值'gini'和'entropy'，默认值'gini'</li>
+</ul>
+<h4 id="input_2">Input:</h4>
+<ul>
+<li>d_feature_test (csv): 特征变量</li>
+<li>d_label_test (csv): 目标变量</li>
+</ul>
+<h4 id="output_2">Output:</h4>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="extratreesregrspy3">ExtratreesRegrSPy3</h2>
+<p>这个类实现了一个元估计器，该估计器适合于数据集的各个子样本上的多个随机决策树（又名extra-trees），并使用平均值来提高预测准确度和控制过度拟合。</p>
+<h4 id="tag_3">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param_3">Param:</h4>
+<ul>
+<li>n_estimators (int) : 评估器数量</li>
+<li>criterion (string) : 评估算法</li>
+</ul>
+<h4 id="input_3">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output_3">Output:</h4>
+<ul>
+<li>d_pred (csv): 预测值</li>
+<li>o_importance_feat (csv): 特征重要性</li>
+<li>m_fitted_model (py3pkl): 训练好的模型 </li>
+</ul>
+<h2 id="gradientboostingregrspy3">GradientboostingRegrSPy3</h2>
+<p>Gradient Boosting 在迭代的时候选择梯度下降的方向来保证最后的结果最好。 损失函数用来描述模型的“靠谱”程度，假设模型没有过拟合，损失函数越大，模型的错误率越高 如果我们的模型能够让损失函数持续的下降，则说明我们的模型在不停的改进，而最好的方式就是让损失函数在其梯度方向上下降。</p>
+<h4 id="tag_4">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param_4">Param:</h4>
+<ul>
+<li>n_estimators (int) : 评估器数量</li>
+<li>loss (string) : 损失函数</li>
+<li>learning_rate (double) : 收敛速度</li>
+</ul>
+<h4 id="input_4">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output_4">Output:</h4>
+<ul>
+<li>d_pred (csv): 预测值</li>
+<li>o_importance_feat (csv): 特征重要性</li>
+<li>m_fitted_model (py3pkl): 训练好的模型 </li>
+</ul>
+<h2 id="randomforestregrspy3">RandomforestRegrSPy3</h2>
+<p>随机森林是利用多棵树对样本进行训练并预测的一种分类器，它是一个包含多个决策树的分类器， 并且其输出的类别是由个别树输出的类别的众数而定。</p>
+<h4 id="tag_5">Tag:</h4>
+<ul>
+<li>回归模型</li>
+</ul>
+<h4 id="param_5">Param:</h4>
+<ul>
+<li>n_estimators (int) : 评估器数量</li>
+<li>criterion (string) : 特征选择方法</li>
+</ul>
+<h4 id="input_5">Input:</h4>
+<ul>
+<li>d_feature (csv): 特征变量</li>
+<li>d_label (csv): 目标变量</li>
+</ul>
+<h4 id="output_5">Output:</h4>
+<ul>
+<li>d_pred (csv): 预测值</li>
+<li>o_importance_feat (csv): 特征重要性</li>
+<li>m_fitted_model (py3pkl): 训练好的模型 </li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
