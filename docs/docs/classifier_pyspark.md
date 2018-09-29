@@ -13,12 +13,13 @@
 * minInfoGain (double) : 最小信息增益
 * impurity (string) : 不纯度
 * seed (double) : 随机种子
+* label (string) :
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline
 
 ## GBTClassifierDPy3
 
@@ -39,32 +40,10 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * maxIter (int) : 最大迭代次数
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
-
-## LinearSVCDPy3
-
-分布式线性支持向量机
-
-#### Tag:
-* 分类模型_分布式
-
-#### Param:
-* maxIter (int) : 最大迭代次数
-* regParam (double) : 正则化参数
-* tol (double) : 收敛判据
-* fitIntercept (string) : 是否拟合截距项
-* standardization (string) : 是否标准化
-* threshold (double) : 二分类的阈值
-
-#### Input:
-* in1 (any) : 输入pipeline
-
-#### Output:
-* out1 (any) : 输出pipeline
-
+* model(any) : 输出pipeline
 
 ## LogisticRegressionDPy3
 
@@ -74,17 +53,17 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * 分类模型_分布式
 
 #### Param:
-* label (string) : 
-* maxIter (int) : 
-* regParam (double) : 
-* elasticNetParam (double) : 
-* threshold (double) : 
+* label (string) : 标签
+* maxIter (int) : 最大迭代次数
+* regParam (double) : 正则化
+* elasticNetParam (double) : elasticNet参数 
+* threshold (double) : 阈值
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline
 
 
 ## MultilayerPerceptronClassifierDPy3
@@ -101,12 +80,13 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * blockSize (int) : 数据入栈的块大小
 * stepSize (double) : 学习步长
 * solver (string) : 优化算法
+* layers (string) : 感知机层数
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline 
+* model (any) : 输出pipeline
 
 ## NaiveBayesDPy3
 
@@ -124,10 +104,10 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * weightCol (string) : 设定对应列所有实例权重为1.0
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline
 
 ## RandomForestClassifierDPy3
 
@@ -148,7 +128,7 @@ GBT分类pipeline: StringIndexer, VectorIndexer, LogisticRegression, IndexToStri
 * impurity (string) : 不纯度
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline

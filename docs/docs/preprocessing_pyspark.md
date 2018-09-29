@@ -11,10 +11,10 @@
 * numTopFeatures (int) : 卡方检验保留的变量个数
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## DropNADPy3
 
@@ -29,27 +29,10 @@
 * cols (string) : 定义变量范围
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
-
-## FeatureHasherDPy3
-
-FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵中的列索引。这样的做法使得计算速度提升并且节省了内存
-
-#### Tag:
-* 数据预处理_分布式
-
-#### Param:
-* cols (string) : 指定变量或选择出标签外所有变量
-* label (string) : 标签列
-
-#### Input:
-* in1 (any) : 输入数据
-
-#### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## FillNADPy3
 
@@ -61,28 +44,13 @@ FeatureHasher直接对特征应用一个hash函数来决定特征在样本矩阵
 #### Param:
 * value (int) : 将缺失值替换为该数值
 * cols (string) : 指定要填充的列
+* value_type (string) : 要填充值的类型是字符还是数值
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
-
-## ImputerDPy3
-
-Imputer用均值或中位数填补数据中缺失值，要填补的列必须是DoubleType或FloatType
-
-#### Tag:
-* 数据预处理_分布式
-
-#### Param:
-* strategy (string) : 填补缺失值策略
-
-#### Input:
-* in1 (any) : 输入数据
-
-#### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## IndexToStringDPy3
 
@@ -95,10 +63,10 @@ Imputer用均值或中位数填补数据中缺失值，要填补的列必须是D
 * cols (string) : 要转换的变量
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## MaxAbsScalerDPy3
 
@@ -111,10 +79,10 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 * None
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## MergeColsDPy3
 
@@ -125,13 +93,14 @@ MaxAbsScaler转换矢量行的数据集，通过除以每个变量的最大绝�
 
 #### Param:
 * method (string) : 合并方式
+* col  :
 
 #### Input:
-* in1 (any): 输入dataframe1
-* in2 (any): 输入dataframe2
+* input_data1 (any): 输入dataframe1
+* input_data2 (any): 输入dataframe2
 
 #### Output:
-* out1 (any): 输出数据
+* output_data (any): 输出数据
 
 ## MinMaxScalerDPy3
 
@@ -144,10 +113,10 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 * None
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data : 输出数据
 
 ## NormalizerDPy3
 
@@ -160,10 +129,10 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 * p (int) : 
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
 
 ## OneHotEncoderDPy3
 
@@ -176,27 +145,11 @@ MinMaxScaler转换数据集的向量行，将每个特征重新缩放到特定�
 * None
 
 #### Input:
-* in1 (any): 输入dataframe
-* in2 (any): 输入string变量
+* input_data (any): 输入dataframe
+* string_vars (any): 输入string变量
 
 #### Output:
-* out1 (any): 输出数据
-
-## PCADPy3
-
-PCA降维使用正交变换方法将一组互相相关的变量转换为一组线性非相关的变量
-
-#### Tag:
-* 数据预处理_分布式
-
-#### Param:
-* k (int) : pca降至维数
-
-#### Input:
-* in1 (any) : 输入数据
-
-#### Output:
-* out1 (any) : 输出数据
+* output_data (any): 输出数据
 
 ## PolynomialExpansionDPy3
 
@@ -209,10 +162,10 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 * degree (int) : 扩展至的维度
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据 
+* output_data (any) : 输出数据
 
 ## QuantileDiscretizerDPy3
 
@@ -224,13 +177,14 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 #### Param:
 * cols (string) : 可以选择要处理的变量，如果#则根据输入的非字符串变量进行处理
 * handleInvalid (string) : 遇到缺失值的处理方法
+* numBuckets (int) : 分箱个数
 
 #### Input:
-* in1 (any): 输入dataframe
-* in2 (any): 输入非string变量
+* input_data (any): 输入dataframe
+* not_string_vars (any): 输入非string变量
 
 #### Output:
-* out1 (any): 输出数据
+* output_data (any): 输出数据
 
 ## SplitDPy3
 
@@ -243,11 +197,11 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 * testRate (double) : 测试集比例
 
 #### Input:
-* in1 (any): 输入数据
+* input_data (any): 输入数据
 
 #### Output:
-* out1 (any): 输出训练集
-* out2 (any): 输出测试集
+* output_data1 (any): 输出训练集
+* output_data2 (any): 输出测试集
 
 ## StackRowsDPy3
 
@@ -260,11 +214,11 @@ PCA降维使用正交变换方法将一组互相相关的变量转换为一组�
 * None
 
 #### Input:
-* in1 (any): 输入dataframe
-* in2 (any): 输入dataframe2
+* input_data1 (any): 输入dataframe
+* input_data2 (any): 输入dataframe2
 
 #### Output:
-* out1 (any): 输出数据
+* output_data (any): 输出数据
 
 ## StandardScalerDPy3
 
@@ -277,26 +231,10 @@ StandardScaler转换数据集的向量行，将每个变量标准化为具有单
 * withMean (string) : 在缩放之前是否使用均值将数据居中。 它会建立一个密集的输出，所以在应用稀疏输入时要小心。
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据 
-
-## StartPointDPy3
-
-pipeline起始模块
-
-#### Tag:
-* 数据预处理_分布式
-
-#### Param:
-* None
-
-#### Input:
-* None
-
-#### Output:
-* out1 (any) : 输出空白pipeline, 作为pipeline开始的标志
+* output_data (any) : 输出数据
 
 ## StringIndexerDPy3
 
@@ -307,16 +245,30 @@ pipeline起始模块
 
 #### Param:
 * cols (string) : 要转换的变量，如果#，则对输入的字符串变量进行转换
-* label (string) : 标签
+* handleInvalid : 对无效数据处理方式
 
 #### Input:
-* in1 (any): 输入dataframe
-* in2 (any): 输入string变量
-* in3 (any): 输入非string变量
+* input_data (any): 输入dataframe
 
 #### Output:
-* out1 (any): 输出dataframe
-* out2 (any): 输出变量
+* output_data (any): 输出dataframe
+
+## StringIndexerDPy3_2
+
+将字符串列编码为标签索引列
+
+#### Tag:
+* 数据预处理_分布式
+
+#### Param:
+* handleInvalid : 对无效数据处理方式
+
+#### Input:
+* input_data (any): 输入dataframe
+* string_vars (any): 输入string变量
+
+#### Output:
+* output_data (any): 输出dataframe
 
 ## VectorAssemblerDPy3
 
@@ -327,15 +279,14 @@ pipeline起始模块
 
 #### Param:
 * label (string) : 标签变量
-* cols (string) : 如果为#，则组合除标签外所有变量
-* method (string) : 选择变量方法
+* cols (string) : 指定要向量化的变量
+* assemble_type (string) : 将变量向量化方式
 
 #### Input:
-* in1 (any): 输入dataframe
-* in2 (any): 输入数据所有变量
+* input_data (any): 输入数据所有变量
 
 #### Output:
-* out1 (any): 输出数据
+* output_data (any): 输出数据
 
 ## VectorIndexerDPy3
 
@@ -348,10 +299,10 @@ pipeline起始模块
 * maxCategories (int) : 定义类别型变量的最大类别数
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据 
+* output_data (any) : 输出数据
 
 ## VectorSlicerDPy3
 
@@ -364,7 +315,7 @@ VectorSlicer是一个变换器，它采用一个特征向量并输出一个带�
 * indices (string) : 选择指定变量的index
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出数据 
+* output_data (any) : 输出数据

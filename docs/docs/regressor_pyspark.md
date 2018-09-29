@@ -18,10 +18,10 @@
 * varianceCol (string) : 预测中偏置样本方差的列名
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline
 
 ## GBTRegressorDPy3
 
@@ -44,58 +44,10 @@
 * seed (double) : 随机种子
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline 
-
-## GeneralizedLinearRegressionDPy3
-
-分布式广义线性回归模型
-
-#### Tag:
-* 回归模型_分布式
-
-#### Param:
-* family (string) : 指数族
-* link (string) : 关联函数
-* fitIntercept (string) : 是否考虑截距
-* maxIter (int) : 最大迭代次数
-* tol (double) : 收敛判据
-* regParam (double) : 正则化参数
-* weightCol (string) : 将某列所有权重设置为1.0
-* solver (string) : 优化算法
-* linkPredictionCol (string) : 链路预测列名
-
-#### Input:
-* in1 (any) : 输入pipeline
-
-#### Output:
-* out1 (any) : 输出pipeline 
-
-## LinearRegressionDPy3
-
-分布式线性回归模型
-
-#### Tag:
-* 回归模型_分布式
-
-#### Param:
-* maxIter (int) : 最大迭代次数
-* regParam (double) : 正则化参数
-* elasticNetParam (double) : 回归混合参数，等于0时为l2惩罚，等于1时为l1惩罚
-* tol (double) : 收敛判据
-* fitIntercept (string) : 是否考虑截距
-* standardization (string) : 是否标准化
-* solver (string) : 优化算法
-* weightCol (string) : 将该列所有实例权重设置为1.0
-* aggregationDepth (int) : 聚集树时的建议深度
-
-#### Input:
-* in1 (any) : 输入pipeline
-
-#### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline
 
 ## RandomForestRegressorDPy3
 
@@ -114,9 +66,10 @@
 * seed (double) : 随机种子
 * numTrees (int) : 树的个数
 * featureSubsetStrategy (string) : 切分每个结点时考虑的特征数目
+* label (string) :
 
 #### Input:
-* in1 (any) : 输入pipeline
+* input_data (any) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出pipeline
+* model (any) : 输出pipeline

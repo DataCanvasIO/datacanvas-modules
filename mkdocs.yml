@@ -23,10 +23,7 @@ nav:
         - 分类模型: classifier_pyspark.md
         - 回归模型: regressor_pyspark.md
         - 聚类模型: cluster_pyspark.md
-        - 模型选择及调参: model_selection_hyperparameters_tuning_pyspark.md
         - 模型预测及评估: prediction_metrics_pyspark.md
-        - 模型发布: model_release_pyspark.md
-        - 自然语言处理: NLP_pyspark.md
     - 深度学习模块: deeplearning_py.md
     - R语言模块: R.md
 #theme: readthedocs

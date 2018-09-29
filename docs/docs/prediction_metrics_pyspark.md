@@ -10,10 +10,10 @@
 * label (string) : 定义标签变量
 
 #### Input:
-* in1 (any) : 输入数据
+* input_data (any) : 输入数据
 
 #### Output:
-* out1 (any) : 输出评估分数
+* scores (any) : 输出评估分数
 
  
 ## ModelPredictDPy3
@@ -27,8 +27,8 @@
 * None
 
 #### Input:
-* in1 (any) : 输入数据
-* in2 (model.pkl) : 输入pipeline
+* input_data (any) : 输入数据
+* model (model.pkl) : 输入pipeline
 
 #### Output:
-* out1 (any) : 输出数据
+* output_data (any) : 输出数据
